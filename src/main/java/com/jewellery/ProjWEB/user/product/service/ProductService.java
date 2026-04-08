@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface ProductService {
     List<ProductDTO> findByCategoryId(Integer CategoryID);
+    List<ProductDTO> findByProductNameContaining(String name, String type);
 }

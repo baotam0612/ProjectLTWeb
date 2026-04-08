@@ -5,6 +5,7 @@ import com.jewellery.ProjWEB.user.product.model.ProductDTO;
 import com.jewellery.ProjWEB.user.product.repository.ProductRepository;
 import com.jewellery.ProjWEB.user.product.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -20,6 +21,57 @@ public class ProductServiceImpl implements ProductService {
         for(ProductEntity item: productEntities){
             ProductDTO product= new ProductDTO();
             product.setProductName(item.getProductName());
+            product.setPrice(item.getPrice());
+            product.setDescription(item.getDescription());
+            product.setStatus(item.getStatus());
+            product.setImageURL(item.getImageUrl());
+            result.add(product);
+        }
+        return result;
+    }
+
+    public List<ProductEntity> searchAndSort(String name, String type){
+        Sort sort;
+        if(type == null){
+            sort= Sort.unsorted();
+        }
+        else {
+            switch (type) {
+                case "name_asc":
+                    sort = Sort.by("productName").ascending(); // tên phải giống trong file entity
+                    break;
+                case "name_desc":
+                    sort = Sort.by("productName").descending();
+                    break;
+                case "price_asc":
+                    sort = Sort.by("price").ascending();
+                    break;
+                case "price_desc":
+                    sort = Sort.by("price").descending();
+                    break;
+                default:
+                    sort = Sort.unsorted();
+            }
+        }
+        List<ProductEntity> entities;
+        if(name == null || name.trim().isEmpty()){
+            entities=productRepository.findAll(sort);
+        }
+        else {
+            entities = productRepository.findByProductNameContaining(name, sort);
+        }
+        return entities;
+    }
+
+    public List<ProductDTO> findByProductNameContaining(String name, String type){
+        List<ProductEntity> productEntities= searchAndSort(name, type);
+        List<ProductDTO> result = new ArrayList<>();
+        for(ProductEntity item: productEntities){
+            ProductDTO product = new ProductDTO();
+            product.setProductName(item.getProductName());
+            product.setPrice(item.getPrice());
+            product.setDescription(item.getDescription());
+            product.setStatus(item.getStatus());
             product.setImageURL(item.getImageUrl());
             result.add(product);
         }

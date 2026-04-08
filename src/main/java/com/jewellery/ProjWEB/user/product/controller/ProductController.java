@@ -18,4 +18,10 @@ public class ProductController {
         List<ProductDTO> result= productService.findByCategoryId(CategoryID);
         return result;
     }
+    @GetMapping(value = "user/product/")
+    public List<ProductDTO> getProductSearch(@RequestParam(required = false) String name,
+                                             @RequestParam(required= false) String type){
+        List<ProductDTO> result= productService.findByProductNameContaining(name, type);
+        return result;
+    }
 }
