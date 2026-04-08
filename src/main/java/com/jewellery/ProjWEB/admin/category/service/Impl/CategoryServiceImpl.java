@@ -9,6 +9,8 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.ModelMap;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 @Service
 public class CategoryServiceImpl implements CategoryService {
@@ -29,6 +31,16 @@ public class CategoryServiceImpl implements CategoryService {
             categoryRepository.save(result);
             return modelMapper.map(result, CategoryDTO.class);
         }
+    }
+
+    @Override
+    public List<CategoryDTO> findAll() {
+        List<CategoryEntity> categoryEntityList = categoryRepository.findAll();
+        List<CategoryDTO> categoryDTOList = new ArrayList<>();
+        for(CategoryEntity item : categoryEntityList){
+            categoryDTOList.add(modelMapper.map(item, CategoryDTO.class));
+        }
+        return categoryDTOList;
     }
 
     @Override

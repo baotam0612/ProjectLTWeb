@@ -23,6 +23,11 @@ public class CategoryController {
         this.categoryService = categoryService;
     }
 
+    @GetMapping("/categorys")
+    public CategoryResponse categoryHomePage(){
+        List<CategoryDTO> categoryDTOList = categoryService.findAll();
+        return new CategoryResponse(HttpStatus.OK,"Query All Category successfully", categoryDTOList);
+    }
     // thêm danh mục
     @PostMapping("/categorys")
     public CategoryResponse addCategory(@Valid @RequestBody CategoryRequest categoryRequest){
