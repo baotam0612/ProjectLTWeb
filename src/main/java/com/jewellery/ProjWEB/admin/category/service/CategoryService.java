@@ -16,5 +16,4 @@ public interface CategoryService {
 
     CategoryDTO updateCategory(Integer id, CategoryRequest categoryRequest);
 
-
 }

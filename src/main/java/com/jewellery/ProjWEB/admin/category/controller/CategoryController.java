@@ -23,6 +23,7 @@ public class CategoryController {
         this.categoryService = categoryService;
     }
 
+
     @GetMapping("/categorys")
     public CategoryResponse categoryHomePage(){
         List<CategoryDTO> categoryDTOList = categoryService.findAll();
