@@ -7,7 +7,6 @@ public class PaymentRequest {
     private String paymentMethod;
     private BigDecimal amount;
 
-    // Constructor mặc định cho Jackson
     public PaymentRequest() {}
 
     public PaymentRequest(int orderId, String paymentMethod, BigDecimal amount) {
@@ -16,7 +15,6 @@ public class PaymentRequest {
         this.amount = amount;
     }
 
-    // Getters and Setters
     public int getOrderId() { return orderId; }
     public void setOrderId(int orderId) { this.orderId = orderId; }
 
