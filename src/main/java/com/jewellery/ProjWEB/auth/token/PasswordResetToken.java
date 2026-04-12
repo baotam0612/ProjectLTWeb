@@ -17,6 +17,14 @@ import com.jewellery.ProjWEB.user.entity.User;
 @AllArgsConstructor
 public class PasswordResetToken {
 
+    /**
+     * Persistence entity representing a password reset token.
+     *
+     * - Tokens are unique strings tied to a `User`.
+     * - Token expires after `EXPIRATION_MINUTES` (short-lived).
+     * - `used` flag prevents reuse after a reset.
+     */
+
     private static final int EXPIRATION_MINUTES = 30;
 
     @Id
@@ -37,12 +45,16 @@ public class PasswordResetToken {
     private boolean used = false;
 
     public PasswordResetToken(User user) {
+        // Associate this token with the provided user
         this.user = user;
+        // Generate a random UUID token string
         this.token = UUID.randomUUID().toString();
+        // Set the expiry time to a short window (configured minutes)
         this.expiryDate = LocalDateTime.now().plusMinutes(EXPIRATION_MINUTES);
     }
 
     public boolean isExpired() {
+        // Token is expired when now is after expiryDate
         return LocalDateTime.now().isAfter(this.expiryDate);
     }
 }

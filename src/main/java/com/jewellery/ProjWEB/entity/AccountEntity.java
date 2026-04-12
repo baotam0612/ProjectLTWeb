@@ -1,5 +1,6 @@
 package com.jewellery.ProjWEB.entity;
 
+import com.jewellery.ProjWEB.user.entity.User;
 import jakarta.persistence.*;
 
 import javax.management.relation.Role;
@@ -12,12 +13,12 @@ public class AccountEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer accountID;
+    private Long accountID;
 
     @Column(unique = true, nullable = false)
     private String username;
 
-    @Column(nullable = false)
+    @Column(nullable = false  )
     private String password;
 
     private String email;
@@ -39,11 +40,23 @@ public class AccountEntity {
     @OneToMany(mappedBy = "account")
     private List<CartEntity> carts;
 
-    public Integer getAccountID() {
+    @OneToOne
+    @JoinColumn(name = "user_id")
+    private User user ;
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Long getAccountID() {
         return accountID;
     }
 
-    public void setAccountID(Integer accountID) {
+    public void setAccountID(Long accountID) {
         this.accountID = accountID;
     }
 

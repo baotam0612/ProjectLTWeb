@@ -17,6 +17,14 @@ import com.jewellery.ProjWEB.user.entity.User;
 @AllArgsConstructor
 public class VerificationToken {
 
+    /**
+     * Persistence entity representing an email verification token.
+     *
+     * - Tokens are unique strings tied to a `User`.
+     * - Token expires after `EXPIRATION_HOURS`.
+     * - `used` flag prevents reuse after confirmation.
+     */
+
     private static final int EXPIRATION_HOURS = 24;
 
     @Id
@@ -37,12 +45,16 @@ public class VerificationToken {
     private boolean used = false;
 
     public VerificationToken(User user) {
+        // Associate token with the provided user
         this.user = user;
+        // Generate a cryptographically random token string (UUID)
         this.token = UUID.randomUUID().toString();
+        // Set expiry to now + configured hours
         this.expiryDate = LocalDateTime.now().plusHours(EXPIRATION_HOURS);
     }
 
     public boolean isExpired() {
+        // Returns true when the current time is strictly after the expiry time
         return LocalDateTime.now().isAfter(this.expiryDate);
     }
 }
