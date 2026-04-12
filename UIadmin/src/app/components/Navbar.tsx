@@ -31,14 +31,7 @@ export function Navbar({ onMenuClick }: NavbarProps) {
 
         {/* Search Bar */}
         <div className="flex-1 max-w-xl">
-          <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-            <Input
-              type="text"
-              placeholder="Search..."
-              className="pl-10 pr-4 py-2 w-full bg-gray-50 border-gray-200 rounded-lg focus:bg-white focus:ring-2 focus:ring-[#4F46E5] focus:border-transparent hidden sm:block"
-            />
-          </div>
+
         </div>
 
         {/* Right Side Actions */}
