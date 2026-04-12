@@ -191,7 +191,10 @@
         }
 
         // Chạy hàm ngay khi toàn bộ cấu trúc trang được tải xong
-        document.addEventListener("DOMContentLoaded", includeHTML);
+        document.addEventListener("DOMContentLoaded", async () => {
+             await includeHTML();
+             if (typeof UI !== 'undefined') UI.syncAdminLinks();
+        });
     </script>
     <script src="./js/home-data.js"></script>
 

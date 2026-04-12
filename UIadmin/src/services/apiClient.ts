@@ -22,10 +22,12 @@ class ApiClient {
     this.baseURL = baseURL;
   }
 
-  private getHeaders(): Record<string, string> {
-    const headers: Record<string, string> = {
-      'Content-Type': 'application/json',
-    };
+  private getHeaders(isFormData: boolean = false): Record<string, string> {
+    const headers: Record<string, string> = {};
+    
+    if (!isFormData) {
+      headers['Content-Type'] = 'application/json';
+    }
 
     const token = authService.getToken();
     if (token) {
@@ -146,6 +148,21 @@ class ApiClient {
       ...options,
       method: 'DELETE',
       headers: this.getHeaders(),
+    });
+
+    return this.handleResponse<T>(response);
+  }
+
+  async postFormData<T = any>(
+    url: string,
+    formData: FormData,
+    options?: RequestInit
+  ): Promise<T> {
+    const response = await fetch(`${this.baseURL}${url}`, {
+      ...options,
+      method: 'POST',
+      headers: this.getHeaders(true),
+      body: formData,
     });
 
     return this.handleResponse<T>(response);

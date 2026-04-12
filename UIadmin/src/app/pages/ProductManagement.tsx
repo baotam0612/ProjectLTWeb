@@ -31,6 +31,8 @@ import {
   updateProduct,
   deleteProductApi
 } from '../api/ProductAPI';
+import { uploadImage } from '../api/UploadAPI';
+import { Upload } from 'lucide-react';
 
 export function ProductManagement() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -41,6 +43,7 @@ export function ProductManagement() {
   const [deleteConfirmOpen, setDeleteConfirmOpen] = useState(false);
   const [productToDelete, setProductToDelete] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [isUploading, setIsUploading] = useState(false);
 
   const [formData, setFormData] = useState<Partial<Product>>({
     name: '',
@@ -142,6 +145,23 @@ export function ProductManagement() {
       toast.error('Failed to save product');
     } finally {
       setIsLoading(false);
+    }
+  };
+
+  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    try {
+      setIsUploading(true);
+      const imageUrl = await uploadImage(file);
+      setFormData({ ...formData, image: imageUrl });
+      toast.success('Ảnh đã được tải lên Cloudinary');
+    } catch (error) {
+      console.error('Upload failed:', error);
+      toast.error('Tải ảnh lên thất bại');
+    } finally {
+      setIsUploading(false);
     }
   };
 
@@ -333,14 +353,58 @@ export function ProductManagement() {
                 </SelectContent>
               </Select>
             </div>
-            <div className="space-y-2">
-              <Label htmlFor="image">Image URL</Label>
-              <Input
-                id="imageUrl"
-                value={formData.image}
-                onChange={(e) => setFormData({ ...formData, image: e.target.value })}
-                placeholder="https://example.com/image.jpg"
-              />
+            <div className="space-y-4">
+              <Label>Product Image</Label>
+              <div className="flex flex-col items-center gap-4 p-4 border-2 border-dashed rounded-lg border-gray-200">
+                {formData.image ? (
+                  <div className="relative group">
+                    <img
+                      src={formData.image}
+                      alt="Preview"
+                      className="w-32 h-32 object-cover rounded-lg shadow-md"
+                    />
+                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-lg">
+                       <Label htmlFor="image-upload" className="cursor-pointer text-white text-xs font-medium">
+                         Change Image
+                       </Label>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="w-32 h-32 bg-gray-50 flex flex-col items-center justify-center rounded-lg border border-gray-100">
+                    <Upload className="w-8 h-8 text-gray-400 mb-2" />
+                    <span className="text-xs text-gray-500">No Image</span>
+                  </div>
+                )}
+                
+                <div className="flex items-center gap-2">
+                  <Input
+                    id="image-upload"
+                    type="file"
+                    accept="image/*"
+                    className="hidden"
+                    onChange={handleFileUpload}
+                  />
+                  <Button
+                    type="button"
+                    variant="outline"
+                    size="sm"
+                    disabled={isUploading}
+                    onClick={() => document.getElementById('image-upload')?.click()}
+                  >
+                    {isUploading ? 'Uploading...' : 'Chọn ảnh từ Desktop'}
+                  </Button>
+                </div>
+              </div>
+              
+              <div className="space-y-2">
+                <Label htmlFor="imageUrl">Or Image URL</Label>
+                <Input
+                  id="imageUrl"
+                  value={formData.image}
+                  onChange={(e) => setFormData({ ...formData, image: e.target.value })}
+                  placeholder="https://example.com/image.jpg"
+                />
+              </div>
             </div>
           </div>
           <DialogFooter>

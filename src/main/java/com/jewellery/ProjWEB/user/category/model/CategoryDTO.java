@@ -1,15 +1,30 @@
 package com.jewellery.ProjWEB.user.category.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
 public class CategoryDTO {
     private Integer id;
     private String categoryName;
+
+    public CategoryDTO() {
+    }
+
+    public CategoryDTO(Integer id, String categoryName) {
+        this.id = id;
+        this.categoryName = categoryName;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getCategoryName() {
+        return categoryName;
+    }
+
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
+    }
 }

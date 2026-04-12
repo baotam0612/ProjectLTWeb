@@ -1,9 +1,6 @@
-/* ============================================================
-   app.js — Auth helper, API calls, UI utilities
-   Backend: http://localhost:8080
-   ============================================================ */
-
 const BASE_URL = "http://localhost:8081/api";
+const ADMIN_URL = "http://localhost:5173"; // CHỈ CẦN SỬA CỔNG Ở ĐÂY LÀ TOÀN BỘ WEB TỰ ĐỔI THEO
+const USER_PAGE = "user.html";
 
 /* ============================================================
    API — gọi tới BE
@@ -108,10 +105,9 @@ const Auth = {
     if (!roles.includes(requiredRole)) {
       // Redirect sang đúng trang của role hiện tại
       if (roles.includes("ROLE_ADMIN")) {
-        // Redirect sang đúng trang của role hiện tại
-        window.location.href = "http://localhost:5173";
+        window.location.href = ADMIN_URL;
       } else {
-        window.location.href = "user.html";
+        window.location.href = USER_PAGE;
       }
     }
   },
@@ -170,5 +166,22 @@ const UI = {
         btn.textContent = input.type === "password" ? "👁" : "🙈";
       });
     });
+  },
+
+  /**
+   * Tự động gán link Admin từ biến ADMIN_URL vào các thẻ có id="adminLink"
+   */
+  syncAdminLinks() {
+    const adminLink = document.getElementById("adminLink");
+    if (adminLink) {
+      // Nếu là Admin thì dẫn vào trang login của Admin Dashboard trên cổng NPM
+      const roles = Auth.getRoles();
+      if (Auth.isLoggedIn() && roles.includes("ROLE_ADMIN")) {
+        adminLink.href = `${ADMIN_URL}/login`;
+      } else {
+        // Nếu chưa đăng nhập hoặc là User thường, dẫn tới trang login của UIHome
+        adminLink.href = "index.html"; 
+      }
+    }
   },
 };

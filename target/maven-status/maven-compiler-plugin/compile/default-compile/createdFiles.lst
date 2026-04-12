@@ -7,8 +7,10 @@ com\jewellery\ProjWEB\exception\GlobalExceptionHandle.class
 com\jewellery\ProjWEB\auth\service\AuthService.class
 com\jewellery\ProjWEB\user\product\service\Impl\ProductServiceImpl.class
 com\jewellery\ProjWEB\user\product\service\ProductService.class
+com\jewellery\ProjWEB\config\CloudinaryConfig.class
 com\jewellery\ProjWEB\admin\order\repository\OrderRepository.class
 com\jewellery\ProjWEB\security\JwtService.class
+com\jewellery\ProjWEB\service\Impl\CloudinaryServiceImpl.class
 com\jewellery\ProjWEB\auth\controller\AuthController.class
 com\jewellery\ProjWEB\admin\product\model\response\ProductResponse.class
 com\jewellery\ProjWEB\admin\product\service\ProductService.class
@@ -28,6 +30,7 @@ com\jewellery\ProjWEB\auth\dto\AuthResponse$AuthResponseBuilder.class
 com\jewellery\ProjWEB\entity\ProductEntity.class
 com\jewellery\ProjWEB\config\DataInitializer.class
 com\jewellery\ProjWEB\admin\product\Specification\ProductSpecification.class
+com\jewellery\ProjWEB\service\CloudinaryService.class
 com\jewellery\ProjWEB\entity\CategoryEntity.class
 com\jewellery\ProjWEB\user\category\service\CategoryService.class
 com\jewellery\ProjWEB\admin\order\service\Impl\OrderDetailServiceImpl.class
@@ -41,6 +44,7 @@ com\jewellery\ProjWEB\auth\token\VerificationToken.class
 com\jewellery\ProjWEB\admin\order\model\dto\OrderDetailDTO.class
 com\jewellery\ProjWEB\admin\material\repository\MaterialRepository.class
 com\jewellery\ProjWEB\admin\product\repository\ProductRepository.class
+com\jewellery\ProjWEB\controller\admin\ImageUploadController.class
 com\jewellery\ProjWEB\admin\category\repository\CategoryRepository.class
 com\jewellery\ProjWEB\user\product\repository\ProductRepository.class
 com\jewellery\ProjWEB\config\MailConfig.class

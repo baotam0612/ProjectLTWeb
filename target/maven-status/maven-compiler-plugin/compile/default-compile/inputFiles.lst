@@ -49,12 +49,14 @@ D:\ProjectLTWeb123\src\main\java\com\jewellery\ProjWEB\auth\service\AuthService.
 D:\ProjectLTWeb123\src\main\java\com\jewellery\ProjWEB\auth\service\AuthServiceImpl.java
 D:\ProjectLTWeb123\src\main\java\com\jewellery\ProjWEB\auth\token\PasswordResetToken.java
 D:\ProjectLTWeb123\src\main\java\com\jewellery\ProjWEB\auth\token\VerificationToken.java
+D:\ProjectLTWeb123\src\main\java\com\jewellery\ProjWEB\config\CloudinaryConfig.java
 D:\ProjectLTWeb123\src\main\java\com\jewellery\ProjWEB\config\DataInitializer.java
 D:\ProjectLTWeb123\src\main\java\com\jewellery\ProjWEB\config\MailConfig.java
 D:\ProjectLTWeb123\src\main\java\com\jewellery\ProjWEB\config\ModelMapperConfig.java
 D:\ProjectLTWeb123\src\main\java\com\jewellery\ProjWEB\config\SecurityConfig.java
 D:\ProjectLTWeb123\src\main\java\com\jewellery\ProjWEB\config\SpaForwardController.java
 D:\ProjectLTWeb123\src\main\java\com\jewellery\ProjWEB\config\WebConfig.java
+D:\ProjectLTWeb123\src\main\java\com\jewellery\ProjWEB\controller\admin\ImageUploadController.java
 D:\ProjectLTWeb123\src\main\java\com\jewellery\ProjWEB\entity\AccountEntity.java
 D:\ProjectLTWeb123\src\main\java\com\jewellery\ProjWEB\entity\CartEntity.java
 D:\ProjectLTWeb123\src\main\java\com\jewellery\ProjWEB\entity\CartItemEntity.java
@@ -78,6 +80,8 @@ D:\ProjectLTWeb123\src\main\java\com\jewellery\ProjWEB\security\CustomUserDetail
 D:\ProjectLTWeb123\src\main\java\com\jewellery\ProjWEB\security\JwtAuthenticationFilter.java
 D:\ProjectLTWeb123\src\main\java\com\jewellery\ProjWEB\security\JwtService.java
 D:\ProjectLTWeb123\src\main\java\com\jewellery\ProjWEB\security\SecurityConfig.java
+D:\ProjectLTWeb123\src\main\java\com\jewellery\ProjWEB\service\CloudinaryService.java
+D:\ProjectLTWeb123\src\main\java\com\jewellery\ProjWEB\service\Impl\CloudinaryServiceImpl.java
 D:\ProjectLTWeb123\src\main\java\com\jewellery\ProjWEB\user\category\controller\CategoryController.java
 D:\ProjectLTWeb123\src\main\java\com\jewellery\ProjWEB\user\category\model\CategoryDTO.java
 D:\ProjectLTWeb123\src\main\java\com\jewellery\ProjWEB\user\category\repository\CategoryRepository.java
