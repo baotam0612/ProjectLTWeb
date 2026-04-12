@@ -19,4 +19,6 @@ public interface MaterialService {
     MaterialDTO CreateMaterial(MaterialRequest materialRequest);
 
     MaterialDTO UpdateMaterial(MaterialRequest materialRequest, Integer Id);
+
+    void deleteMaterial(Integer id);
 }

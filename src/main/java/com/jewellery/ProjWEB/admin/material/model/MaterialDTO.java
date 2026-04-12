@@ -2,11 +2,20 @@ package com.jewellery.ProjWEB.admin.material.model;
 
 public class MaterialDTO {
 
+    private Integer materialID;
     private String materialName;
     private String composition;
     private String weight;
     private String purity;
     private String unit;
+
+    public Integer getMaterialID() {
+        return materialID;
+    }
+
+    public void setMaterialID(Integer materialID) {
+        this.materialID = materialID;
+    }
 
     public String getMaterialName() {
         return materialName;

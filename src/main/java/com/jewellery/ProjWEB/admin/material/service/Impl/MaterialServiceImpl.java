@@ -40,7 +40,7 @@ public class MaterialServiceImpl implements MaterialService {
         Optional<MaterialEntity> materialEntity = materialRepository.findById(Id);
         MaterialEntity materialEntity1 = materialRepository.findByMaterialNameEqualsIgnoreCase(materialRequest.getMaterialName());
         modelMapper.map(materialRequest, materialEntity.get());
-        if(materialEntity1 == null) {
+        if(materialEntity1 == null || materialEntity1.getMaterialID().equals(Id)) {
             materialRepository.save(materialEntity.get());
             return modelMapper.map(materialEntity.get(), MaterialDTO.class);
         } else
@@ -70,5 +70,12 @@ public class MaterialServiceImpl implements MaterialService {
         if(materialEntity != null)
             return modelMapper.map(materialEntity, MaterialDTO.class);
         else return null;
+    }
+
+    @Override
+    public void deleteMaterial(Integer id) {
+        MaterialEntity materialEntity = materialRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Material Not Found with id: " + id));
+        materialRepository.delete(materialEntity);
     }
 }

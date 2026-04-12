@@ -9,4 +9,6 @@ import java.util.List;
 
 public interface OrderService {
     List<OrderDTO>  findAll();
- }
+    OrderDTO updateOrderStatus(Integer orderId, String status);
+    void deleteOrder(Integer orderId);
+}

@@ -18,7 +18,7 @@ public class MaterialEntity {
     private String purity;
     private String unit;
 
-    @OneToMany(mappedBy = "material")
+    @OneToMany(mappedBy = "material", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<MaterialPriceEntity> prices;
 
     public Integer getMaterialID() {

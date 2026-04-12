@@ -8,9 +8,18 @@ import java.util.List;
 public class CategoryDTO {
 
 
+    private Integer categoryID;
     private String categoryName;
     private String description;
     private String status;
+
+    public Integer getCategoryID() {
+        return categoryID;
+    }
+
+    public void setCategoryID(Integer categoryID) {
+        this.categoryID = categoryID;
+    }
 
     public String getCategoryName() {
         return categoryName;

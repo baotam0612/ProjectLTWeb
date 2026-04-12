@@ -53,4 +53,21 @@ public class CategoryServiceImpl implements CategoryService {
         categoryRepository.save(categoryEntity);
         return modelMapper.map(categoryEntity, CategoryDTO.class);
     }
+
+    @Override
+    public CategoryDTO updateCategoryStatus(Integer id, String status) {
+        CategoryEntity categoryEntity = categoryRepository.findById(id).orElseThrow(() -> new RuntimeException("Category Not Found"));
+        categoryEntity.setStatus(status);
+        categoryRepository.save(categoryEntity);
+        return modelMapper.map(categoryEntity, CategoryDTO.class);
+    }
+
+    @Override
+    public void deleteCategory(Integer id) {
+        CategoryEntity categoryEntity = categoryRepository.findById(id).orElseThrow(() -> new RuntimeException("Category Not Found"));
+        if (!"unactive".equalsIgnoreCase(categoryEntity.getStatus())) {
+            throw new RuntimeException("Cannot delete category. Status must be 'unactive'.");
+        }
+        categoryRepository.delete(categoryEntity);
+    }
 }

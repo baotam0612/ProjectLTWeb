@@ -39,11 +39,26 @@ public class CategoryController {
 
     // sửa danh mục
     @PutMapping("/categorys/{id}")
-    public CategoryResponse updateCategory( @PathVariable Integer id,@Valid @RequestBody CategoryRequest categoryRequest){
+    public CategoryResponse updateCategory( @PathVariable("id") Integer id,@Valid @RequestBody CategoryRequest categoryRequest){
         CategoryDTO categoryDTO = categoryService.updateCategory(id, categoryRequest);
         return new CategoryResponse(HttpStatus.OK,"Updated Category!", categoryDTO);
     }
 
-    //xód danh mục
+    // update status
+    @PutMapping("/categorys/{id}/status")
+    public CategoryResponse updateCategoryStatus(@PathVariable("id") Integer id, @RequestBody CategoryDTO categoryDTO) {
+        CategoryDTO categoryDTO1 = categoryService.updateCategoryStatus(id, categoryDTO.getStatus());
+        return new CategoryResponse(HttpStatus.OK,"Updated Category Status!", categoryDTO1);
+    }
 
+    // xoá danh mục
+    @DeleteMapping("/categorys/{id}")
+    public CategoryResponse deleteCategory(@PathVariable("id") Integer id) {
+        try {
+            categoryService.deleteCategory(id);
+            return new CategoryResponse(HttpStatus.OK, "Category deleted successfully!", null);
+        } catch (RuntimeException e) {
+            return new CategoryResponse(HttpStatus.BAD_REQUEST, e.getMessage(), null);
+        }
+    }
 }

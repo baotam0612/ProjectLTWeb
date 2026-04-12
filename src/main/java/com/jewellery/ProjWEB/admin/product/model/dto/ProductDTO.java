@@ -3,12 +3,21 @@ package com.jewellery.ProjWEB.admin.product.model.dto;
 import com.jewellery.ProjWEB.entity.CategoryEntity;
 
 public class ProductDTO {
+    private Integer id;
     private String productName;
     private double price;
     private String status;
     private String imageUrl;
     private String description;
     private String categoryName;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getCategoryName() {
         return categoryName;
@@ -41,7 +50,6 @@ public class ProductDTO {
     public void setStatus(String status) {
         this.status = status;
     }
-
 
     public String getImageUrl() {
         return imageUrl;

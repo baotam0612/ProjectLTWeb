@@ -21,7 +21,7 @@ public class CartEntity {
     @JoinColumn(name = "AccountID")
     private AccountEntity account;
 
-    @OneToMany(mappedBy = "cart")
+    @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<CartItemEntity> cartItems;
 
     public Integer getCartID() {

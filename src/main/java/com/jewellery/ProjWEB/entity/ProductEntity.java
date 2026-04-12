@@ -2,6 +2,7 @@ package com.jewellery.ProjWEB.entity;
 
 import jakarta.persistence.*;
 import java.math.BigDecimal;
+import java.util.List;
 
 @Entity
 @Table(name = "product")
@@ -31,6 +32,17 @@ public class ProductEntity {
     @JoinColumn(name = "CategoryID", nullable = false)
     private CategoryEntity category;
 
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<ProductDetailEntity> productDetails;
+
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<OrderDetailEntity> orderDetails;
+
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<CartItemEntity> cartItems;
+
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<ReviewEntity> reviews;
 
     public Integer getId() {
         return id;
@@ -86,5 +98,37 @@ public class ProductEntity {
 
     public void setCategory(CategoryEntity category) {
         this.category = category;
+    }
+
+    public List<ProductDetailEntity> getProductDetails() {
+        return productDetails;
+    }
+
+    public void setProductDetails(List<ProductDetailEntity> productDetails) {
+        this.productDetails = productDetails;
+    }
+
+    public List<OrderDetailEntity> getOrderDetails() {
+        return orderDetails;
+    }
+
+    public void setOrderDetails(List<OrderDetailEntity> orderDetails) {
+        this.orderDetails = orderDetails;
+    }
+
+    public List<CartItemEntity> getCartItems() {
+        return cartItems;
+    }
+
+    public void setCartItems(List<CartItemEntity> cartItems) {
+        this.cartItems = cartItems;
+    }
+
+    public List<ReviewEntity> getReviews() {
+        return reviews;
+    }
+
+    public void setReviews(List<ReviewEntity> reviews) {
+        this.reviews = reviews;
     }
 }

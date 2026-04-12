@@ -1,6 +1,5 @@
 package com.jewellery.ProjWEB.admin.product.controller;
 
-
 import com.jewellery.ProjWEB.admin.product.model.dto.ProductDTO;
 import com.jewellery.ProjWEB.admin.product.model.request.ProductRequest;
 import com.jewellery.ProjWEB.admin.product.model.response.ProductResponse;
@@ -14,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.net.http.HttpRequest;
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/admin")
 public class ProductController {
@@ -26,32 +26,30 @@ public class ProductController {
 
     // Tìm kiếm
     @GetMapping("/products")
-    public ProductResponse adminPage(ProductRequest productRequest){
+    public ProductResponse adminPage(ProductRequest productRequest) {
         List<ProductDTO> li = productService.findAll(productRequest);
-        return new ProductResponse(HttpStatus.OK,"Query Successfully", li);
+        return new ProductResponse(HttpStatus.OK, "Query Successfully", li);
     }
 
     // thêm sản phẩm
     @PostMapping("/products")
-    public ProductResponse createProduct(@Valid @RequestBody ProductRequest productRequest){
+    public ProductResponse createProduct(@Valid @RequestBody ProductRequest productRequest) {
 
         ProductDTO result = productService.addProduct(productRequest);
-        return new ProductResponse(HttpStatus.CREATED,"Add succesfully", result);
+        return new ProductResponse(HttpStatus.CREATED, "Add succesfully", result);
     }
 
     // sửa sản phẩm
     @PutMapping("/products/{id}")
-    public ProductResponse updateProduct(@PathVariable Integer id, @RequestBody ProductRequest productRequest){
+    public ProductResponse updateProduct(@PathVariable Integer id, @RequestBody ProductRequest productRequest) {
         ProductDTO res = productService.updateProduct(id, productRequest);
-        return new ProductResponse(HttpStatus.OK,"Updated product", res);
+        return new ProductResponse(HttpStatus.OK, "Updated product", res);
     }
 
     // xóa product
     @DeleteMapping("/products/{id}")
-    public ProductResponse deleteProduct(@PathVariable Integer id){
-        return null;
+    public ProductResponse deleteProduct(@PathVariable Integer id) {
+        productService.deleteProduct(id);
+        return new ProductResponse(HttpStatus.OK, "Deleted product successfully", null);
     }
-
-
-
 }

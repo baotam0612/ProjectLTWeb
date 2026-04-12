@@ -58,4 +58,14 @@ public class MaterialController {
         if(materialDTO == null) return new Response(HttpStatus.OK,"MaterialName existed!", "");
         return new Response(HttpStatus.ACCEPTED,"Update Successfully!", materialDTO);
     }
+
+    @DeleteMapping("/materials/{id}")
+    public Response deleteMaterial(@PathVariable("id") Integer id) {
+        try {
+            materialService.deleteMaterial(id);
+            return new Response(HttpStatus.OK, "Material deleted successfully!", null);
+        } catch (RuntimeException e) {
+            return new Response(HttpStatus.BAD_REQUEST, e.getMessage(), null);
+        }
+    }
 }

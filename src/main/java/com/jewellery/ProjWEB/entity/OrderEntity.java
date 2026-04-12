@@ -14,24 +14,30 @@ public class OrderEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer orderID;
 
-    @Column(name="OrderDate")
+    @Column(name = "OrderDate")
     private LocalDateTime orderDate;
 
-    @Column(name="TotalAmount")
+    @Column(name = "TotalAmount")
     private BigDecimal totalAmount;
 
-//    @Enumerated(EnumType.STRING)
-//    private OrderStatus orderStatus;
+    @Column(name = "OrderStatus")
+    private String orderStatus;
 
-    @Column(name="ShippingAddress")
+    // @Enumerated(EnumType.STRING)
+    // private OrderStatus orderStatus;
+
+    @Column(name = "ShippingAddress")
     private String shippingAddress;
 
     @ManyToOne
     @JoinColumn(name = "AccountID")
     private AccountEntity account;
 
-    @OneToMany(mappedBy = "order")
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<OrderDetailEntity> orderDetails;
+
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<PaymentEntity> payments;
 
     public Integer getOrderID() {
         return orderID;
@@ -65,6 +71,14 @@ public class OrderEntity {
         this.shippingAddress = shippingAddress;
     }
 
+    public String getOrderStatus() {
+        return orderStatus;
+    }
+
+    public void setOrderStatus(String orderStatus) {
+        this.orderStatus = orderStatus;
+    }
+
     public AccountEntity getAccount() {
         return account;
     }
@@ -79,5 +93,13 @@ public class OrderEntity {
 
     public void setOrderDetails(List<OrderDetailEntity> orderDetails) {
         this.orderDetails = orderDetails;
+    }
+
+    public List<PaymentEntity> getPayments() {
+        return payments;
+    }
+
+    public void setPayments(List<PaymentEntity> payments) {
+        this.payments = payments;
     }
 }

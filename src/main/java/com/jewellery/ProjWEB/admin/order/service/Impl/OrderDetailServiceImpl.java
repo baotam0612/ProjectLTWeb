@@ -1,6 +1,5 @@
 package com.jewellery.ProjWEB.admin.order.service.Impl;
 
-
 import com.jewellery.ProjWEB.admin.order.model.dto.OrderDTO;
 import com.jewellery.ProjWEB.admin.order.model.dto.OrderDetailDTO;
 import com.jewellery.ProjWEB.admin.order.repository.OrderDetailRepository;
@@ -17,7 +16,7 @@ public class OrderDetailServiceImpl implements OrderDetailService {
     private final OrderDetailRepository orderDetailRepository;
     private ModelMapper modelMapper;
 
-    public OrderDetailServiceImpl(OrderDetailRepository orderDetailRepository,ModelMapper modelMapper){
+    public OrderDetailServiceImpl(OrderDetailRepository orderDetailRepository, ModelMapper modelMapper) {
         this.orderDetailRepository = orderDetailRepository;
         this.modelMapper = modelMapper;
     }
@@ -26,8 +25,10 @@ public class OrderDetailServiceImpl implements OrderDetailService {
     public List<OrderDetailDTO> findAll() {
         List<OrderDetailEntity> orderDetailEntityList = orderDetailRepository.findAll();
         List<OrderDetailDTO> orderDetailDTOList = new ArrayList<>();
-        for(OrderDetailEntity item : orderDetailEntityList){
-            orderDetailDTOList.add(modelMapper.map(item, OrderDetailDTO.class));
+        for (OrderDetailEntity item : orderDetailEntityList) {
+            OrderDetailDTO orderDetailDTO = modelMapper.map(item, OrderDetailDTO.class);
+            orderDetailDTO.setProductName(item.getProduct().getProductName());
+            orderDetailDTOList.add(orderDetailDTO);
         }
         return orderDetailDTOList;
     }

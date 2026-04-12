@@ -25,19 +25,23 @@ public class AccountEntity {
     private String fullName;
     private String address;
 
-//    @Enumerated(EnumType.STRING)
-//    private Role role;
-
-
+    // @Enumerated(EnumType.STRING)
+    // private Role role;
 
     private LocalDateTime createdAt;
 
     // RELATIONSHIP
-    @OneToMany(mappedBy = "account")
+    @OneToMany(mappedBy = "account", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<OrderEntity> orders;
 
-    @OneToMany(mappedBy = "account")
+    @OneToMany(mappedBy = "account", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<CartEntity> carts;
+
+    @OneToMany(mappedBy = "account", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<ReviewEntity> reviews;
+
+    @OneToMany(mappedBy = "account", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<RewardPointEntity> rewardPoints;
 
     public Integer getAccountID() {
         return accountID;
@@ -94,15 +98,14 @@ public class AccountEntity {
     public void setAddress(String address) {
         this.address = address;
     }
-//
-//    public Role getRole() {
-//        return role;
-//    }
-//
-//    public void setRole(Role role) {
-//        this.role = role;
-//    }
-
+    //
+    // public Role getRole() {
+    // return role;
+    // }
+    //
+    // public void setRole(Role role) {
+    // this.role = role;
+    // }
 
     public LocalDateTime getCreatedAt() {
         return createdAt;
@@ -126,5 +129,21 @@ public class AccountEntity {
 
     public void setCarts(List<CartEntity> carts) {
         this.carts = carts;
+    }
+
+    public List<ReviewEntity> getReviews() {
+        return reviews;
+    }
+
+    public void setReviews(List<ReviewEntity> reviews) {
+        this.reviews = reviews;
+    }
+
+    public List<RewardPointEntity> getRewardPoints() {
+        return rewardPoints;
+    }
+
+    public void setRewardPoints(List<RewardPointEntity> rewardPoints) {
+        this.rewardPoints = rewardPoints;
     }
 }
