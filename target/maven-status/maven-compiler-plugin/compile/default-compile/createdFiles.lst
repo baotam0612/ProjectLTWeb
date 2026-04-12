@@ -19,6 +19,7 @@ com\jewellery\ProjWEB\exception\GlobalExceptionHandler.class
 com\jewellery\ProjWEB\admin\feedback\controller.class
 com\jewellery\ProjWEB\admin\category\model\CategoryRequest.class
 com\jewellery\ProjWEB\entity\CartEntity.class
+com\jewellery\ProjWEB\user\category\service\Impl\CategoryServiceImpl.class
 com\jewellery\ProjWEB\admin\order\repository\OrderDetailRepository.class
 com\jewellery\ProjWEB\auth\dto\ResetPasswordRequest.class
 com\jewellery\ProjWEB\entity\ProductDetailEntity.class
@@ -28,6 +29,7 @@ com\jewellery\ProjWEB\entity\ProductEntity.class
 com\jewellery\ProjWEB\config\DataInitializer.class
 com\jewellery\ProjWEB\admin\product\Specification\ProductSpecification.class
 com\jewellery\ProjWEB\entity\CategoryEntity.class
+com\jewellery\ProjWEB\user\category\service\CategoryService.class
 com\jewellery\ProjWEB\admin\order\service\Impl\OrderDetailServiceImpl.class
 com\jewellery\ProjWEB\user\product\controller\ProductController.class
 com\jewellery\ProjWEB\admin\order\service\OrderService.class
@@ -67,6 +69,7 @@ com\jewellery\ProjWEB\entity\ReviewEntity.class
 com\jewellery\ProjWEB\user\repository\UserRepository.class
 com\jewellery\ProjWEB\user\repository\RoleRepository.class
 com\jewellery\ProjWEB\admin\account\controller.class
+com\jewellery\ProjWEB\user\category\repository\CategoryRepository.class
 com\jewellery\ProjWEB\entity\CartItemEntity.class
 com\jewellery\ProjWEB\admin\payment\service\PaymentService.class
 com\jewellery\ProjWEB\entity\AccountEntity.class
@@ -82,6 +85,7 @@ com\jewellery\ProjWEB\admin\material\controller\MaterialController.class
 com\jewellery\ProjWEB\auth\dto\RegisterRequest.class
 com\jewellery\ProjWEB\auth\dto\AuthResponse.class
 com\jewellery\ProjWEB\config\ModelMapperConfig.class
+com\jewellery\ProjWEB\user\category\controller\CategoryController.class
 com\jewellery\ProjWEB\admin\payment\repository\PaymentRepository.class
 com\jewellery\ProjWEB\config\WebConfig.class
 com\jewellery\ProjWEB\admin\material\model\MaterialRequest.class
@@ -97,3 +101,4 @@ com\jewellery\ProjWEB\admin\product\model\dto\ProductDTO.class
 com\jewellery\ProjWEB\user\controller.class
 com\jewellery\ProjWEB\admin\product\service\Impl\ProductServiceImpl.class
 com\jewellery\ProjWEB\mail\EmailServiceImpl.class
+com\jewellery\ProjWEB\user\category\model\CategoryDTO.class

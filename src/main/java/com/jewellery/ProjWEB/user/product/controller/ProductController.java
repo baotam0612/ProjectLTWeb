@@ -9,13 +9,21 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+import org.springframework.web.bind.annotation.RequestMapping;
+
 @RestController("userProductController")
+@RequestMapping("/api/public")
 public class ProductController {
     @Autowired
     private ProductService productService;
-    @GetMapping(value="category/")
-    public List<ProductDTO> getProduct(@RequestParam(required= false) Integer CategoryID){
-        List<ProductDTO> result= productService.findByCategoryId(CategoryID);
-        return result;
+
+    @GetMapping("/products")
+    public List<ProductDTO> getAllPublicProducts() {
+        return productService.findAllPublicProducts();
+    }
+
+    @GetMapping("/products/category")
+    public List<ProductDTO> getProductByCategory(@RequestParam(required= false) Integer categoryId){
+        return productService.findByCategoryId(categoryId);
     }
 }

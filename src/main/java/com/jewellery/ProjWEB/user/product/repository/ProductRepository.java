@@ -8,4 +8,5 @@ import java.util.List;
 @Repository("userProductRepository")
 public interface ProductRepository extends JpaRepository<ProductEntity, Integer> {
     List<ProductEntity> findByCategoryId(Integer CategoryID);
+    List<ProductEntity> findByStatusIgnoreCase(String status);
 }

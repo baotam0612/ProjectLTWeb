@@ -18,9 +18,28 @@ public class ProductServiceImpl implements ProductService {
         List<ProductEntity> productEntities= productRepository.findByCategoryId(CategoryID);
         List<ProductDTO> result = new ArrayList<>();
         for(ProductEntity item: productEntities){
-            ProductDTO product= new ProductDTO();
+            ProductDTO product = new ProductDTO();
+            product.setId(item.getId());
             product.setProductName(item.getProductName());
-            product.setImageURL(item.getImageUrl());
+            product.setDescription(item.getDescription());
+            product.setPrice(item.getPrice());
+            product.setImageUrl(item.getImageUrl());
+            result.add(product);
+        }
+        return result;
+    }
+
+    @Override
+    public List<ProductDTO> findAllPublicProducts() {
+        List<ProductEntity> productEntities = productRepository.findByStatusIgnoreCase("ACTIVE");
+        List<ProductDTO> result = new ArrayList<>();
+        for(ProductEntity item: productEntities){
+            ProductDTO product = new ProductDTO();
+            product.setId(item.getId());
+            product.setProductName(item.getProductName());
+            product.setDescription(item.getDescription());
+            product.setPrice(item.getPrice());
+            product.setImageUrl(item.getImageUrl());
             result.add(product);
         }
         return result;

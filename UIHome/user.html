@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang người dùng</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-brand">🏠 Trang chủ</div>
+      <div class="nav-info">
+        <span id="navUsername"></span>
+        <span class="role-badge role-user">USER</span>
+        <button class="btn-logout" id="logoutBtn">Đăng xuất</button>
+      </div>
+    </nav>
+
+    <main class="dashboard">
+      <div class="dashboard-header">
+        <h2>Xin chào, <span id="welcomeName"></span>!</h2>
+        <p>Chào mừng bạn đến với hệ thống</p>
+      </div>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-icon">👤</div>
+          <div class="card-title">Hồ sơ cá nhân</div>
+          <div class="card-desc">Xem và chỉnh sửa thông tin cá nhân của bạn</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔑</div>
+          <div class="card-title">Đổi mật khẩu</div>
+          <div class="card-desc">Cập nhật mật khẩu tài khoản</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">📦</div>
+          <div class="card-title">Đơn hàng của tôi</div>
+          <div class="card-desc">Xem lịch sử và trạng thái đơn hàng</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">❤️</div>
+          <div class="card-title">Yêu thích</div>
+          <div class="card-desc">Danh sách sản phẩm đã lưu</div>
+        </div>
+      </div>
+
+      <div class="session-info">
+        <h3>Thông tin tài khoản</h3>
+        <table class="info-table">
+          <tr>
+            <td>Email</td>
+            <td id="infoEmail">—</td>
+          </tr>
+          <tr>
+            <td>Vai trò</td>
+            <td id="infoRoles">—</td>
+          </tr>
+        </table>
+      </div>
+    </main>
+
+    <script src="js/app.js"></script>
+    <script>
+      // Guard: chỉ ROLE_USER mới vào được (admin bị redirect)
+      Auth.requireRole("ROLE_USER");
+
+      const user = Auth.getUser();
+      document.getElementById("navUsername").textContent = user.username;
+      document.getElementById("welcomeName").textContent = user.username;
+      document.getElementById("infoEmail").textContent = user.email;
+      document.getElementById("infoRoles").textContent = user.roles.join(", ");
+
+      document.getElementById("logoutBtn").addEventListener("click", () => {
+        Auth.logout();
+      });
+    </script>
+  </body>
+</html>
