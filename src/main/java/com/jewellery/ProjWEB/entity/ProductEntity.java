@@ -2,6 +2,7 @@ package com.jewellery.ProjWEB.entity;
 
 import jakarta.persistence.*;
 import java.math.BigDecimal;
+import java.util.List;
 
 @Entity
 @Table(name = "product")
@@ -31,6 +32,16 @@ public class ProductEntity {
     @JoinColumn(name = "CategoryID", nullable = false)
     private CategoryEntity category;
 
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
+    private List<ProductDetailEntity> productDetails;
+
+    // Thêm Getter và Setter cho productDetails
+    public List<ProductDetailEntity> getProductDetails() {
+        return productDetails;
+    }
+    public void setProductDetails(List<ProductDetailEntity> productDetails) {
+        this.productDetails = productDetails;
+    }
 
     public Integer getId() {
         return id;
