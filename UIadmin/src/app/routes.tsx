@@ -10,6 +10,7 @@ import { PaymentManagement } from './pages/PaymentManagement';
 import { NotFound } from './pages/NotFound';
 import { Login } from './pages/Login';
 import { Register } from './pages/Register';
+import { VerifyEmail } from './pages/VerifyEmail';
 import { authService } from '../services/authService';
 
 const ProtectedLayout = () => {
@@ -27,6 +28,7 @@ const TestLayout = () => {
 export const router = createBrowserRouter([
   { path: '/login', Component: Login },
   { path: '/register', Component: Register },
+  { path: '/verify-email', Component: VerifyEmail },
   {
     path: '/',
     Component: TestLayout,

@@ -1,9 +1,15 @@
-import { useState, useEffect } from 'react';
+﻿import { useState, useEffect } from 'react';
 import { Plus, Pencil, Trash2 } from 'lucide-react';
 import { DataTable, Column } from '../components/DataTable';
 import { LoadingSpinner } from '../components/LoadingSpinner';
 import { Category } from '../data/mockData';
-import { getCategories, createCategory, updateCategory, deleteCategory, updateCategoryStatus } from '../api/CategoryAPI';
+import {
+  getCategories,
+  createCategory,
+  updateCategory,
+  deleteCategory,
+  updateCategoryStatus,
+} from '../api/CategoryAPI';
 import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
@@ -26,6 +32,9 @@ import { Textarea } from '../components/ui/textarea';
 import { ConfirmDialog } from '../components/ConfirmDialog';
 import { toast } from 'sonner';
 
+const getCategoryStatusLabel = (status: string) =>
+  status === 'Inactive' ? 'Ngừng hoạt động' : 'Hoạt động';
+
 export function CategoryManagement() {
   const [categories, setCategories] = useState<Category[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -34,7 +43,6 @@ export function CategoryManagement() {
   const [categoryToDelete, setCategoryToDelete] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
 
-  // Fetch categories when component mounts
   useEffect(() => {
     fetchCategories();
   }, []);
@@ -80,20 +88,20 @@ export function CategoryManagement() {
   };
 
   const handleDeleteConfirm = async () => {
-    if (categoryToDelete) {
-      try {
-        setIsLoading(true);
-        await deleteCategory(categoryToDelete);
-        setCategories(categories.filter((c) => c.id !== categoryToDelete));
-        toast.success('Xóa danh mục thành công');
-        setDeleteConfirmOpen(false);
-        setCategoryToDelete(null);
-      } catch (error) {
-        console.error('Failed to delete category:', error);
-        toast.error('Không thể xóa danh mục(Danh mục đang được sử dụng)');
-      } finally {
-        setIsLoading(false);
-      }
+    if (!categoryToDelete) return;
+
+    try {
+      setIsLoading(true);
+      await deleteCategory(categoryToDelete);
+      setCategories(categories.filter((c) => c.id !== categoryToDelete));
+      toast.success('Xóa danh mục thành công');
+      setDeleteConfirmOpen(false);
+      setCategoryToDelete(null);
+    } catch (error) {
+      console.error('Xóa danh mục thất bại:', error);
+      toast.error('Không thể xóa danh mục (danh mục đang được sử dụng)');
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -101,22 +109,18 @@ export function CategoryManagement() {
     try {
       setIsLoading(true);
       if (editingCategory) {
-        // Update existing category
         const updatedCategory = await updateCategory(editingCategory.id, formData);
-        setCategories(
-          categories.map((c) => (c.id === editingCategory.id ? updatedCategory : c))
-        );
-        toast.success('Category updated successfully');
+        setCategories(categories.map((c) => (c.id === editingCategory.id ? updatedCategory : c)));
+        toast.success('Cập nhật danh mục thành công');
       } else {
-        // Create new category
         const newCategory = await createCategory(formData);
         setCategories([...categories, newCategory]);
-        toast.success('Category added successfully');
+        toast.success('Thêm danh mục thành công');
       }
       setIsModalOpen(false);
     } catch (error) {
-      console.error('Failed to save category:', error);
-      toast.error('Failed to save category');
+      console.error('Không thể lưu danh mục:', error);
+      toast.error('Không thể lưu danh mục');
     } finally {
       setIsLoading(false);
     }
@@ -126,11 +130,11 @@ export function CategoryManagement() {
     try {
       setIsLoading(true);
       await updateCategoryStatus(category.id, newStatus);
-      toast.success(`Category status updated to ${newStatus}`);
+      toast.success(`Đã cập nhật trạng thái danh mục thành ${getCategoryStatusLabel(newStatus)}`);
       fetchCategories();
-    } catch (error: any) {
-      console.error('Update status error:', error);
-      toast.error('Failed to update category status');
+    } catch (error) {
+      console.error('Lỗi cập nhật trạng thái danh mục:', error);
+      toast.error('Không thể cập nhật trạng thái danh mục');
     } finally {
       setIsLoading(false);
     }
@@ -138,13 +142,14 @@ export function CategoryManagement() {
 
   const categoryColumns: Column<Category>[] = [
     { header: 'ID', accessor: 'id' },
-    { header: 'Name', accessor: 'name' },
-    { header: 'Description', accessor: 'description' },
+    { header: 'Tên danh mục', accessor: 'name' },
+    { header: 'Mô tả', accessor: 'description' },
     {
-      header: 'Status',
+      header: 'Trạng thái',
       accessor: (row) => {
         const rawStatus = row.status || 'Active';
-        const status = rawStatus.charAt(0).toUpperCase() + rawStatus.slice(1).toLowerCase();
+        const status =
+          rawStatus.charAt(0).toUpperCase() + rawStatus.slice(1).toLowerCase();
         return (
           <div onClick={(e) => e.stopPropagation()}>
             <Select
@@ -153,16 +158,17 @@ export function CategoryManagement() {
               disabled={isLoading}
             >
               <SelectTrigger
-                className={`w-[110px] h-7 text-xs font-semibold rounded-full border-0 focus:ring-0 focus:ring-offset-0 ring-0 px-2.5 ${status === 'Active'
-                  ? 'bg-green-100 text-green-700'
-                  : 'bg-red-100 text-red-700'
-                  }`}
+                className={`w-[140px] h-7 text-xs font-semibold rounded-full border-0 focus:ring-0 focus:ring-offset-0 ring-0 px-2.5 ${
+                  status === 'Active'
+                    ? 'bg-green-100 text-green-700'
+                    : 'bg-red-100 text-red-700'
+                }`}
               >
-                <div className="flex-1 text-left">{status}</div>
+                <div className="flex-1 text-left">{getCategoryStatusLabel(status)}</div>
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="Active">Active</SelectItem>
-                <SelectItem value="Inactive">Inactive</SelectItem>
+                <SelectItem value="Active">Hoạt động</SelectItem>
+                <SelectItem value="Inactive">Ngừng hoạt động</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -170,7 +176,7 @@ export function CategoryManagement() {
       },
     },
     {
-      header: 'Actions',
+      header: 'Thao tác',
       accessor: (row) => (
         <div className="flex gap-2">
           <Button
@@ -197,91 +203,90 @@ export function CategoryManagement() {
   return (
     <div className="space-y-6 animate-slideIn">
       {isLoading && <LoadingSpinner />}
-      {/* Header */}
+
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-semibold text-gray-900">Category Management</h1>
-          <p className="text-gray-600 mt-1">Organize your products into categories</p>
+          <h1 className="text-3xl font-semibold text-gray-900">Quản lý danh mục</h1>
+          <p className="text-gray-600 mt-1">Sắp xếp sản phẩm theo danh mục</p>
         </div>
         <Button onClick={handleAddCategory} className="bg-[#4F46E5] hover:bg-[#4338CA]">
           <Plus className="w-4 h-4 mr-2" />
-          Add Category
+          Thêm danh mục
         </Button>
       </div>
 
-      {/* Categories Table */}
       <Card className="border-gray-200 shadow-sm">
         <CardHeader>
-          <CardTitle>Categories ({categories.length})</CardTitle>
+          <CardTitle>Danh mục ({categories.length})</CardTitle>
         </CardHeader>
         <CardContent>
-          <DataTable columns={categoryColumns} data={categories} emptyMessage="No categories found" />
+          <DataTable
+            columns={categoryColumns}
+            data={categories}
+            emptyMessage="Không tìm thấy danh mục"
+          />
         </CardContent>
       </Card>
 
-      {/* Add/Edit Category Modal */}
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
         <DialogContent className="sm:max-w-[500px]">
           <DialogHeader>
-            <DialogTitle>
-              {editingCategory ? 'Edit Category' : 'Add New Category'}
-            </DialogTitle>
+            <DialogTitle>{editingCategory ? 'Cập nhật danh mục' : 'Thêm danh mục mới'}</DialogTitle>
           </DialogHeader>
           <div className="space-y-4 py-4">
             <div className="space-y-2">
-              <Label htmlFor="name">Category Name</Label>
+              <Label htmlFor="name">Tên danh mục</Label>
               <Input
                 id="name"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                placeholder="Enter category name"
+                placeholder="Nhập tên danh mục"
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="description">Description</Label>
+              <Label htmlFor="description">Mô tả</Label>
               <Textarea
                 id="description"
                 value={formData.description}
                 onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                placeholder="Enter category description"
+                placeholder="Nhập mô tả danh mục"
                 rows={3}
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="status">Status</Label>
+              <Label htmlFor="status">Trạng thái</Label>
               <Select
                 value={formData.status || 'Active'}
                 onValueChange={(val) => setFormData({ ...formData, status: val as 'Active' | 'Inactive' })}
               >
                 <SelectTrigger id="status">
-                  <SelectValue placeholder="Select status" />
+                  <SelectValue placeholder="Chọn trạng thái" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="Active">Active</SelectItem>
-                  <SelectItem value="Inactive">Inactive</SelectItem>
+                  <SelectItem value="Active">Hoạt động</SelectItem>
+                  <SelectItem value="Inactive">Ngừng hoạt động</SelectItem>
                 </SelectContent>
               </Select>
             </div>
           </div>
           <DialogFooter>
             <Button variant="outline" onClick={() => setIsModalOpen(false)}>
-              Cancel
+              Hủy
             </Button>
             <Button onClick={handleSubmit} className="bg-[#4F46E5] hover:bg-[#4338CA]">
-              {editingCategory ? 'Update' : 'Add'} Category
+              {editingCategory ? 'Cập nhật' : 'Thêm'} danh mục
             </Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>
 
-      {/* Delete Confirmation */}
       <ConfirmDialog
         open={deleteConfirmOpen}
         onOpenChange={setDeleteConfirmOpen}
         onConfirm={handleDeleteConfirm}
-        title="Delete Category"
-        description="Are you sure you want to delete this category? This action cannot be undone."
-        confirmText="Delete"
+        title="Xóa danh mục"
+        description="Bạn có chắc muốn xóa danh mục này? Hành động này không thể hoàn tác."
+        confirmText="Xóa"
       />
     </div>
   );

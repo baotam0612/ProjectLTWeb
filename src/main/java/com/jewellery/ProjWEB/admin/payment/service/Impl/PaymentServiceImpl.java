@@ -49,6 +49,20 @@ public class PaymentServiceImpl implements PaymentService {
     }
 
     @Override
+    public PaymentDTO updatePaymentStatus(Integer id, String status) {
+        PaymentEntity entity = paymentRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Payment Not Found with id: " + id));
+        entity.setPaymentStatus(status);
+        paymentRepository.save(entity);
+        
+        PaymentDTO dto = modelMapper.map(entity, PaymentDTO.class);
+        if(entity.getOrder() != null) {
+            dto.setOrderID(entity.getOrder().getOrderID());
+        }
+        return dto;
+    }
+
+    @Override
     public void deletePayment(Integer id) {
         PaymentEntity entity = paymentRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Payment Not Found with id: " + id));

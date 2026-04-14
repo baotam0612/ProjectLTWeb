@@ -12,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.jewellery.ProjWEB.auth.dto.*;
 import com.jewellery.ProjWEB.auth.token.PasswordResetToken;
 import com.jewellery.ProjWEB.auth.token.VerificationToken;
+import com.jewellery.ProjWEB.entity.AccountEntity;
 import com.jewellery.ProjWEB.mail.EmailService;
 import com.jewellery.ProjWEB.security.CustomUserDetailsService;
 import com.jewellery.ProjWEB.security.JwtService;
@@ -21,6 +22,7 @@ import com.jewellery.ProjWEB.user.entity.Role.ERole;
 import com.jewellery.ProjWEB.user.repository.*;
 
 import java.util.List;
+import java.time.LocalDateTime;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -31,6 +33,7 @@ import java.util.stream.Collectors;
 public class AuthServiceImpl implements AuthService {
 
     private final UserRepository userRepository;
+    private final AccountRepository accountRepository;
     private final RoleRepository roleRepository;
     private final VerificationTokenRepository verificationTokenRepository;
     private final PasswordResetTokenRepository passwordResetTokenRepository;
@@ -56,11 +59,23 @@ public class AuthServiceImpl implements AuthService {
                 .username(request.getUsername())
                 .email(request.getEmail())
                 .password(passwordEncoder.encode(request.getPassword()))
+                .fullName(request.getFullName())
+                .address(request.getAddress())
+                .phoneNumber(request.getPhoneNumber())
                 .enabled(false)
                 .roles(Set.of(userRole))
                 .build();
 
         userRepository.save(user);
+
+        AccountEntity account = new AccountEntity();
+        account.setUser(user);
+        account.setUsername(user.getUsername());
+        account.setFullName(user.getFullName());
+        account.setAddress(user.getAddress());
+        account.setPhoneNumber(user.getPhoneNumber());
+        account.setCreatedAt(LocalDateTime.now());
+        accountRepository.save(account);
 
         VerificationToken verificationToken = new VerificationToken(user);
         verificationTokenRepository.save(verificationToken);
@@ -99,7 +114,7 @@ public class AuthServiceImpl implements AuthService {
 
         log.info("User logged in: {}", user.getUsername());
 
-        return new AuthResponse(token, user.getId(), user.getUsername(), user.getEmail(), roles);
+        return new AuthResponse(token, user.getId(), user.getUsername(), user.getFullName(), user.getEmail(), roles);
     }
 
     @Override

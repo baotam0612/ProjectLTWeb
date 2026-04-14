@@ -5,18 +5,16 @@ const API_URL = 'http://localhost:8081/admin/payments';
 
 // Map API response to Payment interface
 const mapApiPaymentToPayment = (apiPayment: any, index: number): Payment => {
-  const methodMap: { [key: string]: 'credit_card' | 'paypal' | 'bank_transfer' } = {
-    'CREDIT_CARD': 'credit_card',
-    'PAYPAL': 'paypal',
-    'BANK_TRANSFER': 'bank_transfer',
+  const methodMap: { [key: string]: 'cod' } = {
+    'Thanh toán khi nhận hàng': 'cod',
   };
-  
+
   return {
     id: apiPayment.paymentID || apiPayment.id || `PAY${String(index + 1).padStart(3, '0')}`,
     orderId: apiPayment.orderID || apiPayment.orderId || `ORD${String(index + 1).padStart(5, '0')}`,
     amount: apiPayment.amount || apiPayment.totalAmount || 0,
-    method: apiPayment.paymentMethod ? (methodMap[apiPayment.paymentMethod] || 'credit_card') : (methodMap[apiPayment.method] || 'credit_card'),
-    status: apiPayment.paymentStatus === 'COMPLETED' ? 'completed' : apiPayment.paymentStatus === 'PENDING' ? 'pending' : apiPayment.status ? apiPayment.status : 'pending',
+    method: apiPayment.paymentMethod ? (methodMap[apiPayment.paymentMethod] || 'cod') : (methodMap[apiPayment.method] || 'cod'),
+    status: apiPayment.paymentStatus === 'Success' ? 'Success' : apiPayment.paymentStatus === 'Failed' ? 'Failed' : 'Failed',
     date: apiPayment.paymentDate || apiPayment.date || new Date().toISOString().split('T')[0],
   };
 };
@@ -50,4 +48,12 @@ export const updatePayment = async (id: number | string, data: any): Promise<Pay
 export const deletePayment = async (id: number | string) => {
   const response = await axios.delete(`${API_URL}/${id}`);
   return response.data;
+};
+
+export const updatePaymentStatusAPI = async (id: number | string, status: string): Promise<Payment> => {
+  const response = await axios.put(`${API_URL}/${id}/status`, null, {
+    params: { status }
+  });
+  const paymentData = response.data.data || response.data;
+  return mapApiPaymentToPayment(paymentData, 0);
 };

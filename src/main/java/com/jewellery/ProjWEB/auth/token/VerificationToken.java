@@ -38,7 +38,7 @@ public class VerificationToken {
 
     public VerificationToken(User user) {
         this.user = user;
-        this.token = UUID.randomUUID().toString();
+        this.token = String.format("%06d", new java.util.Random().nextInt(1000000));
         this.expiryDate = LocalDateTime.now().plusHours(EXPIRATION_HOURS);
     }
 

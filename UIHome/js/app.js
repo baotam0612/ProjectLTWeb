@@ -50,18 +50,110 @@ const API = {
 const Auth = {
   KEY_TOKEN: "auth_token",
   KEY_USER: "auth_user",
+  AUTH_QUERY_KEYS: ["authToken", "authUsername", "authFullName", "authEmail", "authRoles"],
 
   saveSession(data) {
+    const existingUser = this.getUser() || {};
     localStorage.setItem(this.KEY_TOKEN, data.token);
     localStorage.setItem(
       this.KEY_USER,
       JSON.stringify({
         id: data.id,
         username: data.username,
+        fullName: data.fullName || existingUser.fullName || data.username,
         email: data.email,
         roles: data.roles || [],
       }),
     );
+  },
+
+  consumeSessionFromUrl() {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const authToken = params.get("authToken");
+      const authUsername = params.get("authUsername");
+
+      if (!authToken || !authUsername) return;
+
+      const authFullName = params.get("authFullName") || authUsername;
+      const authEmail = params.get("authEmail") || "";
+      const rawRoles = params.get("authRoles");
+      let roles = [];
+
+      if (rawRoles) {
+        try {
+          const parsed = JSON.parse(rawRoles);
+          roles = Array.isArray(parsed) ? parsed : [];
+        } catch {
+          roles = [];
+        }
+      }
+
+      localStorage.setItem(this.KEY_TOKEN, authToken);
+      localStorage.setItem(
+        this.KEY_USER,
+        JSON.stringify({
+          username: authUsername,
+          fullName: authFullName,
+          email: authEmail,
+          roles,
+        }),
+      );
+
+      this.AUTH_QUERY_KEYS.forEach((key) => params.delete(key));
+      const cleanQuery = params.toString();
+      const cleanUrl = `${window.location.pathname}${cleanQuery ? `?${cleanQuery}` : ""}${window.location.hash || ""}`;
+      window.history.replaceState({}, document.title, cleanUrl);
+    } catch {
+      // no-op
+    }
+  },
+
+  decodeTokenPayload(token) {
+    try {
+      const parts = token.split(".");
+      if (parts.length !== 3) return null;
+      const base64 = parts[1].replace(/-/g, "+").replace(/_/g, "/");
+      const pad = base64.length % 4 ? "=".repeat(4 - (base64.length % 4)) : "";
+      return JSON.parse(atob(base64 + pad));
+    } catch {
+      return null;
+    }
+  },
+
+  normalizeSession() {
+    this.consumeSessionFromUrl();
+
+    const token = this.getToken();
+    if (!token) {
+      localStorage.removeItem(this.KEY_USER);
+      return;
+    }
+
+    const payload = this.decodeTokenPayload(token);
+    if (!payload) return;
+
+    // Token hết hạn thì xóa session cũ để không hiển thị sai user
+    if (payload.exp && Date.now() >= payload.exp * 1000) {
+      localStorage.removeItem(this.KEY_TOKEN);
+      localStorage.removeItem(this.KEY_USER);
+      return;
+    }
+
+    const tokenUsername = payload.sub;
+    if (!tokenUsername) return;
+
+    const currentUser = this.getUser() || {};
+    if (currentUser.username !== tokenUsername) {
+      localStorage.setItem(
+        this.KEY_USER,
+        JSON.stringify({
+          ...currentUser,
+          username: tokenUsername,
+          fullName: tokenUsername,
+        }),
+      );
+    }
   },
 
   getToken() {
@@ -81,24 +173,31 @@ const Auth = {
     return user ? user.roles : [];
   },
 
+  getDisplayName() {
+    const user = this.getUser();
+    if (!user) return "";
+    return user.fullName || user.username || "";
+  },
+
   isLoggedIn() {
+    this.normalizeSession();
     return !!this.getToken() && !!this.getUser();
   },
 
   logout() {
     localStorage.removeItem(this.KEY_TOKEN);
     localStorage.removeItem(this.KEY_USER);
-    window.location.href = "index.html";
+    window.location.href = `${ADMIN_URL}/login`;
   },
 
   /**
    * Guard: kiểm tra đăng nhập + quyền.
-   * Nếu chưa đăng nhập → về index.html
+   * Nếu chưa đăng nhập → về trang đăng nhập
    * Nếu không đúng role → về trang tương ứng của role đó
    */
   requireRole(requiredRole) {
     if (!this.isLoggedIn()) {
-      window.location.href = "index.html";
+      window.location.href = `${ADMIN_URL}/login`;
       return;
     }
     const roles = this.getRoles();
@@ -172,15 +271,25 @@ const UI = {
    * Tự động gán link Admin từ biến ADMIN_URL vào các thẻ có id="adminLink"
    */
   syncAdminLinks() {
+    Auth.normalizeSession();
     const adminLink = document.getElementById("adminLink");
     if (adminLink) {
-      // Nếu là Admin thì dẫn vào trang login của Admin Dashboard trên cổng NPM
-      const roles = Auth.getRoles();
-      if (Auth.isLoggedIn() && roles.includes("ROLE_ADMIN")) {
-        adminLink.href = `${ADMIN_URL}/login`;
+      const displayName = Auth.getDisplayName();
+      adminLink.textContent = displayName || "Tài khoản";
+      adminLink.onclick = null;
+
+      // Đã đăng nhập: click vào tên tài khoản để đăng xuất ngay.
+      if (Auth.isLoggedIn()) {
+        adminLink.href = "#";
+        adminLink.title = "Đăng xuất";
+        adminLink.onclick = (event) => {
+          event.preventDefault();
+          Auth.logout();
+        };
       } else {
-        // Nếu chưa đăng nhập hoặc là User thường, dẫn tới trang login của UIHome
-        adminLink.href = "index.html"; 
+        // Chưa đăng nhập: đưa về trang đăng nhập
+        adminLink.href = `${ADMIN_URL}/login`;
+        adminLink.title = "Đăng nhập";
       }
     }
   },

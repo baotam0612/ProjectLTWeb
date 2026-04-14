@@ -47,6 +47,7 @@ public class SecurityConfig {
                     .requestMatchers("/api/public/**").permitAll()
                     .requestMatchers("/admin/**", "/UIadmin/**", "/static/**", "/css/**", "/js/**", "/images/**").permitAll()
                     .requestMatchers("/api/admin/**").hasAuthority("ROLE_ADMIN")
+                    .requestMatchers("/api/user/**").authenticated()
                     .anyRequest().authenticated())
                 .authenticationProvider(authenticationProvider())
                 .addFilterBefore(jwtAuthenticationFilter,

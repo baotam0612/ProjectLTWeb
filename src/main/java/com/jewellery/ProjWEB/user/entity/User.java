@@ -38,6 +38,10 @@ public class User {
     @Size(max = 120)
     private String password;
 
+    private String fullName;
+    private String address;
+    private String phoneNumber;
+
     @Column(nullable = false)
     private boolean enabled = false;
 

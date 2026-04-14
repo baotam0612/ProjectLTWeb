@@ -1,6 +1,7 @@
 package com.jewellery.ProjWEB.user.product.model;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 public class ProductDTO {
     private Integer id;
@@ -8,6 +9,7 @@ public class ProductDTO {
     private String description;
     private BigDecimal price;
     private String imageUrl;
+    private List<ProductDetailDTO> productDetails;
 
     public ProductDTO() {
     }
@@ -58,5 +60,13 @@ public class ProductDTO {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
+    }
+
+    public List<ProductDetailDTO> getProductDetails() {
+        return productDetails;
+    }
+
+    public void setProductDetails(List<ProductDetailDTO> productDetails) {
+        this.productDetails = productDetails;
     }
 }

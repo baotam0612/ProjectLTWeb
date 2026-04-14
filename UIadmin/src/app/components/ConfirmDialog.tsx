@@ -1,4 +1,4 @@
-import {
+﻿import {
   AlertDialog,
   AlertDialogAction,
   AlertDialogCancel,
@@ -25,8 +25,8 @@ export function ConfirmDialog({
   onConfirm,
   title,
   description,
-  confirmText = 'Confirm',
-  cancelText = 'Cancel',
+  confirmText = 'Xác nhận',
+  cancelText = 'Hủy',
 }: ConfirmDialogProps) {
   return (
     <AlertDialog open={open} onOpenChange={onOpenChange}>

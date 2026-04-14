@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+﻿import { ReactNode } from 'react';
 import {
   Table,
   TableBody,
@@ -23,7 +23,7 @@ interface DataTableProps<T> {
 export function DataTable<T extends { id: string }>({
   columns,
   data,
-  emptyMessage = 'No data available',
+  emptyMessage = 'Không có dữ liệu',
 }: DataTableProps<T>) {
   return (
     <div className="rounded-lg border border-gray-200 bg-white overflow-hidden">

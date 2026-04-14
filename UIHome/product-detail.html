@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/base.css?v=20260414-0002">
+    <link rel="stylesheet" href="./css/sanpham.css?v=20260414-0002">
+    <link rel="stylesheet" href="./css/product-detail.css?v=20260414-0002">
+    <title>Chi tiết sản phẩm | SHYNE</title>
+</head>
+<body>
+    <div data-include="header.html"></div>
+
+    <div class="product-detail-section">
+        <div class="container">
+            <div id="productDetailContent" class="detail-container">
+                <div class="text-center w-100 py-5">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="sr-only">Đang tải...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="orderOverlay" class="order-overlay">
+        <div class="order-modal">
+            <h3>Xác nhận địa chỉ giao hàng</h3>
+            <p id="orderProductName" style="font-weight: 600; margin-bottom: 10px;"></p>
+            <label for="shippingAddress" style="display: block; margin-bottom: 5px; font-size: 14px; color: #666;">Địa chỉ nhận hàng:</label>
+            <input type="text" id="shippingAddress" placeholder="Nhập địa chỉ giao hàng của bạn...">
+
+            <label for="orderQuantity" style="display: block; margin-bottom: 5px; font-size: 14px; color: #666;">Số lượng:</label>
+            <input type="number" id="orderQuantity" value="1" min="1" style="width: 80px; margin-bottom: 15px;">
+
+            <label for="paymentMethod" style="display: block; margin-bottom: 5px; font-size: 14px; color: #666;">Phương thức thanh toán:</label>
+            <select id="paymentMethod" style="width: 100%; margin-bottom: 20px; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                <option value="Thanh toán khi nhận hàng">Thanh toán khi nhận hàng (COD)</option>
+            </select>
+
+            <div class="order-modal-footer">
+                <button class="btn-cancel" onclick="closeOrderModal()">Hủy</button>
+                <button class="btn-confirm" id="confirmOrderBtn">Xác nhận đặt hàng</button>
+            </div>
+        </div>
+    </div>
+
+    <div data-include="footer.html"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        async function includeHTML() {
+            const elements = document.querySelectorAll("[data-include]");
+            for (const el of elements) {
+                const file = el.getAttribute("data-include");
+                try {
+                    const response = await fetch(file);
+                    if (response.ok) {
+                        const data = await response.text();
+                        el.innerHTML = data;
+                        el.removeAttribute("data-include");
+                    }
+                } catch (error) {
+                    console.error("Lỗi tải include:", file, error);
+                }
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", async () => {
+            await includeHTML();
+            if (typeof UI !== "undefined") UI.syncAdminLinks();
+        });
+    </script>
+    <script src="./js/app.js?v=20260414-0002"></script>
+    <script src="./js/product-detail.js?v=20260414-0002"></script>
+</body>
+</html>

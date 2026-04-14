@@ -28,6 +28,16 @@ public class PaymentController {
         }
     }
 
+    @PutMapping("/payments/{id}/status")
+    public Response updatePaymentStatus(@PathVariable("id") Integer id, @RequestParam("status") String status) {
+        try {
+            PaymentDTO updated = paymentService.updatePaymentStatus(id, status);
+            return new Response(HttpStatus.OK, "Payment status updated successfully!", updated);
+        } catch (Exception e) {
+            return new Response(HttpStatus.BAD_REQUEST, e.getMessage(), null);
+        }
+    }
+
     @DeleteMapping("/payments/{id}")
     public Response deletePayment(@PathVariable("id") Integer id) {
         try {

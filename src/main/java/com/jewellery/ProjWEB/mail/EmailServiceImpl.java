@@ -28,26 +28,27 @@ public class EmailServiceImpl implements EmailService {
 
     @Override
     public void sendVerificationEmail(String to, String username, String token) {
-        String subject = "Xác nhận tài khoản của bạn";
-        String verifyUrl = backendUrl + "/api/auth/verify?token=" + token;
+        String subject = "Mã xác nhận tài khoản của bạn";
         String content = """
                 <html>
-                <body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-                    <h2 style="color: #4CAF50;">Xin chào, %s!</h2>
-                    <p>Cảm ơn bạn đã đăng ký tài khoản.</p>
-                    <p>Vui lòng nhấn vào nút bên dưới để xác nhận địa chỉ email của bạn:</p>
-                    <div style="text-align: center; margin: 30px 0;">
-                        <a href="%s"
-                           style="background-color: #4CAF50; color: white; padding: 14px 28px;
-                                  text-decoration: none; border-radius: 5px; font-size: 16px;">
-                            Xác nhận Email
-                        </a>
+                <body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #333;">
+                    <div style="background-color: #f8f9fa; padding: 20px; border-radius: 10px;">
+                        <h2 style="color: #4CAF50; text-align: center;">Chào mừng %s!</h2>
+                        <p style="font-size: 16px;">Cảm ơn bạn đã đăng ký. Vui lòng sử dụng mã xác nhận bên dưới để kích hoạt tài khoản của bạn:</p>
+                        <div style="text-align: center; margin: 30px 0;">
+                            <span style="background-color: #ffffff; border: 2px dashed #4CAF50; color: #4CAF50;
+                                         padding: 15px 30px; border-radius: 5px; font-size: 32px; font-weight: bold;
+                                         letter-spacing: 5px;">
+                                %s
+                            </span>
+                        </div>
+                        <p style="color: #666; font-size: 14px; text-align: center;">Mã này sẽ hết hạn trong 24 giờ.</p>
+                        <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+                        <p style="color: #888; font-size: 12px;">Nếu bạn không thực hiện yêu cầu này, vui lòng bỏ qua email này.</p>
                     </div>
-                    <p style="color: #888;">Link có hiệu lực trong 24 giờ.</p>
-                    <p style="color: #888;">Nếu bạn không đăng ký tài khoản này, vui lòng bỏ qua email này.</p>
                 </body>
                 </html>
-                """.formatted(username, verifyUrl);
+                """.formatted(username, token);
 
         sendHtmlEmail(to, subject, content);
     }

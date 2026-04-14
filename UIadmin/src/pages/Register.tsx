@@ -76,6 +76,7 @@ export function Register() {
         authService.setAuth(response.token, {
           id: response.id,
           username: response.username,
+          fullName: response.fullName || response.username,
           email: response.email,
           roles: response.roles,
         });

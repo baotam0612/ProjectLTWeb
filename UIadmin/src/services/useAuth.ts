@@ -28,6 +28,7 @@ export function useAuth(): UseAuthReturn {
         const authUser = {
           id: response.id,
           username: response.username,
+          fullName: response.fullName || response.username,
           email: response.email,
           roles: response.roles,
         };
@@ -57,6 +58,7 @@ export function useAuth(): UseAuthReturn {
           const authUser = {
             id: response.id,
             username: response.username,
+            fullName: response.fullName || response.username,
             email: response.email,
             roles: response.roles,
           };

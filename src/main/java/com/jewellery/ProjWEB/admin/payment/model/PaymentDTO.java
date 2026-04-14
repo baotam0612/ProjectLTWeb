@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
 public class PaymentDTO {
     private Integer paymentID;
     private String paymentMethod;
+    private String paymentStatus;
     private LocalDateTime paymentDate;
     private BigDecimal amount;
     private Integer orderID; // Linked to OrderEntity
@@ -24,6 +25,14 @@ public class PaymentDTO {
 
     public void setPaymentMethod(String paymentMethod) {
         this.paymentMethod = paymentMethod;
+    }
+
+    public String getPaymentStatus() {
+        return paymentStatus;
+    }
+
+    public void setPaymentStatus(String paymentStatus) {
+        this.paymentStatus = paymentStatus;
     }
 
     public LocalDateTime getPaymentDate() {

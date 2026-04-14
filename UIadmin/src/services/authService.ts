@@ -5,6 +5,7 @@ export interface AuthResponse {
   type?: string;
   id: number;
   username: string;
+  fullName?: string;
   email: string;
   roles: string[];
   message?: string;
@@ -19,11 +20,15 @@ export interface RegisterRequest {
   username: string;
   email: string;
   password: string;
+  fullName: string;
+  address: string;
+  phoneNumber: string;
 }
 
 export interface AuthUser {
   id: number;
   username: string;
+  fullName?: string;
   email: string;
   roles: string[];
 }
@@ -37,7 +42,7 @@ export const authService = {
     });
     if (!response.ok) {
       const errorData = await response.json().catch(() => ({}));
-      throw new Error(errorData.message || 'Login failed');
+      throw new Error(errorData.message || 'Đăng nhập thất bại');
     }
     return response.json();
   },
@@ -50,9 +55,20 @@ export const authService = {
     });
     if (!response.ok) {
       const errorData = await response.json().catch(() => ({}));
-      throw new Error(errorData.message || 'Registration failed');
+      throw new Error(errorData.message || 'Đăng ký thất bại');
     }
     return response.json();
+  },
+
+  verifyEmail: async (token: string): Promise<string> => {
+    const response = await fetch(`${API_BASE}/verify?token=${token}`, {
+      method: 'GET',
+    });
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({}));
+      throw new Error(errorData.message || 'Xác minh thất bại');
+    }
+    return response.text();
   },
 
   logout: () => {
@@ -64,7 +80,13 @@ export const authService = {
   
   getUser: (): AuthUser | null => {
     const user = localStorage.getItem('auth_user');
-    return user ? JSON.parse(user) : null;
+    if (!user) return null;
+    try {
+      return JSON.parse(user);
+    } catch {
+      localStorage.removeItem('auth_user');
+      return null;
+    }
   },
 
   setAuth: (token: string, user: AuthUser) => {

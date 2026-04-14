@@ -31,6 +31,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         const authUser: AuthUser = {
           id: response.id,
           username: response.username,
+          fullName: response.fullName || response.username,
           email: response.email,
           roles: response.roles,
         };
@@ -59,6 +60,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
           const authUser: AuthUser = {
             id: response.id,
             username: response.username,
+            fullName: response.fullName || response.username,
             email: response.email,
             roles: response.roles,
           };

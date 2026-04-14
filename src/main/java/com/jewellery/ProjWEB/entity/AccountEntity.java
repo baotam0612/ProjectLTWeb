@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import javax.management.relation.Role;
 import java.time.LocalDateTime;
 import java.util.List;
+import com.jewellery.ProjWEB.user.entity.User;
 
 @Entity
 @Table(name = "Account")
@@ -18,19 +19,17 @@ public class AccountEntity {
     private String username;
 
     @Column(nullable = false)
-    private String password;
-
-    private String email;
     private String phoneNumber;
+
+    @Column(name = "fullName")
     private String fullName;
+
+    @Column(name = "address")
     private String address;
 
-    // @Enumerated(EnumType.STRING)
-    // private Role role;
-
+    @Column(name = "createdAt")
     private LocalDateTime createdAt;
 
-    // RELATIONSHIP
     @OneToMany(mappedBy = "account", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<OrderEntity> orders;
 
@@ -42,6 +41,10 @@ public class AccountEntity {
 
     @OneToMany(mappedBy = "account", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<RewardPointEntity> rewardPoints;
+
+    @OneToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
     public Integer getAccountID() {
         return accountID;
@@ -57,22 +60,6 @@ public class AccountEntity {
 
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public String getPhoneNumber() {
@@ -145,5 +132,13 @@ public class AccountEntity {
 
     public void setRewardPoints(List<RewardPointEntity> rewardPoints) {
         this.rewardPoints = rewardPoints;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }

@@ -49,13 +49,25 @@ export function Login() {
         authService.setAuth(response.token, {
           id: response.id,
           username: response.username,
+          fullName: response.fullName || response.username,
           email: response.email,
           roles: response.roles,
         });
         
         setSuccess('Login successful! Redirecting...');
         setTimeout(() => {
-          navigate('/');
+          if ((response.roles || []).includes('ROLE_ADMIN')) {
+            navigate('/');
+            return;
+          }
+
+          const target = new URL('http://localhost:8081/trangchu.html');
+          target.searchParams.set('authToken', response.token);
+          target.searchParams.set('authUsername', response.username);
+          target.searchParams.set('authFullName', response.fullName || response.username);
+          target.searchParams.set('authEmail', response.email || '');
+          target.searchParams.set('authRoles', JSON.stringify(response.roles || []));
+          window.location.href = target.toString();
         }, 1000);
       }
     } catch (err) {

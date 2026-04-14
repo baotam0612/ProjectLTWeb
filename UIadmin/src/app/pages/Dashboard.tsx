@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+﻿import { useState, useEffect } from 'react';
 import { Users, ShoppingCart, DollarSign, Package } from 'lucide-react';
 import { StatsCard } from '../components/StatsCard';
 import { DataTable, Column } from '../components/DataTable';
@@ -32,7 +32,7 @@ export function Dashboard() {
       setTotalUsers(usersData.length);
       setTotalProducts(productsData.length);
     } catch (error) {
-      console.error('Failed to fetch dashboard data:', error);
+      console.error('Không thể tải dữ liệu bảng điều khiển:', error);
     } finally {
       setIsLoading(false);
     }
@@ -41,15 +41,15 @@ export function Dashboard() {
   const recentOrders = orders.slice(0, 5);
 
   const orderColumns: Column<Order>[] = [
-    { header: 'Order ID', accessor: 'id' },
-    { header: 'Customer', accessor: 'userName' },
-    { header: 'Items', accessor: 'items' },
+    { header: 'Mã đơn', accessor: 'id' },
+    { header: 'Khách hàng', accessor: 'userName' },
+    { header: 'Số lượng', accessor: 'items' },
     {
-      header: 'Total',
+      header: 'Tổng tiền',
       accessor: (row) => `$${row.totalAmount.toFixed(2)}`,
     },
     {
-      header: 'Status',
+      header: 'Trạng thái',
       accessor: (row) => {
         const status = row.orderStatus || row.status;
         return (
@@ -62,27 +62,30 @@ export function Dashboard() {
                 : 'bg-red-100 text-red-700'
             }`}
           >
-            {typeof status === 'string' && status.charAt(0).toUpperCase() + status.slice(1).toLowerCase()}
+            {typeof status === 'string' &&
+              (status.toLowerCase() === 'completed'
+                ? 'Hoàn thành'
+                : status.toLowerCase() === 'pending'
+                ? 'Chờ xử lý'
+                : 'Đã hủy')}
           </span>
         );
       },
     },
-    { header: 'Date', accessor: 'orderDate' },
+    { header: 'Ngày đặt', accessor: 'orderDate' },
   ];
 
   return (
     <div className="space-y-6 animate-slideIn">
       {isLoading && <LoadingSpinner />}
-      {/* Header */}
       <div>
-        <h1 className="text-3xl font-semibold text-gray-900">Dashboard</h1>
-        <p className="text-gray-600 mt-1">Welcome back! Here's what's happening today.</p>
+        <h1 className="text-3xl font-semibold text-gray-900">Bảng điều khiển</h1>
+        <p className="text-gray-600 mt-1">Tổng quan hoạt động hệ thống hôm nay.</p>
       </div>
 
-      {/* Stats Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <StatsCard
-          title="Total Users"
+          title="Tổng người dùng"
           value={totalUsers.toString()}
           icon={Users}
           trend={{ value: 12.5, isPositive: true }}
@@ -90,7 +93,7 @@ export function Dashboard() {
           iconBgColor="bg-blue-50"
         />
         <StatsCard
-          title="Total Orders"
+          title="Tổng đơn hàng"
           value={orders.length.toString()}
           icon={ShoppingCart}
           trend={{ value: 8.3, isPositive: true }}
@@ -98,7 +101,7 @@ export function Dashboard() {
           iconBgColor="bg-green-50"
         />
         <StatsCard
-          title="Revenue"
+          title="Doanh thu"
           value={`$${orders.reduce((sum, order) => sum + order.totalAmount, 0).toFixed(0)}`}
           icon={DollarSign}
           trend={{ value: 15.7, isPositive: true }}
@@ -106,7 +109,7 @@ export function Dashboard() {
           iconBgColor="bg-purple-50"
         />
         <StatsCard
-          title="Products"
+          title="Sản phẩm"
           value={totalProducts.toString()}
           icon={Package}
           trend={{ value: 3.2, isPositive: false }}
@@ -115,11 +118,10 @@ export function Dashboard() {
         />
       </div>
 
-      {/* Revenue Chart */}
       <Card className="border-gray-200 shadow-sm">
         <CardHeader>
-          <CardTitle>Revenue Overview</CardTitle>
-          <p className="text-sm text-gray-600 mt-1">Monthly revenue for the past year</p>
+          <CardTitle>Tổng quan doanh thu</CardTitle>
+          <p className="text-sm text-gray-600 mt-1">Doanh thu theo tháng trong năm qua</p>
         </CardHeader>
         <CardContent>
           <div className="h-[300px]">
@@ -149,11 +151,10 @@ export function Dashboard() {
         </CardContent>
       </Card>
 
-      {/* Recent Orders */}
       <Card className="border-gray-200 shadow-sm">
         <CardHeader>
-          <CardTitle>Recent Orders</CardTitle>
-          <p className="text-sm text-gray-600 mt-1">Latest orders from your store</p>
+          <CardTitle>Đơn hàng gần đây</CardTitle>
+          <p className="text-sm text-gray-600 mt-1">Những đơn hàng mới nhất trong cửa hàng</p>
         </CardHeader>
         <CardContent>
           <DataTable columns={orderColumns} data={recentOrders} />

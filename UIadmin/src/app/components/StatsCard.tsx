@@ -1,4 +1,4 @@
-import { LucideIcon } from 'lucide-react';
+﻿import { LucideIcon } from 'lucide-react';
 import { Card, CardContent } from './ui/card';
 
 interface StatsCardProps {
@@ -37,7 +37,7 @@ export function StatsCard({
                 >
                   {trend.isPositive ? '↑' : '↓'} {Math.abs(trend.value)}%
                 </span>
-                <span className="text-xs text-gray-500">vs last month</span>
+                <span className="text-xs text-gray-500">so với tháng trước</span>
               </div>
             )}
           </div>

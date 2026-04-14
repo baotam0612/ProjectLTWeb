@@ -6,5 +6,6 @@ import java.util.List;
 public interface PaymentService {
     List<PaymentDTO> findAll();
     PaymentDTO findById(Integer id);
+    PaymentDTO updatePaymentStatus(Integer id, String status);
     void deletePayment(Integer id);
 }

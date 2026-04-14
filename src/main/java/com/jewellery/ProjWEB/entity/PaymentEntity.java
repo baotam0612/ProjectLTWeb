@@ -15,8 +15,8 @@ public class PaymentEntity {
 
     private String paymentMethod;
 
-    // @Enumerated(EnumType.STRING)
-    // private PaymentStatus paymentStatus;
+    @Column(name = "PaymentStatus")
+    private String paymentStatus;
 
     private LocalDateTime paymentDate;
     private BigDecimal amount;
@@ -39,6 +39,14 @@ public class PaymentEntity {
 
     public void setPaymentMethod(String paymentMethod) {
         this.paymentMethod = paymentMethod;
+    }
+
+    public String getPaymentStatus() {
+        return paymentStatus;
+    }
+
+    public void setPaymentStatus(String paymentStatus) {
+        this.paymentStatus = paymentStatus;
     }
 
     public LocalDateTime getPaymentDate() {

@@ -24,6 +24,24 @@
           </div>
 
           <div class="form-group">
+            <label for="fullName">Họ và tên</label>
+            <input type="text" id="fullName" placeholder="Nguyễn Văn A" />
+            <span class="field-error" id="fullNameError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="address">Địa chỉ</label>
+            <input type="text" id="address" placeholder="Hà Nội, Việt Nam" />
+            <span class="field-error" id="addressError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="phoneNumber">Số điện thoại</label>
+            <input type="text" id="phoneNumber" placeholder="0123456789" />
+            <span class="field-error" id="phoneNumberError"></span>
+          </div>
+
+          <div class="form-group">
             <label for="email">Email</label>
             <input type="email" id="email" placeholder="example@gmail.com" autocomplete="email" />
             <span class="field-error" id="emailError"></span>
@@ -64,6 +82,9 @@
         UI.clearErrors();
 
         const username = document.getElementById("username").value.trim();
+        const fullName = document.getElementById("fullName").value.trim();
+        const address = document.getElementById("address").value.trim();
+        const phoneNumber = document.getElementById("phoneNumber").value.trim();
         const email = document.getElementById("email").value.trim();
         const password = document.getElementById("password").value;
         const confirmPassword = document.getElementById("confirmPassword").value;
@@ -71,6 +92,18 @@
         let valid = true;
         if (!username || username.length < 3) {
           UI.fieldError("usernameError", "Tên đăng nhập tối thiểu 3 ký tự");
+          valid = false;
+        }
+        if (!fullName) {
+          UI.fieldError("fullNameError", "Vui lòng nhập họ tên");
+          valid = false;
+        }
+        if (!address) {
+          UI.fieldError("addressError", "Vui lòng nhập địa chỉ");
+          valid = false;
+        }
+        if (!phoneNumber) {
+          UI.fieldError("phoneNumberError", "Vui lòng nhập số điện thoại");
           valid = false;
         }
         if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
@@ -89,7 +122,7 @@
 
         UI.loading(true);
         try {
-          const data = await API.register({ username, email, password });
+          const data = await API.register({ username, fullName, address, phoneNumber, email, password });
           UI.alert(data.message || "Đăng ký thành công! Vui lòng kiểm tra email để xác nhận tài khoản.", "success");
           document.getElementById("registerForm").reset();
         } catch (err) {

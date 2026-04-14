@@ -1,9 +1,14 @@
-import { useState, useEffect } from 'react';
+﻿import { useState, useEffect } from 'react';
 import { Plus, Pencil, Trash2, Search } from 'lucide-react';
 import { DataTable, Column } from '../components/DataTable';
 import { LoadingSpinner } from '../components/LoadingSpinner';
 import { Material } from '../data/mockData';
-import { getMaterials, createMaterial, updateMaterial, deleteMaterial } from '../api/MaterialAPI';
+import {
+  getMaterials,
+  createMaterial,
+  updateMaterial,
+  deleteMaterial,
+} from '../api/MaterialAPI';
 import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
@@ -27,7 +32,6 @@ export function MaterialManagement() {
   const [materialToDelete, setMaterialToDelete] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
 
-  // Fetch materials when component mounts
   useEffect(() => {
     fetchMaterials();
   }, []);
@@ -39,7 +43,7 @@ export function MaterialManagement() {
       setMaterials(data);
     } catch (error) {
       console.error('Không kết nối được với API:', error);
-      toast.error('Không thể tải danh sách văn liệu');
+      toast.error('Không thể tải danh sách vật liệu');
     } finally {
       setIsLoading(false);
     }
@@ -52,7 +56,6 @@ export function MaterialManagement() {
     purity: '',
   });
 
-  // Filter materials
   const filteredMaterials = materials.filter((material) => {
     if (!material || !material.name) return false;
     return material.name.toLowerCase().includes(searchTerm.toLowerCase());
@@ -81,20 +84,20 @@ export function MaterialManagement() {
   };
 
   const handleDeleteConfirm = async () => {
-    if (materialToDelete) {
-      try {
-        setIsLoading(true);
-        await deleteMaterial(materialToDelete);
-        setMaterials(materials.filter((m) => m.id !== materialToDelete));
-        toast.success('Material deleted successfully');
-        setDeleteConfirmOpen(false);
-        setMaterialToDelete(null);
-      } catch (error) {
-        console.error('Failed to delete material:', error);
-        toast.error('Failed to delete material');
-      } finally {
-        setIsLoading(false);
-      }
+    if (!materialToDelete) return;
+
+    try {
+      setIsLoading(true);
+      await deleteMaterial(materialToDelete);
+      setMaterials(materials.filter((m) => m.id !== materialToDelete));
+      toast.success('Xóa vật liệu thành công');
+      setDeleteConfirmOpen(false);
+      setMaterialToDelete(null);
+    } catch (error) {
+      console.error('Xóa vật liệu thất bại:', error);
+      toast.error('Xóa vật liệu thất bại');
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -102,22 +105,18 @@ export function MaterialManagement() {
     try {
       setIsLoading(true);
       if (editingMaterial) {
-        // Update existing material
         const updatedMaterial = await updateMaterial(editingMaterial.id, formData);
-        setMaterials(
-          materials.map((m) => (m.id === editingMaterial.id ? updatedMaterial : m))
-        );
-        toast.success('Material updated successfully');
+        setMaterials(materials.map((m) => (m.id === editingMaterial.id ? updatedMaterial : m)));
+        toast.success('Cập nhật vật liệu thành công');
       } else {
-        // Create new material
         const newMaterial = await createMaterial(formData);
         setMaterials([...materials, newMaterial]);
-        toast.success('Material added successfully');
+        toast.success('Thêm vật liệu thành công');
       }
       setIsModalOpen(false);
     } catch (error) {
-      console.error('Failed to save material:', error);
-      toast.error('Failed to save material');
+      console.error('Không thể lưu vật liệu:', error);
+      toast.error('Không thể lưu vật liệu');
     } finally {
       setIsLoading(false);
     }
@@ -125,12 +124,12 @@ export function MaterialManagement() {
 
   const materialColumns: Column<Material>[] = [
     { header: 'ID', accessor: 'id' },
-    { header: 'Name', accessor: 'name' },
-    { header: 'Composition', accessor: 'composition' },
-    { header: 'Weight', accessor: 'weight' },
-    { header: 'Purity', accessor: 'purity' },
+    { header: 'Tên vật liệu', accessor: 'name' },
+    { header: 'Thành phần', accessor: 'composition' },
+    { header: 'Trọng lượng', accessor: 'weight' },
+    { header: 'Độ tinh khiết', accessor: 'purity' },
     {
-      header: 'Actions',
+      header: 'Thao tác',
       accessor: (row) => (
         <div className="flex gap-2">
           <Button
@@ -157,25 +156,24 @@ export function MaterialManagement() {
   return (
     <div className="space-y-6 animate-slideIn">
       {isLoading && <LoadingSpinner />}
-      {/* Header */}
+
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-semibold text-gray-900">Material Management</h1>
-          <p className="text-gray-600 mt-1">Manage raw materials and inventory</p>
+          <h1 className="text-3xl font-semibold text-gray-900">Quản lý vật liệu</h1>
+          <p className="text-gray-600 mt-1">Quản lý vật liệu sản xuất</p>
         </div>
         <Button onClick={handleAddMaterial} className="bg-[#4F46E5] hover:bg-[#4338CA]">
           <Plus className="w-4 h-4 mr-2" />
-          Add Material
+          Thêm vật liệu
         </Button>
       </div>
 
-      {/* Search */}
       <Card className="border-gray-200 shadow-sm">
         <CardContent className="p-4">
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
             <Input
-              placeholder="Search materials or suppliers..."
+              placeholder="Tìm kiếm vật liệu..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="pl-10"
@@ -184,87 +182,82 @@ export function MaterialManagement() {
         </CardContent>
       </Card>
 
-      {/* Materials Table */}
       <Card className="border-gray-200 shadow-sm">
         <CardHeader>
-          <CardTitle>Materials ({filteredMaterials.length})</CardTitle>
+          <CardTitle>Vật liệu ({filteredMaterials.length})</CardTitle>
         </CardHeader>
         <CardContent>
-          <DataTable columns={materialColumns} data={filteredMaterials} emptyMessage="No materials found" />
+          <DataTable
+            columns={materialColumns}
+            data={filteredMaterials}
+            emptyMessage="Không tìm thấy vật liệu"
+          />
         </CardContent>
       </Card>
 
-      {/* Add/Edit Material Modal */}
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
         <DialogContent className="sm:max-w-[500px]">
           <DialogHeader>
-            <DialogTitle>
-              {editingMaterial ? 'Edit Material' : 'Add New Material'}
-            </DialogTitle>
+            <DialogTitle>{editingMaterial ? 'Cập nhật vật liệu' : 'Thêm vật liệu mới'}</DialogTitle>
           </DialogHeader>
           <div className="space-y-4 py-4">
             <div className="space-y-2">
-              <Label htmlFor="name">Material Name</Label>
+              <Label htmlFor="name">Tên vật liệu</Label>
               <Input
                 id="name"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                placeholder="Enter material name"
+                placeholder="Nhập tên vật liệu"
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="composition">Composition</Label>
+              <Label htmlFor="composition">Thành phần</Label>
               <Input
                 id="composition"
                 value={formData.composition}
                 onChange={(e) => setFormData({ ...formData, composition: e.target.value })}
-                placeholder="e.g. Au, Ag, Pt"
+                placeholder="Ví dụ: Au, Ag, Pt"
               />
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
-                <Label htmlFor="weight">Weight</Label>
+                <Label htmlFor="weight">Trọng lượng</Label>
                 <Input
                   id="weight"
                   value={formData.weight}
-                  onChange={(e) =>
-                    setFormData({ ...formData, weight: e.target.value })
-                  }
-                  placeholder="e.g. 1 chi, 1 oz"
+                  onChange={(e) => setFormData({ ...formData, weight: e.target.value })}
+                  placeholder="Ví dụ: 1 chỉ, 1 oz"
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="purity">Purity</Label>
+                <Label htmlFor="purity">Độ tinh khiết</Label>
                 <Input
                   id="purity"
                   value={formData.purity}
-                  onChange={(e) =>
-                    setFormData({ ...formData, purity: e.target.value })
-                  }
-                  placeholder="e.g. 99.99%, 18K"
+                  onChange={(e) => setFormData({ ...formData, purity: e.target.value })}
+                  placeholder="Ví dụ: 99.99%, 18K"
                 />
               </div>
             </div>
           </div>
           <DialogFooter>
             <Button variant="outline" onClick={() => setIsModalOpen(false)}>
-              Cancel
+              Hủy
             </Button>
             <Button onClick={handleSubmit} className="bg-[#4F46E5] hover:bg-[#4338CA]">
-              {editingMaterial ? 'Update' : 'Add'} Material
+              {editingMaterial ? 'Cập nhật' : 'Thêm'} vật liệu
             </Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>
 
-      {/* Delete Confirmation */}
       <ConfirmDialog
         open={deleteConfirmOpen}
         onOpenChange={setDeleteConfirmOpen}
         onConfirm={handleDeleteConfirm}
-        title="Delete Material"
-        description="Are you sure you want to delete this material? This action cannot be undone."
-        confirmText="Delete"
+        title="Xóa vật liệu"
+        description="Bạn có chắc muốn xóa vật liệu này? Hành động này không thể hoàn tác."
+        confirmText="Xóa"
       />
     </div>
   );
