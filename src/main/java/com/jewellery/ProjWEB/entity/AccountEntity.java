@@ -21,6 +21,9 @@ public class AccountEntity {
     @Column(nullable = false)
     private String phoneNumber;
 
+    @Column(nullable = false)
+    private String password;
+
     @Column(name = "fullName")
     private String fullName;
 
@@ -68,6 +71,14 @@ public class AccountEntity {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getFullName() {

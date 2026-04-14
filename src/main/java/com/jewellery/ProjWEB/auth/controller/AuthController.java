@@ -19,28 +19,20 @@ public class AuthController {
 
     private final AuthService authService;
 
-    /**
-     * POST /api/auth/register
-     * Đăng ký tài khoản mới – gửi email xác nhận
-     */
+    // Đăng ký tài khoản mới – gửi email xác nhận
+
     @PostMapping("/register")
     public ResponseEntity<AuthResponse> register(@Valid @RequestBody RegisterRequest request) {
         return ResponseEntity.ok(authService.register(request));
     }
 
-    /**
-     * POST /api/auth/login
-     * Đăng nhập – trả về JWT token
-     */
+    // đăng nhap – trả về JWT nếu thành công
     @PostMapping("/login")
     public ResponseEntity<AuthResponse> login(@Valid @RequestBody LoginRequest request) {
         return ResponseEntity.ok(authService.login(request));
     }
 
-    /**
-     * GET /api/auth/verify?token=...
-     * Xác nhận email sau khi đăng ký
-     */
+    // xác nhận khi đăng ký
     @GetMapping(value = "/verify", produces = MediaType.TEXT_HTML_VALUE)
     public ResponseEntity<String> verifyEmail(@RequestParam String token) {
         try {
@@ -77,10 +69,7 @@ public class AuthController {
         }
     }
 
-    /**
-     * POST /api/auth/resend-verification
-     * Gửi lại email xác nhận
-     */
+    // gửi lại email xác nhận nếu người dùng chưa nhận được
     @PostMapping("/resend-verification")
     public ResponseEntity<Map<String, String>> resendVerification(@RequestBody Map<String, String> body) {
         String email = body.get("email");
@@ -91,10 +80,7 @@ public class AuthController {
         return ResponseEntity.ok(Map.of("message", message));
     }
 
-    /**
-     * POST /api/auth/forgot-password
-     * Yêu cầu đặt lại mật khẩu – gửi email reset
-     */
+    // yêu cầu đặt lại mật khẩu
     @PostMapping("/forgot-password")
     public ResponseEntity<Map<String, String>> forgotPassword(
             @Valid @RequestBody ForgotPasswordRequest request,
@@ -104,10 +90,7 @@ public class AuthController {
         return ResponseEntity.ok(Map.of("message", message));
     }
 
-    /**
-     * POST /api/auth/reset-password
-     * Đặt lại mật khẩu bằng token nhận qua email
-     */
+    // đặt lại mật khẩu qua email
     @PostMapping("/reset-password")
     public ResponseEntity<Map<String, String>> resetPassword(
             @Valid @RequestBody ResetPasswordRequest request) {

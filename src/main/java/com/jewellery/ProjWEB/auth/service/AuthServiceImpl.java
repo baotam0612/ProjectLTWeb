@@ -74,6 +74,7 @@ public class AuthServiceImpl implements AuthService {
         account.setFullName(user.getFullName());
         account.setAddress(user.getAddress());
         account.setPhoneNumber(user.getPhoneNumber());
+        account.setPassword(user.getPassword());
         account.setCreatedAt(LocalDateTime.now());
         accountRepository.save(account);
 

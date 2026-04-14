@@ -50,6 +50,7 @@ public class UserOrderServiceImpl implements UserOrderService {
                     created.setFullName(user.getFullName());
                     created.setAddress(user.getAddress());
                     created.setPhoneNumber(user.getPhoneNumber() != null ? user.getPhoneNumber() : "");
+                    created.setPassword(user.getPassword());
                     created.setCreatedAt(LocalDateTime.now());
                     return accountRepository.save(created);
                 });
