@@ -10,6 +10,7 @@ public class OrderDTO {
     private BigDecimal totalAmount;
     private String shippingAddress;
     private String orderStatus;
+    private String userName;
     private String productName;
     private BigDecimal price;
     private List<OrderDetailDTO> orderDetails;
@@ -24,6 +25,14 @@ public class OrderDTO {
 
     public String getProductName() {
         return productName;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public void setProductName(String productName) {

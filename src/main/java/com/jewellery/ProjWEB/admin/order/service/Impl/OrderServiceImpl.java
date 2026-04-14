@@ -4,6 +4,7 @@ import com.jewellery.ProjWEB.admin.order.model.dto.OrderDTO;
 import com.jewellery.ProjWEB.admin.order.model.dto.OrderDetailDTO;
 import com.jewellery.ProjWEB.admin.order.repository.OrderRepository;
 import com.jewellery.ProjWEB.admin.order.service.OrderService;
+import com.jewellery.ProjWEB.entity.AccountEntity;
 import com.jewellery.ProjWEB.entity.OrderDetailEntity;
 import com.jewellery.ProjWEB.entity.OrderEntity;
 import org.springframework.stereotype.Service;
@@ -35,6 +36,7 @@ public class OrderServiceImpl implements OrderService {
             orderDTO.setTotalAmount(item.getTotalAmount());
             orderDTO.setOrderStatus(item.getOrderStatus());
             orderDTO.setShippingAddress(item.getShippingAddress());
+            orderDTO.setUserName(resolveCustomerName(item.getAccount()));
 
             // Map order details
             if (item.getOrderDetails() != null && !item.getOrderDetails().isEmpty()) {
@@ -105,8 +107,33 @@ public class OrderServiceImpl implements OrderService {
         orderDTO.setOrderDate(order.getOrderDate());
         orderDTO.setTotalAmount(order.getTotalAmount());
         orderDTO.setShippingAddress(order.getShippingAddress());
+        orderDTO.setUserName(resolveCustomerName(order.getAccount()));
 
         return orderDTO;
+    }
+
+    private String resolveCustomerName(AccountEntity account) {
+        if (account == null) {
+            return null;
+        }
+
+        if (hasText(account.getFullName())) {
+            return account.getFullName();
+        }
+
+        if (account.getUser() != null && hasText(account.getUser().getFullName())) {
+            return account.getUser().getFullName();
+        }
+
+        if (hasText(account.getUsername())) {
+            return account.getUsername();
+        }
+
+        return null;
+    }
+
+    private boolean hasText(String value) {
+        return value != null && !value.trim().isEmpty();
     }
 
     @Override

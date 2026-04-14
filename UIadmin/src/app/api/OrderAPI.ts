@@ -19,7 +19,7 @@ const mapApiOrderToOrder = (apiOrder: any, index: number): Order => {
   
   return {
     id: apiOrder.orderId || apiOrder.orderID || apiOrder.id || (index + 1),
-    userName: apiOrder.userName || 'Khách hàng',
+    userName: apiOrder.userName || apiOrder.customerName || apiOrder.fullName || apiOrder.accountName || 'Khách hàng',
     productName: apiOrder.productName || (orderDetails[0]?.productName) || 'Sản phẩm không xác định',
     price: parseFloat(apiOrder.price) || (orderDetails[0]?.price) || 0,
     totalAmount: parseFloat(apiOrder.totalAmount) || 0,
