@@ -6,7 +6,7 @@ export const uploadImage = async (file: File): Promise<string> => {
 
   try {
     const response = await apiClient.postFormData('/admin/images/upload', formData);
-    // Cloudinary return data contains 'secure_url'
+    //Dùng Cloudinary 
     return response.secure_url || response.url;
   } catch (error) {
     console.error('Error uploading image:', error);

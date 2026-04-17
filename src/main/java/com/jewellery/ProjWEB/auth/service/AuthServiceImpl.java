@@ -46,10 +46,10 @@ public class AuthServiceImpl implements AuthService {
     @Override
     public AuthResponse register(RegisterRequest request) {
         if (userRepository.existsByUsername(request.getUsername())) {
-            throw new IllegalArgumentException("Username is already taken: " + request.getUsername());
+            throw new IllegalArgumentException("Tên người dùng đã tồn tại: " + request.getUsername());
         }
         if (userRepository.existsByEmail(request.getEmail())) {
-            throw new IllegalArgumentException("Email is already in use: " + request.getEmail());
+            throw new IllegalArgumentException("Email đã được sử dụng: " + request.getEmail());
         }
 
         Role userRole = roleRepository.findByName(ERole.ROLE_USER)

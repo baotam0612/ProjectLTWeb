@@ -3,7 +3,7 @@ import { Product } from '../data/mockData';
 
 const API_URL = 'http://localhost:8081/admin/products';
 
-// Map API response to Product interface
+// Map API response 
 const mapApiProductToProduct = (apiProduct: any): Product => {
   return {
     id: apiProduct.id ? String(apiProduct.id) : `P${Math.random().toString(36).substr(2, 9)}`,
@@ -16,7 +16,7 @@ const mapApiProductToProduct = (apiProduct: any): Product => {
   };
 };
 
-// Map Product interface back to API request format
+// Map Product back to API request 
 const mapProductToApiRequest = (product: Partial<any>) => {
   return {
     productName: product.name || product.productName || '',
@@ -29,7 +29,7 @@ const mapProductToApiRequest = (product: Partial<any>) => {
 
 export const getProducts = async (): Promise<Product[]> => {
   const response = await axios.get(API_URL);
-  // Response structure: { data: [...] }
+  // Response: { data: [...] }
   const products = Array.isArray(response.data) ? response.data : (response.data.data || []);
   return Array.isArray(products) ? products.map(mapApiProductToProduct) : [];
 };

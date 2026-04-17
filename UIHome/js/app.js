@@ -2,9 +2,6 @@ const BASE_URL = "http://localhost:8081/api";
 const ADMIN_URL = "http://localhost:5173"; // CHỈ CẦN SỬA CỔNG Ở ĐÂY LÀ TOÀN BỘ WEB TỰ ĐỔI THEO
 const USER_PAGE = "user.html";
 
-/* ============================================================
-   API — gọi tới BE
-   ============================================================ */
 const API = {
   async _request(endpoint, method = "GET", body = null) {
     const headers = { "Content-Type": "application/json" };

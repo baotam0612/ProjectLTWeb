@@ -36,8 +36,8 @@ export interface Order {
   shippingAddress?: string;
   orderDetails?: OrderDetail[];
   items: number;
-  total?: number; // Alias for totalAmount for backwards compatibility
-  status?: 'pending' | 'completed' | 'canceled'; // Alias for orderStatus in lowercase
+  total?: number; 
+  status?: 'pending' | 'completed' | 'canceled'; 
 }
 
 export interface User {
