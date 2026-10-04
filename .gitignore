@@ -1,0 +1,19 @@
+# Node and frontend build artifacts
+**/node_modules/
+**/dist/
+**/.vite/
+**/coverage/
+
+# Local logs and environment configuration
+*.log
+*.err
+.env
+.env.*
+!.env.example
+backend/application-local.properties
+
+# Editor and operating system files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

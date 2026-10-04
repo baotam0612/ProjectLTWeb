@@ -1,0 +1,84 @@
+
+.overflow-x-auto {
+  scrollbar-width: thin;
+  scrollbar-color: #E5E7EB #F9FAFB;
+}
+
+.overflow-x-auto::-webkit-scrollbar {
+  height: 8px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-track {
+  background: #F9FAFB;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background: #E5E7EB;
+  border-radius: 4px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb:hover {
+  background: #D1D5DB;
+}
+
+
+button,
+a,
+input,
+select,
+textarea {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Focus states */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideIn {
+  animation: slideIn 0.3s ease-out;
+}
+
+.admin-content :is([data-slot="card"], [data-slot="card-content"], .grid > *) {
+  min-width: 0;
+}
+.admin-content h1, [data-slot="dialog-content"], [data-slot="alert-dialog-content"] {
+  overflow-wrap: anywhere;
+}
+.admin-auth { min-height: 100svh; padding: 24px; }
+.admin-auth > div { min-width: 0; overflow-wrap: anywhere; }
+.admin-auth input { font-size: 16px; }
+[data-slot="dialog-content"], [data-slot="alert-dialog-content"] {
+  max-width: calc(100vw - 2rem);
+  max-height: calc(100dvh - 2rem);
+  overflow-y: auto;
+}
+@media (max-width: 1023.98px) {
+  .admin-sidebar[data-open="false"] { visibility: hidden; }
+}
+@media (max-width: 639.98px) {
+  .admin-auth { padding: 16px; }
+  .admin-auth > div { padding: 24px 20px; }
+  .admin-content h1 { font-size: 1.5rem; }
+  [data-slot="dialog-content"] :is(input, textarea, select),
+  .admin-content :is(input, textarea, select) { font-size: 16px; }
+  [data-slot="dialog-content"] .grid > * { min-width: 0; }
+  [data-slot="dialog-header"] { padding-right: 24px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
