@@ -1,0 +1,1 @@
+const r="shyne_cart";function a(){try{const t=JSON.parse(localStorage.getItem(r)||"[]");return Array.isArray(t)?t:[]}catch{return[]}}function e(t){localStorage.setItem(r,JSON.stringify(t)),window.dispatchEvent(new Event("shyne-cart-change"))}export{a as r,e as w};

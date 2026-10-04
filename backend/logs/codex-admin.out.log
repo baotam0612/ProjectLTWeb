@@ -1,0 +1,113 @@
+
+> @figma/my-make-file@0.0.1 dev
+> vite --host 127.0.0.1
+
+[32m✔[0m [33mConsole Ninja[0m extension is connected to [33mVite[0m, see [36mhttps://tinyurl.com/2vt8jxzw[0m
+
+  VITE v6.3.5  ready in 50232 ms
+
+  ➜  Local:   http://127.0.0.1:5173/
+12:38:29 PM [vite] (client) page reload src/pages/Login.tsx
+3:28:08 PM [vite] (client) page reload src/pages/Login.tsx
+3:33:22 PM [vite] (client) page reload src/app/api/adminApiClient.ts
+3:33:22 PM [vite] (client) page reload src/app/api/CategoryAPI.ts
+3:33:22 PM [vite] (client) page reload src/app/api/MaterialAPI.ts
+3:33:22 PM [vite] (client) page reload src/app/api/OrderAPI.ts
+3:33:22 PM [vite] (client) page reload src/app/api/PaymentAPI.ts
+3:33:22 PM [vite] (client) page reload src/app/api/ProductAPI.ts
+3:33:22 PM [vite] (client) page reload src/app/api/UploadAPI.ts
+3:33:22 PM [vite] (client) page reload src/app/api/UserAPI.ts
+3:33:22 PM [vite] (client) hmr update /src/app/App.tsx, /src/styles/index.css
+3:33:22 PM [vite] (client) hmr update /src/app/routes.tsx, /src/styles/index.css
+3:33:22 PM [vite] (client) page reload src/app/data/mockData.ts
+3:33:22 PM [vite] (client) hmr update /src/app/pages/CategoryManagement.tsx, /src/styles/index.css
+3:33:22 PM [vite] (client) hmr update /src/app/pages/Dashboard.tsx, /src/styles/index.css
+3:33:22 PM [vite] (client) hmr update /src/app/pages/Login.tsx, /src/styles/index.css
+3:33:22 PM [vite] (client) hmr update /src/app/pages/MaterialManagement.tsx, /src/styles/index.css
+3:33:22 PM [vite] (client) hmr update /src/app/pages/NotFound.tsx, /src/styles/index.css
+3:33:22 PM [vite] (client) hmr update /src/app/pages/OrderManagement.tsx, /src/styles/index.css
+3:33:22 PM [vite] (client) hmr update /src/app/pages/ProductManagement.tsx, /src/styles/index.css
+3:33:22 PM [vite] (client) hmr update /src/app/pages/PaymentManagement.tsx, /src/styles/index.css
+3:33:22 PM [vite] (client) hmr update /src/app/pages/Register.tsx, /src/styles/index.css
+3:33:22 PM [vite] (client) hmr update /src/app/pages/UserManagement.tsx, /src/styles/index.css
+3:33:22 PM [vite] (client) hmr update /src/app/pages/VerifyEmail.tsx, /src/styles/index.css
+3:33:22 PM [vite] (client) page reload src/pages/Login.tsx
+3:33:22 PM [vite] (client) page reload src/pages/Register.tsx
+3:33:22 PM [vite] (client) hmr update /@fs/D:\PROJJAVA\ProjWebFinal\frontend\admin\src\app\components\ConfirmDialog.tsx, /src/styles/index.css
+3:33:22 PM [vite] (client) hmr update /@fs/D:\PROJJAVA\ProjWebFinal\frontend\admin\src\app\components\DataTable.tsx, /src/styles/index.css
+3:33:22 PM [vite] (client) hmr update /src/app/components/Layout.tsx, /src/styles/index.css
+3:33:22 PM [vite] (client) hmr update /@fs/D:\PROJJAVA\ProjWebFinal\frontend\admin\src\app\components\LoadingSpinner.tsx, /src/styles/index.css
+3:33:22 PM [vite] (client) hmr update /@fs/D:\PROJJAVA\ProjWebFinal\frontend\admin\src\app\components\Navbar.tsx, /src/styles/index.css
+3:33:22 PM [vite] (client) hmr update /@fs/D:\PROJJAVA\ProjWebFinal\frontend\admin\src\app\components\Sidebar.tsx, /src/styles/index.css
+3:33:22 PM [vite] (client) hmr update /@fs/D:\PROJJAVA\ProjWebFinal\frontend\admin\src\app\components\StatsCard.tsx, /src/styles/index.css
+3:33:22 PM [vite] (client) page reload src/app/components/figma/ImageWithFallback.tsx
+3:33:22 PM [vite] (client) page reload src/app/components/ui/accordion.tsx
+3:33:22 PM [vite] (client) hmr update /@fs/D:\PROJJAVA\ProjWebFinal\frontend\admin\src\app\components\ui\alert-dialog.tsx, /src/styles/index.css
+3:33:22 PM [vite] (client) page reload src/app/components/ui/alert.tsx
+3:33:22 PM [vite] (client) page reload src/app/components/ui/aspect-ratio.tsx
+3:33:22 PM [vite] (client) page reload src/app/components/ui/avatar.tsx
+3:33:22 PM [vite] (client) page reload src/app/components/ui/badge.tsx
+3:33:22 PM [vite] (client) page reload src/app/components/ui/breadcrumb.tsx
+3:33:22 PM [vite] (client) hmr update /@fs/D:\PROJJAVA\ProjWebFinal\frontend\admin\src\app\components\ui\button.tsx, /src/styles/index.css
+3:33:22 PM [vite] (client) page reload src/app/components/ui/calendar.tsx
+3:33:22 PM [vite] (client) hmr update /@fs/D:\PROJJAVA\ProjWebFinal\frontend\admin\src\app\components\ui\card.tsx, /src/styles/index.css
+3:33:22 PM [vite] (client) page reload src/app/components/ui/carousel.tsx
+3:33:22 PM [vite] (client) page reload src/app/components/ui/checkbox.tsx
+3:33:22 PM [vite] (client) page reload src/app/components/ui/chart.tsx
+3:33:22 PM [vite] (client) page reload src/app/components/ui/collapsible.tsx
+3:33:22 PM [vite] (client) page reload src/app/components/ui/command.tsx
+3:33:22 PM [vite] (client) page reload src/app/components/ui/context-menu.tsx
+3:33:22 PM [vite] (client) hmr update /@fs/D:\PROJJAVA\ProjWebFinal\frontend\admin\src\app\components\ui\dialog.tsx, /src/styles/index.css
+3:33:22 PM [vite] (client) page reload src/app/components/ui/drawer.tsx
+3:33:22 PM [vite] (client) page reload src/app/components/ui/dropdown-menu.tsx
+3:33:22 PM [vite] (client) page reload src/app/components/ui/form.tsx
+3:33:22 PM [vite] (client) page reload src/app/components/ui/hover-card.tsx
+3:33:22 PM [vite] (client) page reload src/app/components/ui/input-otp.tsx
+3:33:22 PM [vite] (client) hmr update /@fs/D:\PROJJAVA\ProjWebFinal\frontend\admin\src\app\components\ui\input.tsx, /src/styles/index.css
+3:33:22 PM [vite] (client) hmr update /@fs/D:\PROJJAVA\ProjWebFinal\frontend\admin\src\app\components\ui\label.tsx, /src/styles/index.css
+3:33:22 PM [vite] (client) page reload src/app/components/ui/menubar.tsx
+3:33:22 PM [vite] (client) page reload src/app/components/ui/navigation-menu.tsx
+3:33:22 PM [vite] (client) page reload src/app/components/ui/pagination.tsx
+3:33:22 PM [vite] (client) page reload src/app/components/ui/popover.tsx
+3:33:22 PM [vite] (client) page reload src/app/components/ui/progress.tsx
+3:33:22 PM [vite] (client) page reload src/app/components/ui/radio-group.tsx
+3:33:22 PM [vite] (client) page reload src/app/components/ui/resizable.tsx
+3:33:22 PM [vite] (client) page reload src/app/components/ui/scroll-area.tsx
+3:33:22 PM [vite] (client) hmr update /@fs/D:\PROJJAVA\ProjWebFinal\frontend\admin\src\app\components\ui\select.tsx, /src/styles/index.css
+3:33:22 PM [vite] (client) page reload src/app/components/ui/separator.tsx
+3:33:22 PM [vite] (client) page reload src/app/components/ui/sheet.tsx
+3:33:22 PM [vite] (client) page reload src/app/components/ui/skeleton.tsx
+3:33:22 PM [vite] (client) page reload src/app/components/ui/sidebar.tsx
+3:33:22 PM [vite] (client) page reload src/app/components/ui/slider.tsx
+3:33:22 PM [vite] (client) hmr update /@fs/D:\PROJJAVA\ProjWebFinal\frontend\admin\src\app\components\ui\sonner.tsx, /src/styles/index.css
+3:33:22 PM [vite] (client) page reload src/app/components/ui/switch.tsx
+3:33:22 PM [vite] (client) hmr update /@fs/D:\PROJJAVA\ProjWebFinal\frontend\admin\src\app\components\ui\table.tsx, /src/styles/index.css
+3:33:22 PM [vite] (client) page reload src/app/components/ui/tabs.tsx
+3:33:22 PM [vite] (client) hmr update /@fs/D:\PROJJAVA\ProjWebFinal\frontend\admin\src\app\components\ui\textarea.tsx, /src/styles/index.css
+3:33:22 PM [vite] (client) page reload src/app/components/ui/toggle-group.tsx
+3:33:22 PM [vite] (client) page reload src/app/components/ui/toggle.tsx
+3:33:22 PM [vite] (client) page reload src/app/components/ui/tooltip.tsx
+3:33:22 PM [vite] (client) page reload src/app/components/ui/use-mobile.ts
+3:33:22 PM [vite] (client) page reload src/app/components/ui/utils.ts
+3:33:22 PM [vite] (client) page reload src/main.tsx
+3:33:22 PM [vite] (client) page reload src/services/apiClient.ts
+3:33:22 PM [vite] vite.config.ts changed, restarting server...
+3:33:22 PM [vite] (client) page reload src/services/AuthContext.tsx
+3:33:22 PM [vite] (client) page reload src/services/authService.ts
+3:33:22 PM [vite] (client) page reload src/services/useAuth.ts
+3:33:22 PM [vite] server restarted.
+3:34:29 PM [vite] (client) page reload index.html
+3:34:29 PM [vite] vite.config.js changed, restarting server...
+3:34:29 PM [vite] (client) page reload public/__import_check__.html
+3:34:29 PM [vite] (client) page reload __import_check__.html
+3:34:29 PM [vite] server restarted.
+4:18:25 PM [vite] (client) page reload src/pages/Login.jsx
+4:18:25 PM [vite] (client) page reload src/pages/Register.jsx
+4:25:23 PM [vite] vite.config.js changed, restarting server...
+4:25:23 PM [vite] (client) hmr update /src/styles/index.css, /src/app/pages/ProductManagement.jsx
+4:25:23 PM [vite] (client) Re-optimizing dependencies because vite config has changed
+4:25:23 PM [vite] server restarted.
+4:28:26 PM [vite] (client) page reload index.html
+4:34:40 PM [vite] (client) page reload index.html
+4:35:48 PM [vite] vite.config.js changed, restarting server...
+4:35:49 PM [vite] server restarted.

@@ -1,0 +1,15 @@
+3:33:22 PM [vite] Pre-transform error: Failed to load url /src/main.tsx (resolved id: D:/PROJJAVA/ProjWebFinal/frontend/admin/src/main.tsx) in D:/PROJJAVA/ProjWebFinal/frontend/admin/src/styles/index.css. Does the file exist?
+node:internal/process/promises:394
+    triggerUncaughtException(err, true /* fromPromise */);
+    ^
+
+Error: connect ECONNREFUSED 127.0.0.1:63969
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1705:16) {
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 63969
+}
+
+Node.js v24.16.0

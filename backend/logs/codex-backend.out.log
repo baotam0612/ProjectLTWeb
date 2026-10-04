@@ -1,0 +1,1274 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.jewellery:ProjWEB >------------------------
+[INFO] Building ProjWEB 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:4.0.3:run (default-cli) > test-compile @ ProjWEB >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ ProjWEB ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 10 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ ProjWEB ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ ProjWEB ---
+[INFO] skip non existing resourceDirectory D:\PROJJAVA\ProjWebFinal\backend\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ ProjWEB ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:4.0.3:run (default-cli) < test-compile @ ProjWEB <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:4.0.3:run (default-cli) @ ProjWEB ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.3)
+
+2026-10-01T12:26:57.573+07:00  INFO 7628 --- [ProjWEB] [  restartedMain] c.jewellery.ProjWEB.ProjWebApplication   : Starting ProjWebApplication using Java 17.0.12 with PID 7628 (D:\PROJJAVA\ProjWebFinal\backend\target\classes started by baota in D:\PROJJAVA\ProjWebFinal\backend)
+2026-10-01T12:26:57.576+07:00  INFO 7628 --- [ProjWEB] [  restartedMain] c.jewellery.ProjWEB.ProjWebApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-10-01T12:26:57.577+07:00 DEBUG 7628 --- [ProjWEB] [  restartedMain] o.s.boot.SpringApplication               : Loading source class com.jewellery.ProjWEB.ProjWebApplication
+2026-10-01T12:26:57.620+07:00 DEBUG 7628 --- [ProjWEB] [  restartedMain] o.s.b.devtools.restart.ChangeableUrls    : Matching URLs for reloading : [file:/D:/PROJJAVA/ProjWebFinal/backend/target/classes/]
+2026-10-01T12:26:57.620+07:00 DEBUG 7628 --- [ProjWEB] [  restartedMain] o.s.b.d.settings.DevToolsSettings        : Included patterns for restart : []
+2026-10-01T12:26:57.620+07:00 DEBUG 7628 --- [ProjWEB] [  restartedMain] o.s.b.d.settings.DevToolsSettings        : Excluded patterns for restart : [/spring-boot-starter-[\w-]+/, /spring-boot/(bin|build|out)/, /spring-boot-starter/(bin|build|out)/, /spring-boot-devtools/(bin|build|out)/, /spring-boot-actuator/(bin|build|out)/, /spring-boot-autoconfigure/(bin|build|out)/]
+2026-10-01T12:26:57.620+07:00  INFO 7628 --- [ProjWEB] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-01T12:26:57.620+07:00  INFO 7628 --- [ProjWEB] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-01T12:26:57.624+07:00 DEBUG 7628 --- [ProjWEB] [  restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext@118672c2
+2026-10-01T12:26:58.300+07:00  INFO 7628 --- [ProjWEB] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-01T12:26:58.314+07:00 DEBUG 7628 --- [ProjWEB] [  restartedMain] o.s.b.a.AutoConfigurationPackages        : @EnableAutoConfiguration was declared on a class in the package 'com.jewellery.ProjWEB'. Automatic @Repository and @Entity scanning is enabled.
+2026-10-01T12:26:58.464+07:00  INFO 7628 --- [ProjWEB] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 161 ms. Found 13 JPA repository interfaces.
+2026-10-01T12:26:59.047+07:00 DEBUG 7628 --- [ProjWEB] [  restartedMain] o.s.b.t.s.TomcatServletWebServerFactory  : Code archive: C:\Users\baota\.m2\repository\org\springframework\boot\spring-boot-web-server\4.0.3\spring-boot-web-server-4.0.3.jar
+2026-10-01T12:26:59.047+07:00 DEBUG 7628 --- [ProjWEB] [  restartedMain] o.s.b.t.s.TomcatServletWebServerFactory  : Code archive: C:\Users\baota\.m2\repository\org\springframework\boot\spring-boot-web-server\4.0.3\spring-boot-web-server-4.0.3.jar
+2026-10-01T12:26:59.047+07:00 DEBUG 7628 --- [ProjWEB] [  restartedMain] o.s.b.t.s.TomcatServletWebServerFactory  : None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+2026-10-01T12:26:59.081+07:00  INFO 7628 --- [ProjWEB] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-10-01T12:26:59.102+07:00  INFO 7628 --- [ProjWEB] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-01T12:26:59.103+07:00  INFO 7628 --- [ProjWEB] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-10-01T12:26:59.145+07:00 DEBUG 7628 --- [ProjWEB] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2026-10-01T12:26:59.146+07:00  INFO 7628 --- [ProjWEB] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1521 ms
+2026-10-01T12:26:59.447+07:00  INFO 7628 --- [ProjWEB] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-01T12:26:59.500+07:00  INFO 7628 --- [ProjWEB] [  restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-10-01T12:26:59.909+07:00  INFO 7628 --- [ProjWEB] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-01T12:26:59.937+07:00  INFO 7628 --- [ProjWEB] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-01T12:27:00.185+07:00  INFO 7628 --- [ProjWEB] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6527fc37
+2026-10-01T12:27:00.185+07:00  INFO 7628 --- [ProjWEB] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-01T12:27:00.235+07:00  WARN 7628 --- [ProjWEB] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-10-01T12:27:00.248+07:00  INFO 7628 --- [ProjWEB] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/jewelry]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.46
+	Default catalog/schema: jewelry/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-01T12:27:01.409+07:00  INFO 7628 --- [ProjWEB] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-01T12:27:01.481+07:00 DEBUG 7628 --- [ProjWEB] [  restartedMain] org.hibernate.SQL                        : alter table roles modify column name enum ('ROLE_ADMIN','ROLE_USER') not null
+2026-10-01T12:27:01.573+07:00  INFO 7628 --- [ProjWEB] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-01T12:27:01.637+07:00  INFO 7628 --- [ProjWEB] [  restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-01T12:27:02.201+07:00 DEBUG 7628 --- [ProjWEB] [  restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: springSecurityFilterChain urls=[/*] order=-100, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105, authRateLimitFilter urls=[/*] order=2147483647, jwtAuthenticationFilter urls=[/*] order=2147483647
+2026-10-01T12:27:02.215+07:00 DEBUG 7628 --- [ProjWEB] [  restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/], messageDispatcherServlet urls=[/services/*]
+2026-10-01T12:27:02.247+07:00 DEBUG 7628 --- [ProjWEB] [  restartedMain] o.s.b.s.f.OrderedRequestContextFilter    : Filter 'requestContextFilter' configured for use
+2026-10-01T12:27:02.248+07:00 DEBUG 7628 --- [ProjWEB] [  restartedMain] o.s.b.s.f.OrderedCharacterEncodingFilter : Filter 'characterEncodingFilter' configured for use
+2026-10-01T12:27:02.248+07:00 DEBUG 7628 --- [ProjWEB] [  restartedMain] .DelegatingFilterProxyRegistrationBean$1 : Filter 'springSecurityFilterChain' configured for use
+2026-10-01T12:27:02.248+07:00 DEBUG 7628 --- [ProjWEB] [  restartedMain] o.s.b.s.filter.OrderedFormContentFilter  : Filter 'formContentFilter' configured for use
+2026-10-01T12:27:02.560+07:00  INFO 7628 --- [ProjWEB] [  restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-10-01T12:27:02.576+07:00  WARN 7628 --- [ProjWEB] [  restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-10-01T12:27:02.864+07:00  INFO 7628 --- [ProjWEB] [  restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-10-01T12:27:02.947+07:00 DEBUG 7628 --- [ProjWEB] [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 41 mappings in 'requestMappingHandlerMapping'
+2026-10-01T12:27:02.948+07:00 DEBUG 7628 --- [ProjWEB] [  restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/] in 'viewControllerHandlerMapping'
+2026-10-01T12:27:02.981+07:00 DEBUG 7628 --- [ProjWEB] [  restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-10-01T12:27:03.018+07:00 DEBUG 7628 --- [ProjWEB] [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-10-01T12:27:03.064+07:00 DEBUG 7628 --- [ProjWEB] [  restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-10-01T12:27:03.214+07:00  INFO 7628 --- [ProjWEB] [  restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-10-01T12:27:03.247+07:00  INFO 7628 --- [ProjWEB] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-10-01T12:27:03.264+07:00 DEBUG 7628 --- [ProjWEB] [  restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+
+============================
+CONDITIONS EVALUATION REPORT
+============================
+
+
+Positive matches:
+-----------------
+
+   AopAutoConfiguration matched:
+      - @ConditionalOnBooleanProperty (spring.aop.auto=true) matched (OnPropertyCondition)
+
+   AopAutoConfiguration.AspectJAutoProxyingConfiguration matched:
+      - @ConditionalOnClass found required class 'org.aspectj.weaver.Advice' (OnClassCondition)
+
+   AopAutoConfiguration.AspectJAutoProxyingConfiguration.CglibAutoProxyConfiguration matched:
+      - @ConditionalOnBooleanProperty (spring.aop.proxy-target-class=true) matched (OnPropertyCondition)
+
+   ApplicationAvailabilityAutoConfiguration#applicationAvailability matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.availability.ApplicationAvailability; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   DataJpaRepositoriesAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.data.jpa.repository.JpaRepository' (OnClassCondition)
+      - @ConditionalOnBooleanProperty (spring.data.jpa.repositories.enabled=true) matched (OnPropertyCondition)
+      - @ConditionalOnBean (types: javax.sql.DataSource; SearchStrategy: all) found bean 'dataSource'; @ConditionalOnMissingBean (types: org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean,org.springframework.data.jpa.repository.config.JpaRepositoryConfigExtension; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   DataSourceAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'javax.sql.DataSource', 'org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType' (OnClassCondition)
+      - @ConditionalOnMissingBean (types: io.r2dbc.spi.ConnectionFactory; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   DataSourceAutoConfiguration.PooledDataSourceConfiguration matched:
+      - AnyNestedCondition 1 matched 1 did not; NestedCondition on DataSourceAutoConfiguration.PooledDataSourceCondition.PooledDataSourceAvailable PooledDataSource found supported DataSource; NestedCondition on DataSourceAutoConfiguration.PooledDataSourceCondition.ExplicitType @ConditionalOnProperty (spring.datasource.type) did not find property 'spring.datasource.type' (DataSourceAutoConfiguration.PooledDataSourceCondition)
+      - @ConditionalOnMissingBean (types: javax.sql.DataSource,javax.sql.XADataSource; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   DataSourceAutoConfiguration.PooledDataSourceConfiguration#jdbcConnectionDetails matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.jdbc.autoconfigure.JdbcConnectionDetails; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   DataSourceConfiguration.Hikari matched:
+      - @ConditionalOnClass found required class 'com.zaxxer.hikari.HikariDataSource' (OnClassCondition)
+      - @ConditionalOnProperty (spring.datasource.type=com.zaxxer.hikari.HikariDataSource) matched (OnPropertyCondition)
+      - @ConditionalOnMissingBean (types: javax.sql.DataSource; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   DataSourceInitializationAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.jdbc.datasource.init.DatabasePopulator' (OnClassCondition)
+      - SQL InitializationDatabase Initialization default value is EMBEDDED (OnSqlInitializationCondition)
+      - @ConditionalOnSingleCandidate (types: javax.sql.DataSource; SearchStrategy: all) found a single bean 'dataSource'; @ConditionalOnMissingBean (types: org.springframework.boot.sql.autoconfigure.init.ApplicationScriptDatabaseInitializer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   DataSourcePoolMetadataProvidersConfiguration.HikariPoolDataSourceMetadataProviderConfiguration matched:
+      - @ConditionalOnClass found required class 'com.zaxxer.hikari.HikariDataSource' (OnClassCondition)
+
+   DataSourceTransactionManagerAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'javax.sql.DataSource', 'org.springframework.jdbc.core.JdbcTemplate', 'org.springframework.transaction.TransactionManager' (OnClassCondition)
+
+   DataSourceTransactionManagerAutoConfiguration.JdbcTransactionManagerConfiguration matched:
+      - @ConditionalOnSingleCandidate (types: javax.sql.DataSource; SearchStrategy: all) found a single bean 'dataSource' (OnBeanCondition)
+
+   DataWebAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'org.springframework.data.web.PageableHandlerMethodArgumentResolver', 'org.springframework.web.servlet.config.annotation.WebMvcConfigurer' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.data.web.PageableHandlerMethodArgumentResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   DataWebAutoConfiguration#pageableCustomizer matched:
+      - @ConditionalOnMissingBean (types: org.springframework.data.web.config.PageableHandlerMethodArgumentResolverCustomizer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   DataWebAutoConfiguration#sortCustomizer matched:
+      - @ConditionalOnMissingBean (types: org.springframework.data.web.config.SortHandlerMethodArgumentResolverCustomizer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   DataWebAutoConfiguration#springDataWebSettings matched:
+      - @ConditionalOnMissingBean (types: org.springframework.data.web.config.SpringDataWebSettings; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   DevToolsDataSourceAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'javax.sql.DataSource' (OnClassCondition)
+      - Devtools devtools enabled. (OnEnabledDevToolsCondition)
+      - DevTools DataSource Condition found auto-configured DataSource (DevToolsDataSourceAutoConfiguration.DevToolsDataSourceCondition)
+
+   DevToolsDataSourceAutoConfiguration.DatabaseShutdownExecutorEntityManagerFactoryDependsOnConfiguration matched:
+      - @ConditionalOnClass found required classes 'org.springframework.boot.jpa.autoconfigure.EntityManagerFactoryDependsOnPostProcessor', 'org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean' (OnClassCondition)
+      - @ConditionalOnBean (types: org.springframework.orm.jpa.AbstractEntityManagerFactoryBean; SearchStrategy: all) found bean '&entityManagerFactory' (OnBeanCondition)
+
+   DispatcherServletAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.web.servlet.DispatcherServlet' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+
+   DispatcherServletAutoConfiguration.DispatcherServletConfiguration matched:
+      - @ConditionalOnClass found required class 'jakarta.servlet.ServletRegistration' (OnClassCondition)
+      - Default DispatcherServlet did not find dispatcher servlet beans (DispatcherServletAutoConfiguration.DefaultDispatcherServletCondition)
+
+   DispatcherServletAutoConfiguration.DispatcherServletRegistrationConfiguration matched:
+      - @ConditionalOnClass found required class 'jakarta.servlet.ServletRegistration' (OnClassCondition)
+      - DispatcherServlet Registration did not find servlet registration bean (DispatcherServletAutoConfiguration.DispatcherServletRegistrationCondition)
+
+   DispatcherServletAutoConfiguration.DispatcherServletRegistrationConfiguration#dispatcherServletRegistration matched:
+      - @ConditionalOnBean (names: dispatcherServlet types: org.springframework.web.servlet.DispatcherServlet; SearchStrategy: all) found bean 'dispatcherServlet' (OnBeanCondition)
+
+   ErrorMvcAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'jakarta.servlet.Servlet', 'org.springframework.web.servlet.DispatcherServlet' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+
+   ErrorMvcAutoConfiguration#basicErrorController matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.webmvc.error.ErrorController; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   ErrorMvcAutoConfiguration#errorAttributes matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.webmvc.error.ErrorAttributes; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   ErrorMvcAutoConfiguration.DefaultErrorViewResolverConfiguration#conventionErrorViewResolver matched:
+      - @ConditionalOnBean (types: org.springframework.web.servlet.DispatcherServlet; SearchStrategy: all) found bean 'dispatcherServlet'; @ConditionalOnMissingBean (types: org.springframework.boot.webmvc.autoconfigure.error.ErrorViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ErrorMvcAutoConfiguration.WhitelabelErrorViewConfiguration matched:
+      - @ConditionalOnBooleanProperty (spring.web.error.whitelabel.enabled=true) matched (OnPropertyCondition)
+      - ErrorTemplate Missing did not find error template view (ErrorMvcAutoConfiguration.ErrorTemplateMissingCondition)
+
+   ErrorMvcAutoConfiguration.WhitelabelErrorViewConfiguration#beanNameViewResolver matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.BeanNameViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ErrorMvcAutoConfiguration.WhitelabelErrorViewConfiguration#defaultErrorView matched:
+      - @ConditionalOnMissingBean (names: error; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   HibernateJpaAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean', 'jakarta.persistence.EntityManager', 'org.hibernate.engine.spi.SessionImplementor' (OnClassCondition)
+
+   HibernateJpaConfiguration matched:
+      - @ConditionalOnSingleCandidate (types: javax.sql.DataSource; SearchStrategy: all) found a single bean 'dataSource' (OnBeanCondition)
+
+   HttpClientAutoConfiguration#httpClientSettings matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.http.client.HttpClientSettings; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   HttpEncodingAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.web.filter.CharacterEncodingFilter' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnBooleanProperty (spring.servlet.encoding.enabled=true) matched (OnPropertyCondition)
+
+   HttpEncodingAutoConfiguration#characterEncodingFilter matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.filter.CharacterEncodingFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   HttpMessageConvertersAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.http.converter.HttpMessageConverter' (OnClassCondition)
+      - NoneNestedConditions 0 matched 1 did not; NestedCondition on HttpMessageConvertersAutoConfiguration.NotReactiveWebApplicationCondition.ReactiveWebApplication did not find reactive web application classes (HttpMessageConvertersAutoConfiguration.NotReactiveWebApplicationCondition)
+
+   HttpMessageConvertersAutoConfiguration.StringHttpMessageConverterConfiguration#stringHttpMessageConvertersCustomizer matched:
+      - @ConditionalOnMissingBean (types: org.springframework.http.converter.StringHttpMessageConverter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ImperativeHttpClientAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.http.client.ClientHttpRequestFactory' (OnClassCondition)
+      - NoneNestedConditions 0 matched 1 did not; NestedCondition on NotReactiveWebApplicationCondition.ReactiveWebApplication did not find reactive web application classes (NotReactiveWebApplicationCondition)
+
+   ImperativeHttpClientAutoConfiguration#clientHttpRequestFactory matched:
+      - @ConditionalOnMissingBean (types: org.springframework.http.client.ClientHttpRequestFactory; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ImperativeHttpClientAutoConfiguration#clientHttpRequestFactoryBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.http.client.ClientHttpRequestFactoryBuilder<?>; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JacksonAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'tools.jackson.databind.json.JsonMapper' (OnClassCondition)
+
+   JacksonAutoConfiguration#jacksonJsonMapper matched:
+      - @ConditionalOnMissingBean (types: tools.jackson.databind.json.JsonMapper; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JacksonAutoConfiguration#jsonMapperBuilder matched:
+      - @ConditionalOnMissingBean (types: tools.jackson.databind.json.JsonMapper$Builder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JacksonAutoConfiguration.JsonProblemDetailsConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.http.ProblemDetail' (OnClassCondition)
+
+   JacksonHttpMessageConvertersConfiguration.JacksonJsonHttpMessageConverterConfiguration matched:
+      - @ConditionalOnClass found required class 'tools.jackson.databind.json.JsonMapper' (OnClassCondition)
+      - @ConditionalOnProperty (spring.http.converters.preferred-json-mapper=jackson) matched (OnPropertyCondition)
+      - @ConditionalOnBean (types: tools.jackson.databind.json.JsonMapper; SearchStrategy: all) found bean 'jacksonJsonMapper' (OnBeanCondition)
+
+   JacksonHttpMessageConvertersConfiguration.JacksonJsonHttpMessageConverterConfiguration#jacksonJsonHttpMessageConvertersCustomizer matched:
+      - @ConditionalOnMissingBean (types: org.springframework.http.converter.json.JacksonJsonHttpMessageConverter ignored: org.springframework.hateoas.server.mvc.TypeConstrainedJacksonJsonHttpMessageConverter,org.springframework.data.rest.webmvc.alps.AlpsJacksonJsonHttpMessageConverter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JdbcClientAutoConfiguration matched:
+      - @ConditionalOnSingleCandidate (types: org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate; SearchStrategy: all) found a single bean 'namedParameterJdbcTemplate'; @ConditionalOnMissingBean (types: org.springframework.jdbc.core.simple.JdbcClient; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JdbcTemplateAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'javax.sql.DataSource', 'org.springframework.jdbc.core.JdbcTemplate' (OnClassCondition)
+      - @ConditionalOnSingleCandidate (types: javax.sql.DataSource; SearchStrategy: all) found a single bean 'dataSource' (OnBeanCondition)
+
+   JdbcTemplateConfiguration matched:
+      - @ConditionalOnMissingBean (types: org.springframework.jdbc.core.JdbcOperations; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JpaBaseConfiguration#entityManagerFactory matched:
+      - @ConditionalOnMissingBean (types: org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean,jakarta.persistence.EntityManagerFactory; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JpaBaseConfiguration#entityManagerFactoryBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.jpa.EntityManagerFactoryBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JpaBaseConfiguration#jpaVendorAdapter matched:
+      - @ConditionalOnMissingBean (types: org.springframework.orm.jpa.JpaVendorAdapter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JpaBaseConfiguration#transactionManager matched:
+      - @ConditionalOnMissingBean (types: org.springframework.transaction.TransactionManager; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JpaBaseConfiguration.PersistenceManagedTypesConfiguration matched:
+      - @ConditionalOnMissingBean (types: org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean,jakarta.persistence.EntityManagerFactory; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JpaBaseConfiguration.PersistenceManagedTypesConfiguration#persistenceManagedTypes matched:
+      - @ConditionalOnMissingBean (types: org.springframework.orm.jpa.persistenceunit.PersistenceManagedTypes; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JtaAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'jakarta.transaction.Transaction' (OnClassCondition)
+      - @ConditionalOnBooleanProperty (spring.jta.enabled=true) matched (OnPropertyCondition)
+
+   LifecycleAutoConfiguration#defaultLifecycleProcessor matched:
+      - @ConditionalOnMissingBean (names: lifecycleProcessor; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   LocalDevToolsAutoConfiguration matched:
+      - Initialized Restarter Condition available and initialized (OnInitializedRestarterCondition)
+
+   LocalDevToolsAutoConfiguration.RestartConfiguration matched:
+      - @ConditionalOnBooleanProperty (spring.devtools.restart.enabled=true) matched (OnPropertyCondition)
+
+   LocalDevToolsAutoConfiguration.RestartConfiguration#classPathFileSystemWatcher matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.devtools.classpath.ClassPathFileSystemWatcher; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   LocalDevToolsAutoConfiguration.RestartConfiguration#classPathRestartStrategy matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.devtools.classpath.ClassPathRestartStrategy; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   LocalDevToolsAutoConfiguration.RestartConfiguration#conditionEvaluationDeltaLoggingListener matched:
+      - @ConditionalOnBooleanProperty (spring.devtools.restart.log-condition-evaluation-delta=true) matched (OnPropertyCondition)
+
+   MailSenderPropertiesConfiguration matched:
+      - @ConditionalOnProperty (spring.mail.host) matched (OnPropertyCondition)
+
+   MultipartAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'jakarta.servlet.Servlet', 'org.springframework.web.multipart.support.StandardServletMultipartResolver', 'jakarta.servlet.MultipartConfigElement' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnBooleanProperty (spring.servlet.multipart.enabled=true) matched (OnPropertyCondition)
+
+   MultipartAutoConfiguration#multipartConfigElement matched:
+      - @ConditionalOnMissingBean (types: jakarta.servlet.MultipartConfigElement; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   MultipartAutoConfiguration#multipartResolver matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.multipart.MultipartResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   NamedParameterJdbcTemplateConfiguration matched:
+      - @ConditionalOnSingleCandidate (types: org.springframework.jdbc.core.JdbcTemplate; SearchStrategy: all) found a single bean 'jdbcTemplate'; @ConditionalOnMissingBean (types: org.springframework.jdbc.core.namedparam.NamedParameterJdbcOperations; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   PersistenceExceptionTranslationAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor' (OnClassCondition)
+
+   PersistenceExceptionTranslationAutoConfiguration#persistenceExceptionTranslationPostProcessor matched:
+      - @ConditionalOnBooleanProperty (spring.persistence.exceptiontranslation.enabled=true) matched (OnPropertyCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   PropertyPlaceholderAutoConfiguration#propertySourcesPlaceholderConfigurer matched:
+      - @ConditionalOnMissingBean (types: org.springframework.context.support.PropertySourcesPlaceholderConfigurer; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   SecurityAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.authentication.DefaultAuthenticationEventPublisher' (OnClassCondition)
+
+   SecurityAutoConfiguration#authenticationEventPublisher matched:
+      - @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationEventPublisher; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   SecurityFilterAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer', 'org.springframework.security.config.http.SessionCreationPolicy' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+
+   SecurityFilterAutoConfiguration#securityFilterChainRegistration matched:
+      - @ConditionalOnBean (names: springSecurityFilterChain; SearchStrategy: all) found bean 'springSecurityFilterChain' (OnBeanCondition)
+
+   ServletWebSecurityAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+
+   ServletWebSecurityAutoConfiguration.PathPatternRequestMatcherBuilderConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.boot.webmvc.autoconfigure.DispatcherServletPath' (OnClassCondition)
+      - @ConditionalOnBean (types: org.springframework.boot.webmvc.autoconfigure.DispatcherServletPath; SearchStrategy: all) found bean 'dispatcherServletRegistration' (OnBeanCondition)
+
+   ServletWebSecurityAutoConfiguration.PathPatternRequestMatcherBuilderConfiguration#pathPatternRequestMatcherBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.security.web.servlet.util.matcher.PathPatternRequestMatcher$Builder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   SslAutoConfiguration#sslBundleRegistry matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.ssl.SslBundleRegistry,org.springframework.boot.ssl.SslBundles; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TaskExecutionAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor' (OnClassCondition)
+
+   TaskExecutorConfigurations.AsyncConfigurerConfiguration matched:
+      - @ConditionalOnMissingBean (types: org.springframework.scheduling.annotation.AsyncConfigurer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TaskExecutorConfigurations.SimpleAsyncTaskExecutorBuilderConfiguration#simpleAsyncTaskExecutorBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.task.SimpleAsyncTaskExecutorBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+      - @ConditionalOnThreading found PLATFORM (OnThreadingCondition)
+
+   TaskExecutorConfigurations.TaskExecutorConfiguration matched:
+      - AnyNestedCondition 1 matched 1 did not; NestedCondition on TaskExecutorConfigurations.OnExecutorCondition.ModelCondition @ConditionalOnProperty (spring.task.execution.mode=force) did not find property 'spring.task.execution.mode'; NestedCondition on TaskExecutorConfigurations.OnExecutorCondition.ExecutorBeanCondition @ConditionalOnMissingBean (types: java.util.concurrent.Executor; SearchStrategy: all) did not find any beans (TaskExecutorConfigurations.OnExecutorCondition)
+
+   TaskExecutorConfigurations.TaskExecutorConfiguration#applicationTaskExecutor matched:
+      - @ConditionalOnThreading found PLATFORM (OnThreadingCondition)
+
+   TaskExecutorConfigurations.ThreadPoolTaskExecutorBuilderConfiguration#threadPoolTaskExecutorBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.task.ThreadPoolTaskExecutorBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TaskSchedulingAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler' (OnClassCondition)
+
+   TaskSchedulingConfigurations.SimpleAsyncTaskSchedulerBuilderConfiguration#simpleAsyncTaskSchedulerBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.task.SimpleAsyncTaskSchedulerBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+      - @ConditionalOnThreading found PLATFORM (OnThreadingCondition)
+
+   TaskSchedulingConfigurations.ThreadPoolTaskSchedulerBuilderConfiguration#threadPoolTaskSchedulerBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.task.ThreadPoolTaskSchedulerBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TomcatServletWebServerAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'jakarta.servlet.ServletRequest', 'org.apache.catalina.startup.Tomcat', 'org.apache.coyote.UpgradeProtocol', 'org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+
+   TomcatServletWebServerAutoConfiguration#tomcatServletWebServerFactory matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.web.server.servlet.ServletWebServerFactory; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   TomcatWebServerConfiguration matched:
+      - @ConditionalOnWarDeployment the application is not deployed as a WAR file. (OnWarDeploymentCondition)
+
+   TomcatWebServerConfiguration.TomcatWebSocketConfiguration matched:
+      - @ConditionalOnClass found required class 'org.apache.tomcat.websocket.server.WsSci' (OnClassCondition)
+
+   TransactionAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.transaction.PlatformTransactionManager' (OnClassCondition)
+
+   TransactionAutoConfiguration.EnableTransactionManagementConfiguration matched:
+      - @ConditionalOnBean (types: org.springframework.transaction.TransactionManager; SearchStrategy: all) found bean 'transactionManager'; @ConditionalOnMissingBean (types: org.springframework.transaction.annotation.AbstractTransactionManagementConfiguration; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TransactionAutoConfiguration.EnableTransactionManagementConfiguration.CglibAutoProxyConfiguration matched:
+      - @ConditionalOnBooleanProperty (spring.aop.proxy-target-class=true) matched (OnPropertyCondition)
+
+   TransactionAutoConfiguration.TransactionTemplateConfiguration matched:
+      - @ConditionalOnSingleCandidate (types: org.springframework.transaction.PlatformTransactionManager; SearchStrategy: all) found a single bean 'transactionManager' (OnBeanCondition)
+
+   TransactionAutoConfiguration.TransactionTemplateConfiguration#transactionTemplate matched:
+      - @ConditionalOnMissingBean (types: org.springframework.transaction.support.TransactionOperations; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TransactionManagerCustomizationAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.transaction.PlatformTransactionManager' (OnClassCondition)
+
+   TransactionManagerCustomizationAutoConfiguration#platformTransactionManagerCustomizers matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.transaction.autoconfigure.TransactionManagerCustomizers; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ValidationAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'jakarta.validation.executable.ExecutableValidator' (OnClassCondition)
+      - @ConditionalOnResource found location classpath:META-INF/services/jakarta.validation.spi.ValidationProvider (OnResourceCondition)
+
+   ValidationAutoConfiguration#defaultValidator matched:
+      - @ConditionalOnMissingBean (types: jakarta.validation.Validator; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ValidationAutoConfiguration#methodValidationPostProcessor matched:
+      - @ConditionalOnMissingBean (types: org.springframework.validation.beanvalidation.MethodValidationPostProcessor; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'jakarta.servlet.Servlet', 'org.springframework.web.servlet.DispatcherServlet', 'org.springframework.web.servlet.config.annotation.WebMvcConfigurer' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration#formContentFilter matched:
+      - @ConditionalOnBooleanProperty (spring.mvc.formcontent.filter.enabled=true) matched (OnPropertyCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.web.filter.FormContentFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.EnableWebMvcConfiguration#flashMapManager matched:
+      - @ConditionalOnMissingBean (names: flashMapManager; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.EnableWebMvcConfiguration#localeResolver matched:
+      - @ConditionalOnMissingBean (names: localeResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.EnableWebMvcConfiguration#viewNameTranslator matched:
+      - @ConditionalOnMissingBean (names: viewNameTranslator; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#defaultViewResolver matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.InternalResourceViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#requestContextFilter matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.context.request.RequestContextListener,org.springframework.web.filter.RequestContextFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#viewResolver matched:
+      - @ConditionalOnBean (types: org.springframework.web.servlet.ViewResolver; SearchStrategy: all) found beans 'defaultViewResolver', 'beanNameViewResolver', 'mvcViewResolver'; @ConditionalOnMissingBean (names: viewResolver types: org.springframework.web.servlet.view.ContentNegotiatingViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebServiceTemplateAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'org.springframework.ws.client.core.WebServiceTemplate', 'org.springframework.oxm.Unmarshaller', 'org.springframework.oxm.Marshaller' (OnClassCondition)
+
+   WebServiceTemplateAutoConfiguration#webServiceHttpMessageSenderFactory matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.webservices.client.WebServiceMessageSenderFactory; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebServiceTemplateAutoConfiguration#webServiceTemplateBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.webservices.client.WebServiceTemplateBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebServicesAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.ws.transport.http.MessageDispatcherServlet' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.ws.config.annotation.WsConfigurationSupport; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+   AopAutoConfiguration.AspectJAutoProxyingConfiguration.JdkDynamicAutoProxyConfiguration:
+      Did not match:
+         - @ConditionalOnBooleanProperty (spring.aop.proxy-target-class=false) did not find property 'spring.aop.proxy-target-class' (OnPropertyCondition)
+
+   AopAutoConfiguration.ClassProxyingConfiguration:
+      Did not match:
+         - @ConditionalOnMissingClass found unwanted class 'org.aspectj.weaver.Advice' (OnClassCondition)
+
+   DataJpaRepositoriesAutoConfiguration#entityManagerFactoryBootstrapExecutorCustomizer:
+      Did not match:
+         - AnyNestedCondition 0 matched 2 did not; NestedCondition on DataJpaRepositoriesAutoConfiguration.BootstrapExecutorCondition.LazyBootstrapMode @ConditionalOnProperty (spring.data.jpa.repositories.bootstrap-mode=lazy) did not find property 'spring.data.jpa.repositories.bootstrap-mode'; NestedCondition on DataJpaRepositoriesAutoConfiguration.BootstrapExecutorCondition.DeferredBootstrapMode @ConditionalOnProperty (spring.data.jpa.repositories.bootstrap-mode=deferred) did not find property 'spring.data.jpa.repositories.bootstrap-mode' (DataJpaRepositoriesAutoConfiguration.BootstrapExecutorCondition)
+
+   DataRepositoryMetricsAutoConfiguration:
+      Did not match:
+         - @ConditionalOnBean did not find required type 'io.micrometer.core.instrument.MeterRegistry' (OnBeanCondition)
+
+   DataSourceAutoConfiguration.EmbeddedDatabaseConfiguration:
+      Did not match:
+         - EmbeddedDataSource spring.datasource.url is set (DataSourceAutoConfiguration.EmbeddedDatabaseCondition)
+
+   DataSourceCheckpointRestoreConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.crac.Resource' (OnClassCondition)
+
+   DataSourceConfiguration.Dbcp2:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.apache.commons.dbcp2.BasicDataSource' (OnClassCondition)
+
+   DataSourceConfiguration.Generic:
+      Did not match:
+         - @ConditionalOnProperty (spring.datasource.type) did not find property 'spring.datasource.type' (OnPropertyCondition)
+
+   DataSourceConfiguration.OracleUcp:
+      Did not match:
+         - @ConditionalOnClass did not find required classes 'oracle.ucp.jdbc.PoolDataSourceImpl', 'oracle.jdbc.OracleConnection' (OnClassCondition)
+
+   DataSourceConfiguration.Tomcat:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.apache.tomcat.jdbc.pool.DataSource' (OnClassCondition)
+
+   DataSourceHealthContributorAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.boot.health.autoconfigure.contributor.ConditionalOnEnabledHealthIndicator' (OnClassCondition)
+
+   DataSourceJmxConfiguration:
+      Did not match:
+         - @ConditionalOnBooleanProperty (spring.jmx.enabled=true) did not find property 'spring.jmx.enabled' (OnPropertyCondition)
+
+   DataSourcePoolMetadataProvidersConfiguration.CommonsDbcp2PoolDataSourceMetadataProviderConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.apache.commons.dbcp2.BasicDataSource' (OnClassCondition)
+
+   DataSourcePoolMetadataProvidersConfiguration.OracleUcpPoolDataSourceMetadataProviderConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required classes 'oracle.ucp.jdbc.PoolDataSource', 'oracle.jdbc.OracleConnection' (OnClassCondition)
+
+   DataSourcePoolMetadataProvidersConfiguration.TomcatDataSourcePoolMetadataProviderConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.apache.tomcat.jdbc.pool.DataSource' (OnClassCondition)
+
+   DataSourcePoolMetricsAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'io.micrometer.core.instrument.MeterRegistry' (OnClassCondition)
+
+   DataSourceTransactionManagerAutoConfiguration.JdbcTransactionManagerConfiguration#transactionManager:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.transaction.TransactionManager; SearchStrategy: all) found beans of type 'org.springframework.transaction.TransactionManager' transactionManager (OnBeanCondition)
+
+   DevToolsR2dbcAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'io.r2dbc.spi.ConnectionFactory' (OnClassCondition)
+
+   DispatcherServletAutoConfiguration.DispatcherServletConfiguration#multipartResolver:
+      Did not match:
+         - @ConditionalOnBean (types: org.springframework.web.multipart.MultipartResolver; SearchStrategy: all) did not find any beans of type org.springframework.web.multipart.MultipartResolver (OnBeanCondition)
+
+   GsonHttpMessageConvertersConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.google.gson.Gson' (OnClassCondition)
+
+   HibernateMetricsAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'io.micrometer.core.instrument.MeterRegistry' (OnClassCondition)
+
+   HttpClientMetricsAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'io.micrometer.core.instrument.MeterRegistry' (OnClassCondition)
+
+   Jackson2HttpMessageConvertersConfiguration.MappingJackson2HttpMessageConverterConfiguration:
+      Did not match:
+         - AnyNestedCondition 0 matched 2 did not; NestedCondition on Jackson2HttpMessageConvertersConfiguration.PreferJackson2OrJacksonUnavailableCondition.JacksonUnavailable @ConditionalOnMissingBean (types: org.springframework.boot.http.converter.autoconfigure.JacksonHttpMessageConvertersConfiguration$JacksonJsonHttpMessageConvertersCustomizer; SearchStrategy: all) found beans of type 'org.springframework.boot.http.converter.autoconfigure.JacksonHttpMessageConvertersConfiguration$JacksonJsonHttpMessageConvertersCustomizer' jacksonJsonHttpMessageConvertersCustomizer; NestedCondition on Jackson2HttpMessageConvertersConfiguration.PreferJackson2OrJacksonUnavailableCondition.Jackson2Preferred @ConditionalOnProperty (spring.http.converters.preferred-json-mapper=jackson2) did not find property 'spring.http.converters.preferred-json-mapper' (Jackson2HttpMessageConvertersConfiguration.PreferJackson2OrJacksonUnavailableCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'com.fasterxml.jackson.databind.ObjectMapper' (OnClassCondition)
+
+   Jackson2HttpMessageConvertersConfiguration.MappingJackson2XmlHttpMessageConverterConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.fasterxml.jackson.dataformat.xml.XmlMapper' (OnClassCondition)
+
+   JacksonAutoConfiguration.CborConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'tools.jackson.dataformat.cbor.CBORMapper' (OnClassCondition)
+
+   JacksonAutoConfiguration.XmlConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'tools.jackson.dataformat.xml.XmlMapper' (OnClassCondition)
+
+   JacksonHttpMessageConvertersConfiguration.JacksonXmlHttpMessageConverterConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'tools.jackson.dataformat.xml.XmlMapper' (OnClassCondition)
+
+   JmxAutoConfiguration:
+      Did not match:
+         - @ConditionalOnBooleanProperty (spring.jmx.enabled=true) did not find property 'spring.jmx.enabled' (OnPropertyCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.jmx.export.MBeanExporter' (OnClassCondition)
+
+   JndiDataSourceAutoConfiguration:
+      Did not match:
+         - @ConditionalOnProperty (spring.datasource.jndi-name) did not find property 'spring.datasource.jndi-name' (OnPropertyCondition)
+      Matched:
+         - @ConditionalOnClass found required classes 'javax.sql.DataSource', 'org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType' (OnClassCondition)
+
+   JndiJtaConfiguration:
+      Did not match:
+         - @ConditionalOnJndi JNDI environment is not available (OnJndiCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.transaction.jta.JtaTransactionManager' (OnClassCondition)
+
+   JpaBaseConfiguration.JpaWebConfiguration:
+      Did not match:
+         - @ConditionalOnBooleanProperty (spring.jpa.open-in-view=true) found different value in property 'spring.jpa.open-in-view' (OnPropertyCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.web.servlet.config.annotation.WebMvcConfigurer' (OnClassCondition)
+         - found 'session' scope (OnWebApplicationCondition)
+
+   JsonbHttpMessageConvertersConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'jakarta.json.bind.Jsonb' (OnClassCondition)
+
+   KotlinSerializationHttpMessageConvertersConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required classes 'kotlinx.serialization.Serializable', 'kotlinx.serialization.json.Json' (OnClassCondition)
+
+   LocalDevToolsAutoConfiguration.LiveReloadConfiguration:
+      Did not match:
+         - @ConditionalOnBooleanProperty (spring.devtools.livereload.enabled=true) did not find property 'spring.devtools.livereload.enabled' (OnPropertyCondition)
+
+   MailHealthContributorAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.boot.health.autoconfigure.contributor.ConditionalOnEnabledHealthIndicator' (OnClassCondition)
+
+   MailSenderAutoConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.mail.MailSender; SearchStrategy: all) found beans of type 'org.springframework.mail.MailSender' javaMailSender (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required classes 'jakarta.mail.internet.MimeMessage', 'jakarta.activation.MimeType', 'org.springframework.mail.MailSender' (OnClassCondition)
+         - AnyNestedCondition 1 matched 1 did not; NestedCondition on MailSenderAutoConfiguration.MailSenderCondition.JndiNameProperty @ConditionalOnProperty (spring.mail.jndi-name) did not find property 'spring.mail.jndi-name'; NestedCondition on MailSenderAutoConfiguration.MailSenderCondition.HostProperty @ConditionalOnProperty (spring.mail.host) matched (MailSenderAutoConfiguration.MailSenderCondition)
+
+   MailSenderJndiConfiguration:
+      Did not match:
+         - @ConditionalOnProperty (spring.mail.jndi-name) did not find property 'spring.mail.jndi-name' (OnPropertyCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'jakarta.mail.Session' (OnClassCondition)
+
+   MailSenderValidatorAutoConfiguration:
+      Did not match:
+         - @ConditionalOnBooleanProperty (spring.mail.test-connection=true) did not find property 'spring.mail.test-connection' (OnPropertyCondition)
+
+   ManagementWebSecurityAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration' (OnClassCondition)
+
+   MessageSourceAutoConfiguration:
+      Did not match:
+         - ResourceBundle did not find bundle with basename messages (MessageSourceAutoConfiguration.ResourceBundleCondition)
+
+   ProjectInfoAutoConfiguration#buildProperties:
+      Did not match:
+         - @ConditionalOnResource did not find resource '${spring.info.build.location:classpath:META-INF/build-info.properties}' (OnResourceCondition)
+
+   ProjectInfoAutoConfiguration#gitProperties:
+      Did not match:
+         - GitResource did not find git info at classpath:git.properties (ProjectInfoAutoConfiguration.GitResourceAvailableCondition)
+
+   RSocketSecurityAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.boot.rsocket.server.RSocketServerCustomizer' (OnClassCondition)
+
+   ReactiveHttpClientAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'reactor.core.publisher.Mono' (OnClassCondition)
+
+   ReactiveManagementWebSecurityAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration' (OnClassCondition)
+
+   ReactiveUserDetailsServiceAutoConfiguration:
+      Did not match:
+         - AnyNestedCondition 0 matched 2 did not; NestedCondition on ReactiveUserDetailsServiceAutoConfiguration.RSocketEnabledOrReactiveWebApplication.ReactiveWebApplicationCondition did not find reactive web application classes; NestedCondition on ReactiveUserDetailsServiceAutoConfiguration.RSocketEnabledOrReactiveWebApplication.RSocketSecurityEnabledCondition @ConditionalOnBean (types: org.springframework.messaging.rsocket.annotation.support.RSocketMessageHandler; SearchStrategy: all) did not find any beans of type org.springframework.messaging.rsocket.annotation.support.RSocketMessageHandler (ReactiveUserDetailsServiceAutoConfiguration.RSocketEnabledOrReactiveWebApplication)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.security.authentication.ReactiveAuthenticationManager' (OnClassCondition)
+         - AnyNestedCondition 1 matched 2 did not; NestedCondition on MissingAlternativeUserDetailsManagerOrUserPropertiesConfigured.PasswordConfigured @ConditionalOnProperty (spring.security.user.password) did not find property 'spring.security.user.password'; NestedCondition on MissingAlternativeUserDetailsManagerOrUserPropertiesConfigured.NameConfigured @ConditionalOnProperty (spring.security.user.name) did not find property 'spring.security.user.name'; NestedCondition on MissingAlternativeUserDetailsManagerOrUserPropertiesConfigured.MissingAlternative @ConditionalOnMissingClass did not find unwanted classes 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository', 'org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector', 'org.springframework.security.saml2.provider.service.registration.RelyingPartyRegistrationRepository' (MissingAlternativeUserDetailsManagerOrUserPropertiesConfigured)
+
+   ReactiveWebSecurityAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'reactor.core.publisher.Flux' (OnClassCondition)
+
+   RemoteDevToolsAutoConfiguration:
+      Did not match:
+         - @ConditionalOnProperty (spring.devtools.remote.secret) did not find property 'spring.devtools.remote.secret' (OnPropertyCondition)
+      Matched:
+         - @ConditionalOnClass found required classes 'jakarta.servlet.Filter', 'org.springframework.http.server.ServerHttpRequest', 'org.springframework.boot.web.server.autoconfigure.ServerProperties' (OnClassCondition)
+
+   SecurityAutoConfiguration.SecurityDataConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.data.repository.query.SecurityEvaluationContextExtension' (OnClassCondition)
+
+   ServletHttpExchangesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnBean did not find required type 'org.springframework.boot.actuate.web.exchanges.HttpExchangeRepository' (OnBeanCondition)
+
+   ServletManagementContextAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointProperties' (OnClassCondition)
+
+   ServletMappingsAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.boot.actuate.autoconfigure.endpoint.condition.ConditionalOnAvailableEndpoint' (OnClassCondition)
+
+   ServletWebSecurityAutoConfiguration.EnableWebSecurityConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) found beans named springSecurityFilterChain (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+
+   ServletWebSecurityAutoConfiguration.SecurityFilterChainConfiguration:
+      Did not match:
+         - AllNestedConditions 1 matched 1 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) found beans of type 'org.springframework.security.web.SecurityFilterChain' filterChain; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+
+   ServletWebServerConfiguration#forwardedHeaderFilter:
+      Did not match:
+         - @ConditionalOnProperty (server.forward-headers-strategy=framework) did not find property 'server.forward-headers-strategy' (OnPropertyCondition)
+
+   SpringApplicationAdminJmxAutoConfiguration:
+      Did not match:
+         - @ConditionalOnBooleanProperty (spring.application.admin.enabled=true) did not find property 'spring.application.admin.enabled' (OnPropertyCondition)
+
+   TaskExecutorConfigurations.AsyncConfigurerWrapperConfiguration:
+      Did not match:
+         - @ConditionalOnBean (types: org.springframework.scheduling.annotation.AsyncConfigurer; SearchStrategy: all) did not find any beans of type org.springframework.scheduling.annotation.AsyncConfigurer (OnBeanCondition)
+
+   TaskExecutorConfigurations.SimpleAsyncTaskExecutorBuilderConfiguration#simpleAsyncTaskExecutorBuilderVirtualThreads:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.boot.task.SimpleAsyncTaskExecutorBuilder; SearchStrategy: all) found beans of type 'org.springframework.boot.task.SimpleAsyncTaskExecutorBuilder' simpleAsyncTaskExecutorBuilder (OnBeanCondition)
+
+   TaskExecutorConfigurations.TaskExecutorConfiguration#applicationTaskExecutorVirtualThreads:
+      Did not match:
+         - @ConditionalOnThreading did not find VIRTUAL (OnThreadingCondition)
+
+   TaskSchedulingAutoConfiguration#scheduledBeanLazyInitializationExcludeFilter:
+      Did not match:
+         - @ConditionalOnBean (names: org.springframework.scheduling.config.internalScheduledAnnotationProcessor; SearchStrategy: all) did not find any beans named org.springframework.scheduling.config.internalScheduledAnnotationProcessor (OnBeanCondition)
+
+   TaskSchedulingConfigurations.SimpleAsyncTaskSchedulerBuilderConfiguration#simpleAsyncTaskSchedulerBuilderVirtualThreads:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.boot.task.SimpleAsyncTaskSchedulerBuilder; SearchStrategy: all) found beans of type 'org.springframework.boot.task.SimpleAsyncTaskSchedulerBuilder' simpleAsyncTaskSchedulerBuilder (OnBeanCondition)
+
+   TaskSchedulingConfigurations.TaskSchedulerConfiguration:
+      Did not match:
+         - @ConditionalOnBean (names: org.springframework.scheduling.config.internalScheduledAnnotationProcessor; SearchStrategy: all) did not find any beans named org.springframework.scheduling.config.internalScheduledAnnotationProcessor (OnBeanCondition)
+
+   TomcatMetricsAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'io.micrometer.core.instrument.binder.tomcat.TomcatMetrics' (OnClassCondition)
+
+   TomcatReactiveManagementContextAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextFactory' (OnClassCondition)
+
+   TomcatReactiveWebServerAutoConfiguration:
+      Did not match:
+         - @ConditionalOnWebApplication did not find reactive web application classes (OnWebApplicationCondition)
+
+   TomcatServletManagementContextAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextFactory' (OnClassCondition)
+
+   TomcatServletWebServerAutoConfiguration#tomcatForwardedHeaderFilterCustomizer:
+      Did not match:
+         - @ConditionalOnProperty (server.forward-headers-strategy=framework) did not find property 'server.forward-headers-strategy' (OnPropertyCondition)
+
+   TomcatWebServerConfiguration#tomcatVirtualThreadsProtocolHandlerCustomizer:
+      Did not match:
+         - @ConditionalOnThreading did not find VIRTUAL (OnThreadingCondition)
+
+   TransactionAutoConfiguration#transactionalOperator:
+      Did not match:
+         - @ConditionalOnSingleCandidate (types: org.springframework.transaction.ReactiveTransactionManager; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TransactionAutoConfiguration.AspectJTransactionManagementConfiguration:
+      Did not match:
+         - @ConditionalOnBean (types: org.springframework.transaction.aspectj.AbstractTransactionAspect; SearchStrategy: all) did not find any beans of type org.springframework.transaction.aspectj.AbstractTransactionAspect (OnBeanCondition)
+
+   TransactionAutoConfiguration.EnableTransactionManagementConfiguration.JdkDynamicAutoProxyConfiguration:
+      Did not match:
+         - @ConditionalOnBooleanProperty (spring.aop.proxy-target-class=false) did not find property 'spring.aop.proxy-target-class' (OnPropertyCondition)
+
+   UserDetailsServiceAutoConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService,org.springframework.security.authentication.AuthenticationManagerResolver,org.springframework.security.oauth2.jwt.JwtDecoder; SearchStrategy: all) found beans of type 'org.springframework.security.authentication.AuthenticationManager' authenticationManager and found beans of type 'org.springframework.security.core.userdetails.UserDetailsService' customUserDetailsService and found beans of type 'org.springframework.security.authentication.AuthenticationProvider' authenticationProvider (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
+         - found 'session' scope (OnWebApplicationCondition)
+         - AnyNestedCondition 1 matched 2 did not; NestedCondition on MissingAlternativeUserDetailsManagerOrUserPropertiesConfigured.PasswordConfigured @ConditionalOnProperty (spring.security.user.password) did not find property 'spring.security.user.password'; NestedCondition on MissingAlternativeUserDetailsManagerOrUserPropertiesConfigured.NameConfigured @ConditionalOnProperty (spring.security.user.name) did not find property 'spring.security.user.name'; NestedCondition on MissingAlternativeUserDetailsManagerOrUserPropertiesConfigured.MissingAlternative @ConditionalOnMissingClass did not find unwanted classes 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository', 'org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector', 'org.springframework.security.saml2.provider.service.registration.RelyingPartyRegistrationRepository' (MissingAlternativeUserDetailsManagerOrUserPropertiesConfigured)
+
+   WebMvcAutoConfiguration#hiddenHttpMethodFilter:
+      Did not match:
+         - @ConditionalOnBooleanProperty (spring.mvc.hiddenmethod.filter.enabled=true) did not find property 'spring.mvc.hiddenmethod.filter.enabled' (OnPropertyCondition)
+
+   WebMvcAutoConfiguration.ProblemDetailsErrorHandlingConfiguration:
+      Did not match:
+         - @ConditionalOnBooleanProperty (spring.mvc.problemdetails.enabled=true) did not find property 'spring.mvc.problemdetails.enabled' (OnPropertyCondition)
+
+   WebMvcAutoConfiguration.ResourceChainCustomizerConfiguration:
+      Did not match:
+         - @ConditionalOnEnabledResourceChain did not find class org.webjars.WebJarVersionLocator (OnEnabledResourceChainCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#beanNameViewResolver:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.BeanNameViewResolver; SearchStrategy: all) found beans of type 'org.springframework.web.servlet.view.BeanNameViewResolver' beanNameViewResolver (OnBeanCondition)
+
+   WebMvcHealthEndpointExtensionAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.boot.health.actuate.endpoint.HealthEndpoint' (OnClassCondition)
+
+   WebMvcMappingsAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.boot.actuate.autoconfigure.endpoint.condition.ConditionalOnAvailableEndpoint' (OnClassCondition)
+
+   WebMvcObservationAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.boot.micrometer.observation.autoconfigure.ObservationProperties' (OnClassCondition)
+
+   WebServicesAutoConfiguration#wsdlDefinitionBeanFactoryPostProcessor:
+      Did not match:
+         - WSDL locations did not find property spring.webservices.wsdl-locations (OnWsdlLocationsCondition)
+
+   XADataSourceAutoConfiguration:
+      Did not match:
+         - @ConditionalOnBean (types: org.springframework.boot.jdbc.XADataSourceWrapper; SearchStrategy: all) did not find any beans of type org.springframework.boot.jdbc.XADataSourceWrapper (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required classes 'javax.sql.DataSource', 'jakarta.transaction.TransactionManager', 'org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType' (OnClassCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    org.springframework.boot.http.client.autoconfigure.HttpClientAutoConfiguration
+
+    org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration
+
+    org.springframework.boot.http.client.autoconfigure.service.HttpServiceClientPropertiesAutoConfiguration
+
+    org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration
+
+    org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration
+
+    org.springframework.boot.autoconfigure.context.LifecycleAutoConfiguration
+
+    org.springframework.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration
+
+    org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration
+
+
+
+2026-10-01T12:27:03.269+07:00  INFO 7628 --- [ProjWEB] [  restartedMain] c.jewellery.ProjWEB.ProjWebApplication   : Started ProjWebApplication in 6.055 seconds (process running for 6.498)
+2026-10-01T12:27:03.269+07:00 DEBUG 7628 --- [ProjWEB] [  restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
+2026-10-01T12:27:03.381+07:00 DEBUG 7628 --- [ProjWEB] [  restartedMain] org.hibernate.SQL                        : select r1_0.id,r1_0.name from roles r1_0 where r1_0.name=?
+2026-10-01T12:27:03.414+07:00 DEBUG 7628 --- [ProjWEB] [  restartedMain] org.hibernate.SQL                        : select r1_0.id,r1_0.name from roles r1_0 where r1_0.name=?
+2026-10-01T12:27:03.414+07:00 DEBUG 7628 --- [ProjWEB] [  restartedMain] org.hibernate.SQL                        : select r1_0.id,r1_0.name from roles r1_0 where r1_0.name=?
+2026-10-01T12:27:03.414+07:00 DEBUG 7628 --- [ProjWEB] [  restartedMain] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.fullName,u1_0.password,u1_0.phoneNumber,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-10-01T12:27:03.616+07:00 DEBUG 7628 --- [ProjWEB] [  restartedMain] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.fullName,u1_0.password,u1_0.phoneNumber,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.id=?
+2026-10-01T12:27:03.616+07:00 DEBUG 7628 --- [ProjWEB] [  restartedMain] org.hibernate.SQL                        : select r1_0.user_id,r1_1.id,r1_1.name from user_roles r1_0 join roles r1_1 on r1_1.id=r1_0.role_id where r1_0.user_id=?
+2026-10-01T12:27:03.673+07:00 DEBUG 7628 --- [ProjWEB] [  restartedMain] org.hibernate.SQL                        : update users set address=?,created_at=?,email=?,enabled=?,fullName=?,password=?,phoneNumber=?,updated_at=?,username=? where id=?
+2026-10-01T12:27:03.697+07:00  WARN 7628 --- [ProjWEB] [  restartedMain] c.j.ProjWEB.config.DataInitializer       : Replaced the insecure default admin credentials with configured credentials
+2026-10-01T12:27:03.697+07:00 DEBUG 7628 --- [ProjWEB] [  restartedMain] o.s.boot.devtools.restart.Restarter      : Creating new Restarter for thread Thread[main,5,main]
+2026-10-01T12:27:03.698+07:00 DEBUG 7628 --- [ProjWEB] [  restartedMain] o.s.boot.devtools.restart.Restarter      : Immediately restarting application
+2026-10-01T12:27:03.699+07:00 DEBUG 7628 --- [ProjWEB] [  restartedMain] o.s.boot.devtools.restart.Restarter      : Starting application com.jewellery.ProjWEB.ProjWebApplication with URLs [file:/D:/PROJJAVA/ProjWebFinal/backend/target/classes/]
+2026-10-01T12:27:03.699+07:00 DEBUG 7628 --- [ProjWEB] [  restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2026-10-01T12:27:15.214+07:00  INFO 7628 --- [ProjWEB] [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-01T12:27:15.214+07:00  INFO 7628 --- [ProjWEB] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-01T12:27:15.214+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2026-10-01T12:27:15.214+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2026-10-01T12:27:15.214+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1e2ed924
+2026-10-01T12:27:15.214+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@4700a31b
+2026-10-01T12:27:15.214+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-10-01T12:27:15.214+07:00  INFO 7628 --- [ProjWEB] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-10-01T12:27:15.236+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2026-10-01T12:27:15.240+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ParameterizableViewController [view=org.springframework.web.servlet.view.RedirectView: [RedirectView]; URL [/trangchu.html]]
+2026-10-01T12:27:15.246+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-1] o.s.web.servlet.view.RedirectView        : View [RedirectView], model {}
+2026-10-01T12:27:15.247+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 302 FOUND
+2026-10-01T12:27:15.252+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-10-01T12:27:15.257+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.webmvc.autoconfigure.error.BasicErrorController#error(HttpServletRequest)
+2026-10-01T12:27:15.269+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-01T12:27:15.269+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Thu Oct 01 12:27:15 ICT 2026, status=403, error=Forbidden, message=Forbidden, path=/trang (truncated)...]
+2026-10-01T12:27:15.305+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 403
+2026-10-01T12:27:26.888+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/error", parameters={}
+2026-10-01T12:27:26.889+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.webmvc.autoconfigure.error.BasicErrorController#error(HttpServletRequest)
+2026-10-01T12:27:26.889+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-01T12:27:26.890+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Thu Oct 01 12:27:26 ICT 2026, status=999, error=None, message=No message available}]
+2026-10-01T12:27:26.891+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 500 INTERNAL_SERVER_ERROR
+2026-10-01T12:27:26.913+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-10-01T12:27:26.913+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.webmvc.autoconfigure.error.BasicErrorController#error(HttpServletRequest)
+2026-10-01T12:27:26.914+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-01T12:27:26.914+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Thu Oct 01 12:27:26 ICT 2026, status=403, error=Forbidden, message=Forbidden, path=/trang (truncated)...]
+2026-10-01T12:27:26.915+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 403
+2026-10-01T12:28:22.313+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/index.html", parameters={}
+2026-10-01T12:28:22.315+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [URL [file:/D:/PROJJAVA/ProjWebFinal/frontend/home/], classpath [static/]]
+2026-10-01T12:28:22.318+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-10-01T12:28:22.346+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/assets/index-tRClsB9N.js", parameters={}
+2026-10-01T12:28:22.347+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [URL [file:/D:/PROJJAVA/ProjWebFinal/frontend/home/], classpath [static/]]
+2026-10-01T12:28:22.939+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-10-01T12:28:23.199+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/auth/login", parameters={}
+2026-10-01T12:28:23.201+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.jewellery.ProjWEB.exception.GlobalExceptionHandler#handleMethodNotSupported(HttpRequestMethodNotSupportedException)
+2026-10-01T12:28:23.202+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-01T12:28:23.202+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=2026-10-01T12:28:23.202083400, status=405, error=Method Not Allowed, message=Request meth (truncated)...]
+2026-10-01T12:28:23.203+07:00  WARN 7628 --- [ProjWEB] [nio-8081-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-10-01T12:28:23.204+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 405 METHOD_NOT_ALLOWED
+2026-10-01T12:31:08.548+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/login", parameters={}
+2026-10-01T12:31:08.549+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.jewellery.ProjWEB.auth.controller.AuthController#login(LoginRequest)
+2026-10-01T12:31:08.601+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequest(username=nguyenbaotam2005@gmail.com, password=123456)]
+2026-10-01T12:31:08.700+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-2] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.fullName,u1_0.password,u1_0.phoneNumber,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-10-01T12:31:08.801+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.jewellery.ProjWEB.exception.GlobalExceptionHandler#handleBadCredentials(BadCredentialsException)
+2026-10-01T12:31:08.803+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-01T12:31:08.809+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=2026-10-01T12:31:08.802006800, status=401, error=Unauthorized, message=Invalid username o (truncated)...]
+2026-10-01T12:31:08.810+07:00  WARN 7628 --- [ProjWEB] [nio-8081-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.authentication.BadCredentialsException: Bad credentials]
+2026-10-01T12:31:08.810+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 401 UNAUTHORIZED
+2026-10-01T12:31:17.716+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/login", parameters={}
+2026-10-01T12:31:17.716+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.jewellery.ProjWEB.auth.controller.AuthController#login(LoginRequest)
+2026-10-01T12:31:17.716+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequest(username=baotam, password=123456)]
+2026-10-01T12:31:17.716+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-4] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.fullName,u1_0.password,u1_0.phoneNumber,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-10-01T12:31:17.716+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-4] org.hibernate.SQL                        : select r1_0.user_id,r1_1.id,r1_1.name from user_roles r1_0 join roles r1_1 on r1_1.id=r1_0.role_id where r1_0.user_id=?
+2026-10-01T12:31:17.805+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.jewellery.ProjWEB.exception.GlobalExceptionHandler#handleBadCredentials(BadCredentialsException)
+2026-10-01T12:31:17.806+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-01T12:31:17.806+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=2026-10-01T12:31:17.806500800, status=401, error=Unauthorized, message=Invalid username o (truncated)...]
+2026-10-01T12:31:17.807+07:00  WARN 7628 --- [ProjWEB] [nio-8081-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.authentication.BadCredentialsException: Bad credentials]
+2026-10-01T12:31:17.807+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 401 UNAUTHORIZED
+2026-10-01T12:31:18.600+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/login", parameters={}
+2026-10-01T12:31:18.601+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.jewellery.ProjWEB.auth.controller.AuthController#login(LoginRequest)
+2026-10-01T12:31:18.602+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequest(username=baotam, password=123456)]
+2026-10-01T12:31:18.605+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-5] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.fullName,u1_0.password,u1_0.phoneNumber,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-10-01T12:31:18.607+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-5] org.hibernate.SQL                        : select r1_0.user_id,r1_1.id,r1_1.name from user_roles r1_0 join roles r1_1 on r1_1.id=r1_0.role_id where r1_0.user_id=?
+2026-10-01T12:31:18.693+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.jewellery.ProjWEB.exception.GlobalExceptionHandler#handleBadCredentials(BadCredentialsException)
+2026-10-01T12:31:18.694+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-01T12:31:18.695+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=2026-10-01T12:31:18.693808200, status=401, error=Unauthorized, message=Invalid username o (truncated)...]
+2026-10-01T12:31:18.696+07:00  WARN 7628 --- [ProjWEB] [nio-8081-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.authentication.BadCredentialsException: Bad credentials]
+2026-10-01T12:31:18.696+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 401 UNAUTHORIZED
+2026-10-01T12:31:19.201+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-9] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/login", parameters={}
+2026-10-01T12:31:19.202+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.jewellery.ProjWEB.auth.controller.AuthController#login(LoginRequest)
+2026-10-01T12:31:19.203+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequest(username=baotam, password=123456)]
+2026-10-01T12:31:19.205+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-9] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.fullName,u1_0.password,u1_0.phoneNumber,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-10-01T12:31:19.207+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-9] org.hibernate.SQL                        : select r1_0.user_id,r1_1.id,r1_1.name from user_roles r1_0 join roles r1_1 on r1_1.id=r1_0.role_id where r1_0.user_id=?
+2026-10-01T12:31:19.278+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.jewellery.ProjWEB.exception.GlobalExceptionHandler#handleBadCredentials(BadCredentialsException)
+2026-10-01T12:31:19.278+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-01T12:31:19.278+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=2026-10-01T12:31:19.278744200, status=401, error=Unauthorized, message=Invalid username o (truncated)...]
+2026-10-01T12:31:19.293+07:00  WARN 7628 --- [ProjWEB] [nio-8081-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.authentication.BadCredentialsException: Bad credentials]
+2026-10-01T12:31:19.294+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 401 UNAUTHORIZED
+2026-10-01T12:31:19.553+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/login", parameters={}
+2026-10-01T12:31:19.553+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.jewellery.ProjWEB.auth.controller.AuthController#login(LoginRequest)
+2026-10-01T12:31:19.553+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequest(username=baotam, password=123456)]
+2026-10-01T12:31:19.553+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-7] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.fullName,u1_0.password,u1_0.phoneNumber,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-10-01T12:31:19.553+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-7] org.hibernate.SQL                        : select r1_0.user_id,r1_1.id,r1_1.name from user_roles r1_0 join roles r1_1 on r1_1.id=r1_0.role_id where r1_0.user_id=?
+2026-10-01T12:31:19.639+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.jewellery.ProjWEB.exception.GlobalExceptionHandler#handleBadCredentials(BadCredentialsException)
+2026-10-01T12:31:19.639+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-01T12:31:19.640+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=2026-10-01T12:31:19.639129300, status=401, error=Unauthorized, message=Invalid username o (truncated)...]
+2026-10-01T12:31:19.640+07:00  WARN 7628 --- [ProjWEB] [nio-8081-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.authentication.BadCredentialsException: Bad credentials]
+2026-10-01T12:31:19.641+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 401 UNAUTHORIZED
+2026-10-01T12:31:20.369+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-8] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/login", parameters={}
+2026-10-01T12:31:20.370+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.jewellery.ProjWEB.auth.controller.AuthController#login(LoginRequest)
+2026-10-01T12:31:20.371+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequest(username=baotam, password=123456)]
+2026-10-01T12:31:20.374+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-8] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.fullName,u1_0.password,u1_0.phoneNumber,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-10-01T12:31:20.376+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-8] org.hibernate.SQL                        : select r1_0.user_id,r1_1.id,r1_1.name from user_roles r1_0 join roles r1_1 on r1_1.id=r1_0.role_id where r1_0.user_id=?
+2026-10-01T12:31:20.444+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.jewellery.ProjWEB.exception.GlobalExceptionHandler#handleBadCredentials(BadCredentialsException)
+2026-10-01T12:31:20.444+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-01T12:31:20.444+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=2026-10-01T12:31:20.444505600, status=401, error=Unauthorized, message=Invalid username o (truncated)...]
+2026-10-01T12:31:20.444+07:00  WARN 7628 --- [ProjWEB] [nio-8081-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.authentication.BadCredentialsException: Bad credentials]
+2026-10-01T12:31:20.444+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 401 UNAUTHORIZED
+2026-10-01T12:31:29.110+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2026-10-01T12:31:29.110+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ParameterizableViewController [view=org.springframework.web.servlet.view.RedirectView: [RedirectView]; URL [/trangchu.html]]
+2026-10-01T12:31:29.110+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-6] o.s.web.servlet.view.RedirectView        : View [RedirectView], model {}
+2026-10-01T12:31:29.110+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 302 FOUND
+2026-10-01T12:31:29.110+07:00 DEBUG 7628 --- [ProjWEB] [io-8081-exec-10] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-10-01T12:31:29.110+07:00 DEBUG 7628 --- [ProjWEB] [io-8081-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.webmvc.autoconfigure.error.BasicErrorController#error(HttpServletRequest)
+2026-10-01T12:31:29.110+07:00 DEBUG 7628 --- [ProjWEB] [io-8081-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-01T12:31:29.110+07:00 DEBUG 7628 --- [ProjWEB] [io-8081-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Thu Oct 01 12:31:29 ICT 2026, status=403, error=Forbidden, message=Forbidden, path=/trang (truncated)...]
+2026-10-01T12:31:29.110+07:00 DEBUG 7628 --- [ProjWEB] [io-8081-exec-10] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 403
+2026-10-01T12:31:40.958+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2026-10-01T12:31:40.959+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ParameterizableViewController [view=org.springframework.web.servlet.view.RedirectView: [RedirectView]; URL [/trangchu.html]]
+2026-10-01T12:31:40.959+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-2] o.s.web.servlet.view.RedirectView        : View [RedirectView], model {}
+2026-10-01T12:31:40.960+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 302 FOUND
+2026-10-01T12:33:42.050+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-9] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/register", parameters={}
+2026-10-01T12:33:42.079+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.jewellery.ProjWEB.auth.controller.AuthController#register(RegisterRequest)
+2026-10-01T12:33:42.079+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [RegisterRequest(username=tam, email=nguyenbaotam2005@gmail.com, password=12345678, fullName=nguyen b (truncated)...]
+2026-10-01T12:33:42.095+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-9] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.username=? limit ?
+2026-10-01T12:33:42.095+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-9] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.email=? limit ?
+2026-10-01T12:33:42.095+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-9] org.hibernate.SQL                        : select r1_0.id,r1_0.name from roles r1_0 where r1_0.name=?
+2026-10-01T12:33:42.179+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-9] org.hibernate.SQL                        : insert into users (address,created_at,email,enabled,fullName,password,phoneNumber,updated_at,username) values (?,?,?,?,?,?,?,?,?)
+2026-10-01T12:33:42.195+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-9] org.hibernate.SQL                        : insert into Account (address,createdAt,fullName,password,phoneNumber,user_id,username) values (?,?,?,?,?,?,?)
+2026-10-01T12:33:42.195+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-9] org.hibernate.SQL                        : insert into verification_tokens (expiryDate,token,used,user_id) values (?,?,?,?)
+2026-10-01T12:33:44.829+07:00 ERROR 7628 --- [ProjWEB] [nio-8081-exec-9] c.j.P.auth.service.AuthServiceImpl       : Could not send verification email to nguyenbaotam2005@gmail.com
+
+org.springframework.mail.MailAuthenticationException: Authentication failed
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:389) ~[spring-context-support-7.0.5.jar:7.0.5]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:337) ~[spring-context-support-7.0.5.jar:7.0.5]
+	at org.springframework.mail.javamail.JavaMailSender.send(JavaMailSender.java:101) ~[spring-context-support-7.0.5.jar:7.0.5]
+	at com.jewellery.ProjWEB.mail.EmailServiceImpl.sendHtmlEmail(EmailServiceImpl.java:79) ~[classes/:na]
+	at com.jewellery.ProjWEB.mail.EmailServiceImpl.sendVerificationEmail(EmailServiceImpl.java:47) ~[classes/:na]
+	at com.jewellery.ProjWEB.auth.service.AuthServiceImpl.register(AuthServiceImpl.java:88) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.5.jar:7.0.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190) ~[spring-aop-7.0.5.jar:7.0.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158) ~[spring-aop-7.0.5.jar:7.0.5]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133) ~[spring-tx-7.0.5.jar:7.0.5]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371) ~[spring-tx-7.0.5.jar:7.0.5]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130) ~[spring-tx-7.0.5.jar:7.0.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.5.jar:7.0.5]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719) ~[spring-aop-7.0.5.jar:7.0.5]
+	at com.jewellery.ProjWEB.auth.service.AuthServiceImpl$$SpringCGLIB$$0.register(<generated>) ~[classes/:na]
+	at com.jewellery.ProjWEB.auth.controller.AuthController.register(AuthController.java:25) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.18.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.18.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.18.jar:11.0.18]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:235) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:371) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:132) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:86) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at com.jewellery.ProjWEB.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:32) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at com.jewellery.ProjWEB.security.AuthRateLimitFilter.doFilterInternal(AuthRateLimitFilter.java:54) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317) ~[spring-security-config-7.0.3.jar:7.0.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: jakarta.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2e300b21905sm5343425ad.56 - gsmtp
+
+	at org.eclipse.angus.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:954) ~[angus-mail-2.0.5.jar:na]
+	at org.eclipse.angus.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:865) ~[angus-mail-2.0.5.jar:na]
+	at org.eclipse.angus.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:769) ~[angus-mail-2.0.5.jar:na]
+	at jakarta.mail.Service.connect(Service.java:345) ~[jakarta.mail-api-2.1.5.jar:na]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:467) ~[spring-context-support-7.0.5.jar:7.0.5]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:386) ~[spring-context-support-7.0.5.jar:7.0.5]
+	... 120 common frames omitted
+
+2026-10-01T12:33:44.850+07:00  INFO 7628 --- [ProjWEB] [nio-8081-exec-9] c.j.P.auth.service.AuthServiceImpl       : New user registered: tam
+2026-10-01T12:33:44.853+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-9] org.hibernate.SQL                        : insert into user_roles (user_id,role_id) values (?,?)
+2026-10-01T12:33:44.865+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-01T12:33:44.869+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AuthResponse(token=null, type=null, id=null, username=null, fullName=null, email=null, roles=null, m (truncated)...]
+2026-10-01T12:33:44.877+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-10-01T12:33:51.123+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-8] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/resend-verification", parameters={}
+2026-10-01T12:33:51.146+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.jewellery.ProjWEB.auth.controller.AuthController#resendVerification(Map)
+2026-10-01T12:33:51.150+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{email=nguyenbaotam2005@gmail.com}]
+2026-10-01T12:33:51.155+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-8] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.fullName,u1_0.password,u1_0.phoneNumber,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.email=?
+2026-10-01T12:33:51.161+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-8] org.hibernate.SQL                        : select vt1_0.id,vt1_0.expiryDate,vt1_0.token,vt1_0.used,vt1_0.user_id from verification_tokens vt1_0 where vt1_0.user_id=?
+2026-10-01T12:33:51.161+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-8] org.hibernate.SQL                        : insert into verification_tokens (expiryDate,token,used,user_id) values (?,?,?,?)
+2026-10-01T12:33:51.194+07:00  WARN 7628 --- [ProjWEB] [nio-8081-exec-8] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 1062, SQLState: 23000
+2026-10-01T12:33:51.194+07:00  WARN 7628 --- [ProjWEB] [nio-8081-exec-8] org.hibernate.orm.jdbc.error             : Duplicate entry '10' for key 'verification_tokens.UKdqp95ggn6gvm865km5muba2o5'
+2026-10-01T12:33:51.211+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.jewellery.ProjWEB.exception.GlobalExceptionHandler#handleRuntimeException(RuntimeException)
+2026-10-01T12:33:51.211+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-01T12:33:51.211+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=2026-10-01T12:33:51.211835200, status=500, error=Internal Server Error, message=An unexpe (truncated)...]
+2026-10-01T12:33:51.211+07:00  WARN 7628 --- [ProjWEB] [nio-8081-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [Duplicate entry '10' for key 'verification_tokens.UKdqp95ggn6gvm865km5muba2o5'] [insert into verification_tokens (expiryDate,token,used,user_id) values (?,?,?,?)]; SQL [insert into verification_tokens (expiryDate,token,used,user_id) values (?,?,?,?)]; constraint [verification_tokens.UKdqp95ggn6gvm865km5muba2o5]]
+2026-10-01T12:33:51.211+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 500 INTERNAL_SERVER_ERROR
+2026-10-01T12:34:18.598+07:00 DEBUG 7628 --- [ProjWEB] [io-8081-exec-10] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/resend-verification", parameters={}
+2026-10-01T12:34:18.598+07:00 DEBUG 7628 --- [ProjWEB] [io-8081-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.jewellery.ProjWEB.auth.controller.AuthController#resendVerification(Map)
+2026-10-01T12:34:18.598+07:00 DEBUG 7628 --- [ProjWEB] [io-8081-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{email=nguyenbaotam2005@gmail.com}]
+2026-10-01T12:34:18.598+07:00 DEBUG 7628 --- [ProjWEB] [io-8081-exec-10] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.fullName,u1_0.password,u1_0.phoneNumber,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.email=?
+2026-10-01T12:34:18.606+07:00 DEBUG 7628 --- [ProjWEB] [io-8081-exec-10] org.hibernate.SQL                        : select vt1_0.id,vt1_0.expiryDate,vt1_0.token,vt1_0.used,vt1_0.user_id from verification_tokens vt1_0 where vt1_0.user_id=?
+2026-10-01T12:34:18.608+07:00 DEBUG 7628 --- [ProjWEB] [io-8081-exec-10] org.hibernate.SQL                        : insert into verification_tokens (expiryDate,token,used,user_id) values (?,?,?,?)
+2026-10-01T12:34:18.611+07:00  WARN 7628 --- [ProjWEB] [io-8081-exec-10] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 1062, SQLState: 23000
+2026-10-01T12:34:18.611+07:00  WARN 7628 --- [ProjWEB] [io-8081-exec-10] org.hibernate.orm.jdbc.error             : Duplicate entry '10' for key 'verification_tokens.UKdqp95ggn6gvm865km5muba2o5'
+2026-10-01T12:34:18.612+07:00 DEBUG 7628 --- [ProjWEB] [io-8081-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.jewellery.ProjWEB.exception.GlobalExceptionHandler#handleRuntimeException(RuntimeException)
+2026-10-01T12:34:18.612+07:00 DEBUG 7628 --- [ProjWEB] [io-8081-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-01T12:34:18.612+07:00 DEBUG 7628 --- [ProjWEB] [io-8081-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=2026-10-01T12:34:18.612926, status=500, error=Internal Server Error, message=An unexpecte (truncated)...]
+2026-10-01T12:34:18.612+07:00  WARN 7628 --- [ProjWEB] [io-8081-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [Duplicate entry '10' for key 'verification_tokens.UKdqp95ggn6gvm865km5muba2o5'] [insert into verification_tokens (expiryDate,token,used,user_id) values (?,?,?,?)]; SQL [insert into verification_tokens (expiryDate,token,used,user_id) values (?,?,?,?)]; constraint [verification_tokens.UKdqp95ggn6gvm865km5muba2o5]]
+2026-10-01T12:34:18.612+07:00 DEBUG 7628 --- [ProjWEB] [io-8081-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 500 INTERNAL_SERVER_ERROR
+2026-10-01T12:34:19.383+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/resend-verification", parameters={}
+2026-10-01T12:34:19.384+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.jewellery.ProjWEB.auth.controller.AuthController#resendVerification(Map)
+2026-10-01T12:34:19.384+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{email=nguyenbaotam2005@gmail.com}]
+2026-10-01T12:34:19.384+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-1] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.fullName,u1_0.password,u1_0.phoneNumber,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.email=?
+2026-10-01T12:34:19.384+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-1] org.hibernate.SQL                        : select vt1_0.id,vt1_0.expiryDate,vt1_0.token,vt1_0.used,vt1_0.user_id from verification_tokens vt1_0 where vt1_0.user_id=?
+2026-10-01T12:34:19.384+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-1] org.hibernate.SQL                        : insert into verification_tokens (expiryDate,token,used,user_id) values (?,?,?,?)
+2026-10-01T12:34:19.384+07:00  WARN 7628 --- [ProjWEB] [nio-8081-exec-1] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 1062, SQLState: 23000
+2026-10-01T12:34:19.384+07:00  WARN 7628 --- [ProjWEB] [nio-8081-exec-1] org.hibernate.orm.jdbc.error             : Duplicate entry '10' for key 'verification_tokens.UKdqp95ggn6gvm865km5muba2o5'
+2026-10-01T12:34:19.395+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.jewellery.ProjWEB.exception.GlobalExceptionHandler#handleRuntimeException(RuntimeException)
+2026-10-01T12:34:19.395+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-01T12:34:19.395+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=2026-10-01T12:34:19.395680800, status=500, error=Internal Server Error, message=An unexpe (truncated)...]
+2026-10-01T12:34:19.395+07:00  WARN 7628 --- [ProjWEB] [nio-8081-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [Duplicate entry '10' for key 'verification_tokens.UKdqp95ggn6gvm865km5muba2o5'] [insert into verification_tokens (expiryDate,token,used,user_id) values (?,?,?,?)]; SQL [insert into verification_tokens (expiryDate,token,used,user_id) values (?,?,?,?)]; constraint [verification_tokens.UKdqp95ggn6gvm865km5muba2o5]]
+2026-10-01T12:34:19.395+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 500 INTERNAL_SERVER_ERROR
+2026-10-01T12:34:38.545+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/login", parameters={}
+2026-10-01T12:34:38.545+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.jewellery.ProjWEB.auth.controller.AuthController#login(LoginRequest)
+2026-10-01T12:34:38.545+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequest(username=nguyenbaotam2005@gmail.com, password=123456)]
+2026-10-01T12:34:38.545+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-3] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.fullName,u1_0.password,u1_0.phoneNumber,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-10-01T12:34:38.629+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.jewellery.ProjWEB.exception.GlobalExceptionHandler#handleBadCredentials(BadCredentialsException)
+2026-10-01T12:34:38.629+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-01T12:34:38.629+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=2026-10-01T12:34:38.629747900, status=401, error=Unauthorized, message=Invalid username o (truncated)...]
+2026-10-01T12:34:38.629+07:00  WARN 7628 --- [ProjWEB] [nio-8081-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.authentication.BadCredentialsException: Bad credentials]
+2026-10-01T12:34:38.629+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 401 UNAUTHORIZED
+2026-10-01T12:34:42.838+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/login", parameters={}
+2026-10-01T12:34:42.838+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.jewellery.ProjWEB.auth.controller.AuthController#login(LoginRequest)
+2026-10-01T12:34:42.838+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequest(username=baotam0612@gmail.com, password=123456)]
+2026-10-01T12:34:42.838+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-4] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.fullName,u1_0.password,u1_0.phoneNumber,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-10-01T12:34:42.911+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.jewellery.ProjWEB.exception.GlobalExceptionHandler#handleBadCredentials(BadCredentialsException)
+2026-10-01T12:34:42.911+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-01T12:34:42.911+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=2026-10-01T12:34:42.911560800, status=401, error=Unauthorized, message=Invalid username o (truncated)...]
+2026-10-01T12:34:42.927+07:00  WARN 7628 --- [ProjWEB] [nio-8081-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.authentication.BadCredentialsException: Bad credentials]
+2026-10-01T12:34:42.927+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 401 UNAUTHORIZED
+2026-10-01T12:34:46.601+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-9] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/login", parameters={}
+2026-10-01T12:34:46.630+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.jewellery.ProjWEB.auth.controller.AuthController#login(LoginRequest)
+2026-10-01T12:34:46.630+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequest(username=baotam0612@gmail.com, password=12345+)]
+2026-10-01T12:34:46.632+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-9] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.fullName,u1_0.password,u1_0.phoneNumber,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-10-01T12:34:46.711+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.jewellery.ProjWEB.exception.GlobalExceptionHandler#handleBadCredentials(BadCredentialsException)
+2026-10-01T12:34:46.711+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-01T12:34:46.711+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=2026-10-01T12:34:46.711684700, status=401, error=Unauthorized, message=Invalid username o (truncated)...]
+2026-10-01T12:34:46.711+07:00  WARN 7628 --- [ProjWEB] [nio-8081-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.authentication.BadCredentialsException: Bad credentials]
+2026-10-01T12:34:46.711+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 401 UNAUTHORIZED
+2026-10-01T12:34:48.959+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/login", parameters={}
+2026-10-01T12:34:48.986+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.jewellery.ProjWEB.auth.controller.AuthController#login(LoginRequest)
+2026-10-01T12:34:48.987+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequest(username=baotam0612@gmail.com, password=12345+)]
+2026-10-01T12:34:48.988+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-7] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.fullName,u1_0.password,u1_0.phoneNumber,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-10-01T12:34:49.071+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.jewellery.ProjWEB.exception.GlobalExceptionHandler#handleBadCredentials(BadCredentialsException)
+2026-10-01T12:34:49.072+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-01T12:34:49.072+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=2026-10-01T12:34:49.072502700, status=401, error=Unauthorized, message=Invalid username o (truncated)...]
+2026-10-01T12:34:49.073+07:00  WARN 7628 --- [ProjWEB] [nio-8081-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.authentication.BadCredentialsException: Bad credentials]
+2026-10-01T12:34:49.073+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 401 UNAUTHORIZED
+2026-10-01T12:37:11.952+07:00 DEBUG 7628 --- [ProjWEB] [io-8081-exec-10] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/login", parameters={}
+2026-10-01T12:37:11.952+07:00 DEBUG 7628 --- [ProjWEB] [io-8081-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.jewellery.ProjWEB.auth.controller.AuthController#login(LoginRequest)
+2026-10-01T12:37:11.952+07:00 DEBUG 7628 --- [ProjWEB] [io-8081-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequest(username=baotam0612@gmail.com, password=123456)]
+2026-10-01T12:37:11.952+07:00 DEBUG 7628 --- [ProjWEB] [io-8081-exec-10] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.fullName,u1_0.password,u1_0.phoneNumber,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-10-01T12:37:12.028+07:00 DEBUG 7628 --- [ProjWEB] [io-8081-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.jewellery.ProjWEB.exception.GlobalExceptionHandler#handleBadCredentials(BadCredentialsException)
+2026-10-01T12:37:12.028+07:00 DEBUG 7628 --- [ProjWEB] [io-8081-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-01T12:37:12.044+07:00 DEBUG 7628 --- [ProjWEB] [io-8081-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=2026-10-01T12:37:12.028715, status=401, error=Unauthorized, message=Invalid username or p (truncated)...]
+2026-10-01T12:37:12.045+07:00  WARN 7628 --- [ProjWEB] [io-8081-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.authentication.BadCredentialsException: Bad credentials]
+2026-10-01T12:37:12.045+07:00 DEBUG 7628 --- [ProjWEB] [io-8081-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 401 UNAUTHORIZED
+2026-10-01T12:38:55.422+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2026-10-01T12:38:55.426+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.webmvc.autoconfigure.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2026-10-01T12:38:55.432+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-2] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2026-10-01T12:38:55.432+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 403
+2026-10-01T12:38:55.535+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/favicon.ico", parameters={}
+2026-10-01T12:38:55.535+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [URL [file:/D:/PROJJAVA/ProjWebFinal/frontend/home/], classpath [static/]]
+2026-10-01T12:38:55.535+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-3] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2026-10-01T12:38:55.535+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.jewellery.ProjWEB.exception.GlobalExceptionHandler#handleGenericException(Exception)
+2026-10-01T12:38:55.535+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-01T12:38:55.535+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=2026-10-01T12:38:55.535014300, status=500, error=Internal Server Error, message=An unexpe (truncated)...]
+2026-10-01T12:38:55.535+07:00  WARN 7628 --- [ProjWEB] [nio-8081-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico for request '/favicon.ico'.]
+2026-10-01T12:38:55.542+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 500 INTERNAL_SERVER_ERROR
+2026-10-01T15:26:07.839+07:00  WARN 7628 --- [ProjWEB] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h31m7s155ms796탎100ns).
+2026-10-01T15:28:34.350+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/login", parameters={}
+2026-10-01T15:28:34.350+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.jewellery.ProjWEB.auth.controller.AuthController#login(LoginRequest)
+2026-10-01T15:28:34.353+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequest(username=baotam0612@gmail.com, password=123456)]
+2026-10-01T15:28:34.360+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-5] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.fullName,u1_0.password,u1_0.phoneNumber,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-10-01T15:28:34.427+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.jewellery.ProjWEB.exception.GlobalExceptionHandler#handleBadCredentials(BadCredentialsException)
+2026-10-01T15:28:34.427+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-01T15:28:34.427+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=2026-10-01T15:28:34.427561800, status=401, error=Unauthorized, message=Invalid username o (truncated)...]
+2026-10-01T15:28:34.427+07:00  WARN 7628 --- [ProjWEB] [nio-8081-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.authentication.BadCredentialsException: Bad credentials]
+2026-10-01T15:28:34.427+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 401 UNAUTHORIZED
+2026-10-01T15:48:40.793+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api/public/categories", parameters={}
+2026-10-01T15:48:40.794+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.jewellery.ProjWEB.user.category.controller.CategoryController#getPublicCategories()
+2026-10-01T15:48:40.851+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-7] org.hibernate.SQL                        : select ce1_0.CategoryID,ce1_0.CategoryName,ce1_0.Description,ce1_0.Status from category ce1_0 where upper(ce1_0.Status)=upper(?)
+2026-10-01T15:48:40.873+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-01T15:48:40.874+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[com.jewellery.ProjWEB.user.category.model.CategoryDTO@c7f08e5, com.jewellery.ProjWEB.user.category. (truncated)...]
+2026-10-01T15:48:40.879+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-10-01T15:50:05.122+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/api/public/categories", parameters={}
+2026-10-01T15:50:05.123+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.jewellery.ProjWEB.user.category.controller.CategoryController#getPublicCategories()
+2026-10-01T15:50:05.125+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-8] org.hibernate.SQL                        : select ce1_0.CategoryID,ce1_0.CategoryName,ce1_0.Description,ce1_0.Status from category ce1_0 where upper(ce1_0.Status)=upper(?)
+2026-10-01T15:50:05.129+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-01T15:50:05.129+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[com.jewellery.ProjWEB.user.category.model.CategoryDTO@78dad0bf, com.jewellery.ProjWEB.user.category (truncated)...]
+2026-10-01T15:50:05.130+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-10-01T16:13:46.734+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/public/categories", parameters={}
+2026-10-01T16:13:46.734+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.jewellery.ProjWEB.user.category.controller.CategoryController#getPublicCategories()
+2026-10-01T16:13:46.738+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-6] org.hibernate.SQL                        : select ce1_0.CategoryID,ce1_0.CategoryName,ce1_0.Description,ce1_0.Status from category ce1_0 where upper(ce1_0.Status)=upper(?)
+2026-10-01T16:13:46.744+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-10-01T16:13:46.745+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[com.jewellery.ProjWEB.user.category.model.CategoryDTO@24b6d679, com.jewellery.ProjWEB.user.category (truncated)...]
+2026-10-01T16:13:46.749+07:00 DEBUG 7628 --- [ProjWEB] [nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-10-01T18:11:17.702+07:00  WARN 7628 --- [ProjWEB] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m7s516ms384탎400ns).
+2026-10-01T19:50:02.168+07:00  WARN 7628 --- [ProjWEB] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=18m13s134ms285탎200ns).
+2026-10-01T21:23:30.138+07:00  WARN 7628 --- [ProjWEB] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m56s743ms928탎100ns).
+2026-10-01T22:43:39.017+07:00  WARN 7628 --- [ProjWEB] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=32m8s163ms152탎800ns).
